@@ -11,7 +11,7 @@ cd `dirname $0`
 #
 # Create symbolic links.
 #
-foreach i (table key index procedure trigger)
+foreach i (table key index trigger)
     cd $i
     rm -rf Configuration DBPrefix logs
     ln -s ../Configuration .
