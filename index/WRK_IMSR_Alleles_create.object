@@ -12,13 +12,14 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create index WRK_IMSR_Alleles_idx_wrkimsralleles_accid on radar.WRK_IMSR_Alleles(accID);
+create index WRK_IMSR_Alleles_idx_wrkimsralleles_accid on radar.WRK_IMSR_Alleles(accID)
 
 
-create index WRK_IMSR_Alleles_idx_wrkimsralleles_symbol on radar.WRK_IMSR_Alleles(symbol);
+create index WRK_IMSR_Alleles_idx_wrkimsralleles_symbol on radar.WRK_IMSR_Alleles(symbol)
 
 
-create index WRK_IMSR_Alleles_idx_wrkimsralleles_tmpkey on radar.WRK_IMSR_Alleles(tmpAlleleKey);
+create index WRK_IMSR_Alleles_idx_wrkimsralleles_tmpkey on radar.WRK_IMSR_Alleles(tmpAlleleKey)
+
 
 
 EOSQL

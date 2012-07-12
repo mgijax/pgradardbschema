@@ -1,5 +1,9 @@
 #!/bin/sh
 
+#
+# for indexes that contain 'idx_primary'
+#
+
 cd `dirname $0` && . ../Configuration
 
 if [ $# -eq 1 ]
@@ -13,7 +17,7 @@ fi
 # copy radardbschema/index/*_create.object to postgres directory
 #
 cd ../index
-cp ../../radardbschema/index/${findObject} .
+cp ${RADAR_DBSCHEMADIR}/index/${findObject} .
 
 for i in ${findObject}
 do
@@ -22,12 +26,11 @@ t=`basename $i _create.object`
 
 ed $i <<END
 g/csh -f -x/s//sh/g
-g/source/s//./g
-g/ on /s// on radar./g
-g/nonclustered /s///g
-g/clustered /s///g
+g/ source/s// ./g
+g/ nonclustered /s// /g
+g/ clustered /s// /g
 g/idx/s//${t}_idx/g
-g/)/s//);/g
+g/ on /s// on radar./g
 g/^go/s///g
 /cat
 d
@@ -45,7 +48,18 @@ d
 ;d
 .
 a
+
 EOSQL
+.
+w
+q
+END
+
+ed $i <<END
+/idx_primary
+d
+d
+d
 .
 w
 q

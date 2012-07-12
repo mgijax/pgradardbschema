@@ -4,7 +4,7 @@
 # History
 #
 # 08/05/2003	lec
-#	- TR 3404 (JSAM);
+#	- TR 3404 (JSAM)
 #
 
 cd `dirname $0` && . ./Configuration
@@ -12,13 +12,11 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index APP_JobStream_idx_JobStream_key on radar.APP_JobStream (_JobStream_key);
+create index APP_JobStream_idx_jobStreamName on radar.APP_JobStream (jobStreamName)
 
 
-create index APP_JobStream_idx_jobStreamName on radar.APP_JobStream (jobStreamName);
+create index APP_JobStream_idx_end_date on radar.APP_JobStream (end_date)
 
-
-create index APP_JobStream_idx_end_date on radar.APP_JobStream (end_date);
 
 
 

@@ -4,7 +4,7 @@
 # History
 #
 # 11/13/2002	lec
-#	- TR 3404 (JSAM);
+#	- TR 3404 (JSAM)
 #
 
 cd `dirname $0` && . ./Configuration
@@ -12,13 +12,11 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index MGI_CloneLoad_Clone_idx_Clone_key on radar.MGI_CloneLoad_Clone (_Clone_key);
+create index MGI_CloneLoad_Clone_idx_cloneName on radar.MGI_CloneLoad_Clone (cloneName)
 
 
-create index MGI_CloneLoad_Clone_idx_cloneName on radar.MGI_CloneLoad_Clone (cloneName);
+create index MGI_CloneLoad_Clone_idx_jnumID on radar.MGI_CloneLoad_Clone (jnumID)
 
-
-create index MGI_CloneLoad_Clone_idx_jnumID on radar.MGI_CloneLoad_Clone (jnumID);
 
 
 EOSQL

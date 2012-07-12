@@ -12,16 +12,14 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index MGI_CloneLibrary_idx_primary on radar.MGI_CloneLibrary (libraryNum, cloneSet, goodName, badName);
+create index MGI_CloneLibrary_idx_cloneSet on radar.MGI_CloneLibrary (cloneSet)
 
 
-create index MGI_CloneLibrary_idx_cloneSet on radar.MGI_CloneLibrary (cloneSet);
+create index MGI_CloneLibrary_idx_goodName on radar.MGI_CloneLibrary (goodName)
 
 
-create index MGI_CloneLibrary_idx_goodName on radar.MGI_CloneLibrary (goodName);
+create index MGI_CloneLibrary_idx_badName on radar.MGI_CloneLibrary (badName)
 
-
-create index MGI_CloneLibrary_idx_badName on radar.MGI_CloneLibrary (badName);
 
 
 EOSQL

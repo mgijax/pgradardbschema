@@ -12,16 +12,14 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index MGI_Association_idx_Assoc_key on radar.MGI_Association (_Assoc_key);
+create index MGI_Association_idx_Record_key on radar.MGI_Association (_Record_key)
 
 
-create index MGI_Association_idx_Record_key on radar.MGI_Association (_Record_key);
+create index MGI_Association_idx_accID on radar.MGI_Association (accID)
 
 
-create index MGI_Association_idx_accID on radar.MGI_Association (accID);
+create index MGI_Association_idx_logicalDB on radar.MGI_Association (logicalDB)
 
-
-create index MGI_Association_idx_logicalDB on radar.MGI_Association (logicalDB);
 
 
 EOSQL

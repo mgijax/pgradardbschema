@@ -9,9 +9,6 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.MGI_Tables.index_table_name
-;
-
 drop index radar.MGI_Tables.index_modification_date
 ;
 

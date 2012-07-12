@@ -4,7 +4,7 @@
 # History
 #
 # 08/05/2003	lec
-#	- TR 3404 (JSAM);
+#	- TR 3404 (JSAM)
 #
 
 cd `dirname $0` && . ./Configuration
@@ -12,10 +12,8 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index APP_FilesMirrored_idx_File_key on radar.APP_FilesMirrored (_File_key);
+create index APP_FilesMirrored_idx_fileType on radar.APP_FilesMirrored (fileType)
 
-
-create index APP_FilesMirrored_idx_fileType on radar.APP_FilesMirrored (fileType);
 
 
 EOSQL

@@ -12,10 +12,8 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index QC_SEQ_RawSourceConflict_idx_QCRecord_key on radar.QC_SEQ_RawSourceConflict (_QCRecord_key);
+create index QC_SEQ_RawSourceConflict_idx_JobStream_key on radar.QC_SEQ_RawSourceConflict (_JobStream_key)
 
-
-create index QC_SEQ_RawSourceConflict_idx_JobStream_key on radar.QC_SEQ_RawSourceConflict (_JobStream_key);
 
 
 EOSQL

@@ -12,9 +12,6 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.MGI_CloneLoad_Clone_idx_Clone_key
-;
-
 drop index radar.MGI_CloneLoad_Clone_idx_cloneName
 ;
 

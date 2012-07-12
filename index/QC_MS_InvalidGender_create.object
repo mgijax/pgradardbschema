@@ -12,10 +12,8 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index QC_MS_InvalidGender_idx_QCRecord_key on radar.QC_MS_InvalidGender (_QCRecord_key);
+create index QC_MS_InvalidGender_idx_JobStream_key on radar.QC_MS_InvalidGender (_JobStream_key)
 
-
-create index QC_MS_InvalidGender_idx_JobStream_key on radar.QC_MS_InvalidGender (_JobStream_key);
 
 
 EOSQL

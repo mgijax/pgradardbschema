@@ -12,16 +12,17 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create index WRK_IMSR_Strains_idx_wrkimsrstrains_mgistrkey on radar.WRK_IMSR_Strains(MGI_Strain_key);
+create index WRK_IMSR_Strains_idx_wrkimsrstrains_mgistrkey on radar.WRK_IMSR_Strains(MGI_Strain_key)
  
 
-create index WRK_IMSR_Strains_idx_wrkimsrstrains_stockid on radar.WRK_IMSR_Strains(stock_ID);
+create index WRK_IMSR_Strains_idx_wrkimsrstrains_stockid on radar.WRK_IMSR_Strains(stock_ID)
 
 
-create index WRK_IMSR_Strains_idx_wrkimsrstrains_state on radar.WRK_IMSR_Strains(strain_state);
+create index WRK_IMSR_Strains_idx_wrkimsrstrains_state on radar.WRK_IMSR_Strains(strain_state)
 
 
-create index WRK_IMSR_Strains_idx_wrkimsrstrains_des on radar.WRK_IMSR_Strains(stock_designation);
+create index WRK_IMSR_Strains_idx_wrkimsrstrains_des on radar.WRK_IMSR_Strains(stock_designation)
+
 
 
 EOSQL

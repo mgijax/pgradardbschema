@@ -12,10 +12,8 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index QC_cDNALoad_CloneID_Discrep_idx_primary on radar.QC_cDNALoad_CloneID_Discrep (_QCRecord_key);
+create index QC_cDNALoad_CloneID_Discrep_idx_cloneNum on radar.QC_cDNALoad_CloneID_Discrep (cloneNum)
 
-
-create index QC_cDNALoad_CloneID_Discrep_idx_cloneNum on radar.QC_cDNALoad_CloneID_Discrep (cloneNum);
 
 
 EOSQL

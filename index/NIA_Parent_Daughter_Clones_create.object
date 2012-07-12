@@ -4,15 +4,13 @@
 # History
 #
 # 07/14/2003	dbm
-#	- TR 3404 (JSAM);
+#	- TR 3404 (JSAM)
 #
 
 cd `dirname $0` && . ./Configuration
 
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
-
-create unique index NIA_Parent_Daughter_Clones_idx_primary on radar.NIA_Parent_Daughter_Clones (parentCloneID, daughterCloneID);
 
 
 EOSQL

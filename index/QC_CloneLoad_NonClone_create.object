@@ -4,7 +4,7 @@
 # History
 #
 # 08/05/2003	dbm
-#	- TR 3404 (JSAM);
+#	- TR 3404 (JSAM)
 #
 
 cd `dirname $0` && . ./Configuration
@@ -12,13 +12,11 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index QC_CloneLoad_NonClone_idx_primary on radar.QC_CloneLoad_NonClone (_Clone_key, mgiID);
+create index QC_CloneLoad_NonClone_idx_Clone_key on radar.QC_CloneLoad_NonClone (_Clone_key)
 
 
-create index QC_CloneLoad_NonClone_idx_Clone_key on radar.QC_CloneLoad_NonClone (_Clone_key);
+create index QC_CloneLoad_NonClone_idx_mgiID on radar.QC_CloneLoad_NonClone (mgiID)
 
-
-create index QC_CloneLoad_NonClone_idx_mgiID on radar.QC_CloneLoad_NonClone (mgiID);
 
 
 EOSQL

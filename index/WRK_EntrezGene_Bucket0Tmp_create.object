@@ -12,13 +12,14 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create index WRK_EntrezGene_Bucket0Tmp_idx_geneID on radar.WRK_EntrezGene_Bucket0Tmp (geneID);
+create index WRK_EntrezGene_Bucket0Tmp_idx_geneID on radar.WRK_EntrezGene_Bucket0Tmp (geneID)
 
 
-create index WRK_EntrezGene_Bucket0Tmp_idx_mgiID on radar.WRK_EntrezGene_Bucket0Tmp (mgiID);
+create index WRK_EntrezGene_Bucket0Tmp_idx_mgiID on radar.WRK_EntrezGene_Bucket0Tmp (mgiID)
 
 
-create index WRK_EntrezGene_Bucket0Tmp_idx_idType on radar.WRK_EntrezGene_Bucket0Tmp (idType);
+create index WRK_EntrezGene_Bucket0Tmp_idx_idType on radar.WRK_EntrezGene_Bucket0Tmp (idType)
+
 
 
 EOSQL

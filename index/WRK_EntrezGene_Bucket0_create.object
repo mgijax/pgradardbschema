@@ -4,7 +4,7 @@
 # History
 #
 # 04/08/2004	lec
-#	- TR 3404 (JSAM);
+#	- TR 3404 (JSAM)
 #
 
 cd `dirname $0` && . ./Configuration
@@ -12,16 +12,17 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create index WRK_EntrezGene_Bucket0_idx_taxID on radar.WRK_EntrezGene_Bucket0 (taxID);
+create index WRK_EntrezGene_Bucket0_idx_taxID on radar.WRK_EntrezGene_Bucket0 (taxID)
 
 
-create index WRK_EntrezGene_Bucket0_idx_geneID on radar.WRK_EntrezGene_Bucket0 (geneID);
+create index WRK_EntrezGene_Bucket0_idx_geneID on radar.WRK_EntrezGene_Bucket0 (geneID)
 
 
-create index WRK_EntrezGene_Bucket0_idx_mgiID on radar.WRK_EntrezGene_Bucket0 (mgiID);
+create index WRK_EntrezGene_Bucket0_idx_mgiID on radar.WRK_EntrezGene_Bucket0 (mgiID)
 
 
-create index WRK_EntrezGene_Bucket0_idx_accID on radar.WRK_EntrezGene_Bucket0 (accID);
+create index WRK_EntrezGene_Bucket0_idx_accID on radar.WRK_EntrezGene_Bucket0 (accID)
+
 
 
 EOSQL

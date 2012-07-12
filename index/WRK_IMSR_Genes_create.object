@@ -12,7 +12,8 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create index WRK_IMSR_Genes_idx_wrkimsrgenes_mrkkey on radar.WRK_IMSR_Genes(MGI_Gene_key);
+create index WRK_IMSR_Genes_idx_wrkimsrgenes_mrkkey on radar.WRK_IMSR_Genes(MGI_Gene_key)
+
 
 
 EOSQL

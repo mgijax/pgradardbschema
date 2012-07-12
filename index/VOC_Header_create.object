@@ -12,7 +12,5 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index VOC_Header_idx_primary on radar.VOC_Header (accID);
-
 
 EOSQL

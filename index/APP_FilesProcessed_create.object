@@ -4,7 +4,7 @@
 # History
 #
 # 08/05/2003	lec
-#	- TR 3404 (JSAM);
+#	- TR 3404 (JSAM)
 #
 
 cd `dirname $0` && . ./Configuration
@@ -12,13 +12,11 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index APP_FilesProcessed_idx_primary on radar.APP_FilesProcessed (_File_key, createdBy);
+create index APP_FilesProcessed_idx_File_key on radar.APP_FilesProcessed (_File_key)
 
 
-create index APP_FilesProcessed_idx_File_key on radar.APP_FilesProcessed (_File_key);
+create index APP_FilesProcessed_idx_createdBy on radar.APP_FilesProcessed (createdBy)
 
-
-create index APP_FilesProcessed_idx_createdBy on radar.APP_FilesProcessed (createdBy);
 
 
 EOSQL

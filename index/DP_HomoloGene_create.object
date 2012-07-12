@@ -4,7 +4,7 @@
 # History
 #
 # 04/08/2004	lec
-#	- TR 3404 (JSAM);
+#	- TR 3404 (JSAM)
 #
 
 cd `dirname $0` && . ./Configuration
@@ -12,10 +12,11 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create index DP_HomoloGene_idx_groupID on radar.DP_HomoloGene (groupID);
+create index DP_HomoloGene_idx_groupID on radar.DP_HomoloGene (groupID)
 
 
-create index DP_HomoloGene_idx_symbol on radar.DP_HomoloGene (symbol);
+create index DP_HomoloGene_idx_symbol on radar.DP_HomoloGene (symbol)
+
 
 
 EOSQL

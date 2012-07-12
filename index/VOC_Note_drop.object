@@ -12,7 +12,4 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.VOC_Note_idx_primary
-;
-
 EOSQL

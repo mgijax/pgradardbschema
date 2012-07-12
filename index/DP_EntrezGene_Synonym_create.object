@@ -4,7 +4,7 @@
 # History
 #
 # 04/08/2004	lec
-#	- TR 3404 (JSAM);
+#	- TR 3404 (JSAM)
 #
 
 cd `dirname $0` && . ./Configuration
@@ -12,10 +12,11 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create index DP_EntrezGene_Synonym_idx_taxID on radar.DP_EntrezGene_Synonym(taxID);
+create index DP_EntrezGene_Synonym_idx_taxID on radar.DP_EntrezGene_Synonym(taxID)
 
 
-create index DP_EntrezGene_Synonym_idx_geneID on radar.DP_EntrezGene_Synonym(geneID);
+create index DP_EntrezGene_Synonym_idx_geneID on radar.DP_EntrezGene_Synonym(geneID)
+
 
 
 EOSQL

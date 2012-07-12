@@ -12,10 +12,8 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create unique index QC_MGCLoad_Sequence_Missing_idx_primary on radar.QC_MGCLoad_Sequence_Missing (_QCRecord_key);
+create index QC_MGCLoad_Sequence_Missing_idx_MGCClone_key on radar.QC_MGCLoad_Sequence_Missing (_MGCClone_key)
 
-
-create index QC_MGCLoad_Sequence_Missing_idx_MGCClone_key on radar.QC_MGCLoad_Sequence_Missing (_MGCClone_key);
 
 
 EOSQL

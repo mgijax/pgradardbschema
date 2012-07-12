@@ -12,9 +12,6 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.QC_SEQ_Merged_idx_QCRecord_key
-;
-
 drop index radar.QC_SEQ_Merged_idx_JobStream_key
 ;
 
