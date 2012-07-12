@@ -1,0 +1,21 @@
+#!/bin/sh
+
+#
+# History
+#
+# 08/05/2003	lec
+#	- TR 3404 (JSAM)
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+drop index radar.APP_FilesMirrored_idx_File_key
+;
+
+drop index radar.APP_FilesMirrored_idx_fileType
+;
+
+EOSQL

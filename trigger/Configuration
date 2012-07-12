@@ -1,0 +1,29 @@
+#format: sh
+###########################################################################
+#
+# Configuration.default
+#
+###########################################################################
+
+###########################################################################
+#
+#  If the MGICONFIG environment variable does not have a local override,
+#  use the default "live" settings.
+#
+###########################################################################
+if [ "${MGICONFIG}" = "" ]
+then
+    MGICONFIG=/usr/local/mgi/live/mgiconfig
+    export MGICONFIG
+fi
+
+. ${MGICONFIG}/master.config.sh
+
+RADAR_DBNAME="lec"
+export RADAR_DBNAME
+
+RADAR_DBSCHEMADIR="/home/lec/mgi4.0/dbutils/radar/radardbschema_pg"
+export RADAR_DBSCHEMADIR
+
+LOGFILE_PG=${RADAR_DBSCHEMADIR}/logs
+export LOGFILE_PG

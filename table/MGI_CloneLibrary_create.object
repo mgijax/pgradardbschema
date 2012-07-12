@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#
+# History
+#
+# 01/12/2004	dbm
+#	- new
+#
+# 03/08/2004	dbm
+#	- replace unique _Library_key with non-unique libraryNum
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.MGI_CloneLibrary (
+	libraryNum                     int             not null,
+	cloneSet                       varchar(80)     not null,
+	goodName                       varchar(255)    not null,
+	badName                        varchar(255)    not null
+);
+EOSQL

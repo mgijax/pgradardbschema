@@ -1,0 +1,20 @@
+#!/bin/sh
+
+#
+# History
+#
+# 03/17/2004	sc
+#	- created
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+
+drop table radar.QC_SEQ_Merged
+
+CASCADE
+;
+EOSQL

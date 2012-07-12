@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#
+# History
+#
+# 12/15/2005	dow
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.QC_IMSR_GenesNotInMGI (
+	gene_accID                     varchar(50)     null,
+	gene_symbol                    varchar(255)    null,
+	gene_name                      varchar(255)    null,
+	allele_symbol                  varchar(255)    null,
+	allele_name                    varchar(255)    null,
+	chromosome                     varchar(30)     null,
+	stock_designation              varchar(255)    null,
+	site                           varchar(20)     null,
+	mismatch_on                    char(1)         null,
+	creation_date                  timestamp without time zone        null,
+	modification_date              timestamp without time zone        null
+);
+EOSQL

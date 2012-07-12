@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#
+# Application - Processed Files
+#
+# A record in this table represents the logging of
+# of a file that has been processed by a Job Stream.
+#
+# _File_key = primary key
+# _JobStream_key = primary key of the Job Stream
+# createdBy = who created this record
+# creation_date = the date this record was created
+#
+
+#
+# History
+#
+# 04/28/2004	lec
+#	- JSAM
+#
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.APP_FilesProcessed (
+	_File_key                      int             not null,
+	_JobStream_key                 int             not null,
+	createdBy                      varchar(30)     not null,
+	creation_date                  timestamp without time zone        not null
+);
+EOSQL

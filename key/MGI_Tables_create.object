@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#
+# This file was generated automatically by dbschemaScripts.py -- edit with care.
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+ALTER TABLE radar.MGI_Tables ADD PRIMARY KEY (table_name);
+
+
+ALTER TABLE radar.MGI_Columns ADD FOREIGN KEY (table_name) REFERENCES radar.MGI_Tables ON DELETE CASCADE;
+
+
+EOSQL

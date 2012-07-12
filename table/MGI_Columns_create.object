@@ -1,0 +1,20 @@
+#!/bin/sh
+
+#
+# This file was generated automatically by dbschemaScripts.py -- edit with care.
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.MGI_Columns (
+ 	table_name                     varchar(30)     not null,
+ 	column_name                    varchar(30)     not null,
+	description                    varchar(255)    null,
+	example                        varchar(255)    null,
+	creation_date                  timestamp without time zone        not null,
+	modification_date              timestamp without time zone        not null 
+);
+EOSQL

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#
+# History
+#
+# 11/13/2002	lec
+#	- TR 3404 (JSAM);
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create unique index DP_RPCI_Clones_idx_RPCIClone_key on radar.DP_RPCI_Clones (_RPCIClone_key);
+
+
+create index DP_RPCI_Clones_idx_cloneID on radar.DP_RPCI_Clones (cloneID);
+
+
+create index DP_RPCI_Clones_idx_seqID on radar.DP_RPCI_Clones (seqID);
+
+
+EOSQL

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#
+# History
+#
+# 02/17/2004	dbm
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create unique index QC_cDNALoad_CloneID_Unknown_idx_primary on radar.QC_cDNALoad_CloneID_Unknown (_QCRecord_key);
+
+
+EOSQL

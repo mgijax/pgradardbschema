@@ -1,0 +1,21 @@
+#!/bin/sh
+
+#
+# History
+#
+# 04/28/2005	lec
+#	- TR 3853, OMIM
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create index DP_EntrezGene_MIM_idx_mimID on radar.DP_EntrezGene_MIM (mimID);
+
+
+create index DP_EntrezGene_MIM_idx_geneID on radar.DP_EntrezGene_MIM (geneID);
+
+
+EOSQL

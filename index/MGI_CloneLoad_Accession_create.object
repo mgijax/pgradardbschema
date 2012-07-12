@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#
+# History
+#
+# 11/13/2002	lec
+#	- TR 3404 (JSAM);
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create unique index MGI_CloneLoad_Accession_idx_CloneAccession_key on radar.MGI_CloneLoad_Accession (_CloneAccession_key);
+
+
+create index MGI_CloneLoad_Accession_idx_Clone_key on radar.MGI_CloneLoad_Accession (_Clone_key);
+
+
+create index MGI_CloneLoad_Accession_idx_accID on radar.MGI_CloneLoad_Accession (accID);
+
+
+EOSQL

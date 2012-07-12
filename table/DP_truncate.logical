@@ -1,0 +1,14 @@
+#!/bin/csh -f -x
+
+#
+# Logical Group Script
+#
+# Executes all DP*_truncate.object scripts
+#
+
+cd `dirname $0`
+
+foreach i (DP*_truncate.object)
+$i $*
+end
+

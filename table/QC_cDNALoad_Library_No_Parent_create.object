@@ -1,0 +1,23 @@
+#!/bin/sh
+
+#
+# History
+#
+# 02/19/2004	dbm
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.QC_cDNALoad_Library_No_Parent (
+	_QCRecord_key                  int             not null,
+	seqIDList                      varchar(255)    not null,
+	rawLibrary                     varchar(255)    not null,
+	cloneIDList                    varchar(255)    not null,
+	_JobStream_key                 int             not null,
+	creation_date                  timestamp without time zone        not null
+);
+EOSQL

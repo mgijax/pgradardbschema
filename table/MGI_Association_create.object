@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#
+# History
+#
+# 01/19/2005	dbm
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.MGI_Association (
+	_Assoc_key                     int             not null,
+	_Record_key                    int             not null,
+	accID                          varchar(30)     not null,
+	logicalDB                      varchar(80)     not null,
+	target                         boolean             not null,
+	_JobStream_key                 int             not null,
+	creation_date                  timestamp without time zone        not null
+);
+EOSQL

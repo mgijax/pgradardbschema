@@ -1,0 +1,14 @@
+#!/bin/csh -f -x
+
+#
+# Logical Group Script
+#
+# Executes all WRK*_truncate.object scripts
+#
+
+cd `dirname $0`
+
+foreach i (WRK*_truncate.object)
+$i $*
+end
+

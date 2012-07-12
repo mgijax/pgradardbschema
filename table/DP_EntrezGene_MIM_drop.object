@@ -1,0 +1,20 @@
+#!/bin/sh
+
+#
+# History
+#
+# 04/28/2005	lec
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+
+drop table radar.DP_EntrezGene_MIM
+
+CASCADE
+;
+EOSQL

@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# History
+#
+# 02/19/2004	dbm
+#	- new
+#
+cd `dirname $0` &. ./Configuration
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+ALTER TABLE radar.QC_cDNALoad_Library_No_Parent DROP CONSTRAINT QC_cDNALoad_Library_No_Parent_pkey CASCADE;
+
+EOSQL

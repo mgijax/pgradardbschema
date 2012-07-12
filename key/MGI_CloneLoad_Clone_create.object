@@ -1,0 +1,39 @@
+#!/bin/sh
+
+#
+# History
+#
+# 11/14/2002	lec
+#	- TR 3404 (JSAM)
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+ALTER TABLE radar.MGI_CloneLoad_Clone ADD PRIMARY KEY (_Clone_key);
+
+
+ALTER TABLE radar.MGI_CloneLoad_Accession ADD FOREIGN KEY (_Clone_key) REFERENCES radar.MGI_CloneLoad_Clone ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_CloneLoad_DupClone ADD FOREIGN KEY (_Clone_key) REFERENCES radar.MGI_CloneLoad_Clone ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_CloneLoad_DupSeq ADD FOREIGN KEY (_Clone_key) REFERENCES radar.MGI_CloneLoad_Clone ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_CloneLoad_MultiClone ADD FOREIGN KEY (_Clone_key) REFERENCES radar.MGI_CloneLoad_Clone ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_CloneLoad_NonClone ADD FOREIGN KEY (_Clone_key) REFERENCES radar.MGI_CloneLoad_Clone ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_CloneLoad_SeqOnly ADD FOREIGN KEY (_Clone_key) REFERENCES radar.MGI_CloneLoad_Clone ON DELETE CASCADE;
+
+
+ALTER TABLE radar.WRK_CloneAssociation ADD FOREIGN KEY (_Clone_key) REFERENCES radar.MGI_CloneLoad_Clone ON DELETE CASCADE;
+
+
+EOSQL

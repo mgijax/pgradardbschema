@@ -1,0 +1,21 @@
+#!/bin/sh
+
+#
+# History
+#
+# 12/21/2004	dbm
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.QC_MGCLoad_Sequence_Missing (
+	_QCRecord_key                  int             not null,
+	_MGCClone_key                  int             not null,
+	_JobStream_key                 int             not null,
+	creation_date                  timestamp without time zone        not null
+);
+EOSQL

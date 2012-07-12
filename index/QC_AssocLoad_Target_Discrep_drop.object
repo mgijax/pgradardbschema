@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#
+# History
+#
+# 01/19/2005	dbm
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+drop index radar.QC_AssocLoad_Target_Discrep_idx_primary
+;
+
+drop index radar.QC_AssocLoad_Target_Discrep_idx_MGIType_key
+;
+
+drop index radar.QC_AssocLoad_Target_Discrep_idx_Object_key
+;
+
+EOSQL

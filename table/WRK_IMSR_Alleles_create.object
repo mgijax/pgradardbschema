@@ -1,0 +1,26 @@
+#!/bin/sh
+
+#
+# History
+#
+# 12/15/2005	dow
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.WRK_IMSR_Alleles (
+	stock_ID                       varchar(255)    null,
+	accID                          varchar(255)    null,
+	symbol                         varchar(255)    null,
+	name                           varchar(255)    null,
+	mutation_type                  varchar(255)    null,
+	MGI_Allele_key                 int             null,
+	MGI_Gene_key                   int             null,
+	line_number                    int             null,
+	tmpAlleleKey                   serial
+);
+EOSQL

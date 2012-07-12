@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#
+# History
+#
+# 05/05/2004	mbw
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+ALTER TABLE radar.QC_MS_ChangedLibrary ADD PRIMARY KEY (_QCRecord_key);
+
+
+EOSQL

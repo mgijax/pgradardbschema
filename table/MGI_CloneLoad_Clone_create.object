@@ -1,0 +1,39 @@
+#!/bin/sh
+
+#
+# This table is the MGI Format for the Clone Load Product (cloneload).
+#
+# A record in this table represents a unique Clone.
+#
+
+#
+# History
+#
+# 11/13/2002	lec
+#	- TR 3404 (JSAM)
+#
+# 06/25/2003	dbm
+#	- removed organism and derivedFromID
+#
+# 07/08/2003	dbm
+#	- removed segmentType and vectorType
+#
+# 08/07/2003    dbm
+#       - Added _JobStream_key
+#       - Removed createdBy, modifiedBy and modification_date
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.MGI_CloneLoad_Clone (
+	_Clone_key                     int             not null,
+	cloneName                      varchar(40)     not null,
+	cloneLibrary                   varchar(255)    null,
+	jnumID                         varchar(30)     not null,
+	_JobStream_key                 int             not null,
+	creation_date                  timestamp without time zone        not null
+);
+EOSQL

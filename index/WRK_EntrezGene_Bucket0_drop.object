@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#
+# History
+#
+# 04/08/2004	lec
+#	- TR 3404 (JSAM)
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+drop index radar.WRK_EntrezGene_Bucket0_idx_taxID
+;
+
+drop index radar.WRK_EntrezGene_Bucket0_idx_geneID
+;
+
+drop index radar.WRK_EntrezGene_Bucket0_idx_mgiID
+;
+
+drop index radar.WRK_EntrezGene_Bucket0_idx_accID
+;
+
+EOSQL

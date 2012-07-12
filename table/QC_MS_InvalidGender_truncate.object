@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#
+# History
+#
+# 01/27/2004	mbw
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+
+truncate table radar.QC_MS_InvalidGender
+
+;
+EOSQL

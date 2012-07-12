@@ -1,0 +1,14 @@
+#!/bin/csh -f -x
+
+#
+# Logical Group Script
+#
+# Executes all VOC*_create.object scripts
+#
+
+cd `dirname $0`
+
+foreach i (VOC*_create.object)
+$i $*
+end
+

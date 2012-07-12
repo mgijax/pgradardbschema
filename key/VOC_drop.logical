@@ -1,0 +1,14 @@
+#!/bin/csh -f -x
+
+#
+# Logical Group Script
+#
+# Executes all VOC*_drop.object scripts
+#
+
+cd `dirname $0`
+
+foreach i (VOC*_drop.object)
+$i $*
+end
+

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#
+# History
+#
+# 02/19/2004	dbm
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+drop index radar.RIKEN_FANTOM_Clones_idx_primary
+;
+
+EOSQL

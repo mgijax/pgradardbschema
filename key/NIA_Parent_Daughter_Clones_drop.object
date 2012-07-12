@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# History
+#
+# 07/14/2003	dbm
+#	- TR 3404 (JSAM)
+#
+cd `dirname $0` &. ./Configuration
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+ALTER TABLE radar.NIA_Parent_Daughter_Clones DROP CONSTRAINT NIA_Parent_Daughter_Clones_pkey CASCADE;
+
+EOSQL

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+#
+# History
+#
+# 05/02/2011	lec
+#	- was originally a "tempdb..bucket0"; createing a "real" table
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+
+drop table radar.WRK_EntrezGene_Bucket0Tmp
+
+CASCADE
+;
+EOSQL

@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#
+# History
+#
+# 01/19/2005	dbm
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+drop index radar.MGI_Association_idx_Assoc_key
+;
+
+drop index radar.MGI_Association_idx_Record_key
+;
+
+drop index radar.MGI_Association_idx_accID
+;
+
+drop index radar.MGI_Association_idx_logicalDB
+;
+
+EOSQL

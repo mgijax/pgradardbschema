@@ -1,0 +1,132 @@
+#!/bin/sh
+
+#
+# History
+#
+# 08/05/2003	lec
+#	- TR 3404 (JSAM)
+#
+# 01/14/2004	dbm
+#	- Added keys for cDNA Load
+#
+# 12/21/2004	dbm
+#	- Added keys for MGC Load
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+ALTER TABLE radar.APP_JobStream ADD PRIMARY KEY (_JobStream_key);
+
+
+ALTER TABLE radar.APP_FilesProcessed ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.DP_MGC_Clones ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.DP_RPCI_Clones ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.MGI_Association ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.MGI_CloneLoad_Accession ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.MGI_CloneLoad_Clone ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_AssocLoad_Assoc_Discrep ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_AssocLoad_Target_Discrep ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_cDNALoad_CloneID_Discrep ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_cDNALoad_CloneID_Missing ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_cDNALoad_CloneID_Unknown ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_cDNALoad_Library_Discrep ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_cDNALoad_Library_Missing ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_cDNALoad_Library_No_Parent ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_CloneLoad_DupClone ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_CloneLoad_DupSeq ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_CloneLoad_MultiClone ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_CloneLoad_NonClone ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_CloneLoad_SeqOnly ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MGCLoad_IMAGE_Missing ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MGCLoad_MGC_Missing ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MGCLoad_MGC_Duplicate ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MGCLoad_Sequence_Missing ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MGCLoad_Sequence_Duplicate ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MS_AttrEdit ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MS_ChangedLibrary ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MS_InvalidLibrary ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MS_InvalidStrain ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MS_InvalidTissue ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MS_InvalidCellLine ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MS_InvalidGender ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MS_NameConflict ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_MS_UnresolvedOrganism ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_SEQ_OldRef ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_SEQ_RawSourceConflict ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+ALTER TABLE radar.QC_SEQ_Merged ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
+
+
+EOSQL

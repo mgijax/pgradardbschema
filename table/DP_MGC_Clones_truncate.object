@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#
+# History
+#
+# 12/21/2004	dbm
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+
+truncate table radar.DP_MGC_Clones
+
+;
+EOSQL

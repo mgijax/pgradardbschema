@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#
+# History
+#
+# 08/05/2003	dbm
+#	- TR 3404 (JSAM);
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create unique index QC_CloneLoad_MultiClone_idx_primary on radar.QC_CloneLoad_MultiClone (_Clone_key, mgiID, accID);
+
+
+create index QC_CloneLoad_MultiClone_idx_Clone_key on radar.QC_CloneLoad_MultiClone (_Clone_key);
+
+
+create index QC_CloneLoad_MultiClone_idx_mgiID on radar.QC_CloneLoad_MultiClone (mgiID);
+
+
+create index QC_CloneLoad_MultiClone_idx_accID on radar.QC_CloneLoad_MultiClone (accID);
+
+
+EOSQL

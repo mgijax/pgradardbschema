@@ -1,0 +1,14 @@
+#!/bin/csh -f -x
+
+#
+# Logical Group Script
+#
+# Executes all IMG*_create.object scripts
+#
+
+cd `dirname $0`
+
+foreach i (IMG*_create.object)
+$i $*
+end
+

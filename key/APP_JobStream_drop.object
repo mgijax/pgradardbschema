@@ -1,0 +1,90 @@
+#!/bin/sh
+#
+# History
+#
+# 08/05/2003	lec
+#	- TR 3404 (JSAM)
+#
+# 01/14/2004	dbm
+#	- Added keys for cDNA Load
+#
+# 12/21/2004	dbm
+#	- Added keys for MGC Load
+#
+cd `dirname $0` &. ./Configuration
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+ALTER TABLE radar.QC_SEQ_Merged DROP CONSTRAINT QC_SEQ_Merged__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_SEQ_RawSourceConflict DROP CONSTRAINT QC_SEQ_RawSourceConflict__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_SEQ_OldRef DROP CONSTRAINT QC_SEQ_OldRef__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MS_UnresolvedOrganism DROP CONSTRAINT QC_MS_UnresolvedOrganism__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MS_NameConflict DROP CONSTRAINT QC_MS_NameConflict__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MS_InvalidGender DROP CONSTRAINT QC_MS_InvalidGender__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MS_InvalidCellLine DROP CONSTRAINT QC_MS_InvalidCellLine__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MS_InvalidTissue DROP CONSTRAINT QC_MS_InvalidTissue__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MS_InvalidStrain DROP CONSTRAINT QC_MS_InvalidStrain__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MS_InvalidLibrary DROP CONSTRAINT QC_MS_InvalidLibrary__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MS_ChangedLibrary DROP CONSTRAINT QC_MS_ChangedLibrary__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MS_AttrEdit DROP CONSTRAINT QC_MS_AttrEdit__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MGCLoad_Sequence_Duplicate DROP CONSTRAINT QC_MGCLoad_Sequence_Duplicate__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MGCLoad_Sequence_Missing DROP CONSTRAINT QC_MGCLoad_Sequence_Missing__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MGCLoad_MGC_Duplicate DROP CONSTRAINT QC_MGCLoad_MGC_Duplicate__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MGCLoad_MGC_Missing DROP CONSTRAINT QC_MGCLoad_MGC_Missing__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_MGCLoad_IMAGE_Missing DROP CONSTRAINT QC_MGCLoad_IMAGE_Missing__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_CloneLoad_SeqOnly DROP CONSTRAINT QC_CloneLoad_SeqOnly__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_CloneLoad_NonClone DROP CONSTRAINT QC_CloneLoad_NonClone__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_CloneLoad_MultiClone DROP CONSTRAINT QC_CloneLoad_MultiClone__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_CloneLoad_DupSeq DROP CONSTRAINT QC_CloneLoad_DupSeq__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_CloneLoad_DupClone DROP CONSTRAINT QC_CloneLoad_DupClone__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_cDNALoad_Library_No_Parent DROP CONSTRAINT QC_cDNALoad_Library_No_Parent__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_cDNALoad_Library_Missing DROP CONSTRAINT QC_cDNALoad_Library_Missing__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_cDNALoad_Library_Discrep DROP CONSTRAINT QC_cDNALoad_Library_Discrep__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_cDNALoad_CloneID_Unknown DROP CONSTRAINT QC_cDNALoad_CloneID_Unknown__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_cDNALoad_CloneID_Missing DROP CONSTRAINT QC_cDNALoad_CloneID_Missing__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_cDNALoad_CloneID_Discrep DROP CONSTRAINT QC_cDNALoad_CloneID_Discrep__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_AssocLoad_Target_Discrep DROP CONSTRAINT QC_AssocLoad_Target_Discrep__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.QC_AssocLoad_Assoc_Discrep DROP CONSTRAINT QC_AssocLoad_Assoc_Discrep__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.MGI_CloneLoad_Clone DROP CONSTRAINT MGI_CloneLoad_Clone__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.MGI_CloneLoad_Accession DROP CONSTRAINT MGI_CloneLoad_Accession__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.MGI_Association DROP CONSTRAINT MGI_Association__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.DP_RPCI_Clones DROP CONSTRAINT DP_RPCI_Clones__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.DP_MGC_Clones DROP CONSTRAINT DP_MGC_Clones__JobStream_key_fkey CASCADE;
+
+ALTER TABLE radar.APP_FilesProcessed DROP CONSTRAINT APP_FilesProcessed__JobStream_key_fkey CASCADE;
+ALTER TABLE radar.APP_JobStream DROP CONSTRAINT APP_JobStream_pkey CASCADE;
+
+EOSQL

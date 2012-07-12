@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# History
+#
+# 03/18/2004	sc
+#	- created
+#
+cd `dirname $0` &. ./Configuration
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+ALTER TABLE radar.QC_SEQ_RawSourceConflict DROP CONSTRAINT QC_SEQ_RawSourceConflict_pkey CASCADE;
+
+EOSQL

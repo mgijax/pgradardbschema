@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# History
+#
+# 08/05/2003	dbm
+#	- TR 3404 (JSAM)
+#
+cd `dirname $0` &. ./Configuration
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+ALTER TABLE radar.QC_CloneLoad_SeqOnly DROP CONSTRAINT QC_CloneLoad_SeqOnly_pkey CASCADE;
+
+EOSQL

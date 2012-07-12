@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#
+# This table is the Application Job Stream.
+#
+# A record in this table represents the logging of the execution
+#
+# History
+#
+# 08/05/2003	lec
+#	- TR 3404 (JSAM)
+#
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.APP_JobStream (
+	_JobStream_key                 int             not null,
+	jobStreamName                  varchar(30)     not null,
+	createdBy                      varchar(30)     not null,
+	returnCode                     int null,
+	start_date                     timestamp without time zone        not null,
+	end_date                       timestamp without time zone null
+);
+EOSQL

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#
+# History
+#
+# 06/27/2003	dbm
+#	- TR 3404 (JSAM);
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create index WRK_CloneAssociation_idx_Clone_key on radar.WRK_CloneAssociation (_Clone_key);
+
+
+create index WRK_CloneAssociation_idx_accID on radar.WRK_CloneAssociation (accID);
+
+
+create index WRK_CloneAssociation_idx_logicalDB on radar.WRK_CloneAssociation (logicalDB);
+
+
+EOSQL

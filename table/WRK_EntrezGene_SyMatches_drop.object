@@ -1,0 +1,20 @@
+#!/bin/sh
+
+#
+# History
+#
+# 05/02/2011	lec
+#	- was originally a "tempdb..symatches"; createing a "real" table
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+
+drop table radar.WRK_EntrezGene_SyMatches
+
+CASCADE
+;
+EOSQL

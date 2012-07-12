@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#
+# History
+#
+# 04/08/2004	lec
+#	- TR 3404 (JSAM);
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create index WRK_EntrezGene_Nomen_idx_taxID on radar.WRK_EntrezGene_Nomen (taxID);
+
+
+create index WRK_EntrezGene_Nomen_idx_geneID on radar.WRK_EntrezGene_Nomen (geneID);
+
+
+create index WRK_EntrezGene_Nomen_idx_Marker_key on radar.WRK_EntrezGene_Nomen (_Marker_key);
+
+
+EOSQL

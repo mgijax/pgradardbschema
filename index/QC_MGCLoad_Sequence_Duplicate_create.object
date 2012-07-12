@@ -1,0 +1,21 @@
+#!/bin/sh
+
+#
+# History
+#
+# 12/21/2004	dbm
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create unique index QC_MGCLoad_Sequence_Duplicate_idx_primary on radar.QC_MGCLoad_Sequence_Duplicate (_QCRecord_key);
+
+
+create index QC_MGCLoad_Sequence_Duplicate_idx_MGCClone_key on radar.QC_MGCLoad_Sequence_Duplicate (_MGCClone_key);
+
+
+EOSQL

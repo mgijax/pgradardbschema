@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#
+# History
+#
+# 07/19/2004	dow
+#	- Initial IMSR release
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+
+truncate table radar.MGI_IMSR
+
+;
+EOSQL

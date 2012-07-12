@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# History
+#
+# 10/13/2003	dbm
+#	- TR 3404 (JSAM)
+#
+cd `dirname $0` &. ./Configuration
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+ALTER TABLE radar.DP_RPCI_Clones DROP CONSTRAINT DP_RPCI_Clones_pkey CASCADE;
+
+EOSQL

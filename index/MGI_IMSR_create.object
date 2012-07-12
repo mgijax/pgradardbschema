@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#
+# History
+#
+# 01/28/20093	marka
+# - adding indexes to improve imsrload performance for imsrload-4-2-0-1
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create index MGI_IMSR_idx_mgiimsr_stockdesignation on radar.MGI_IMSR(stock_designation);
+
+
+create index MGI_IMSR_idx_mgiimsr_state on radar.MGI_IMSR(state);
+
+
+create index MGI_IMSR_idx_mgiimsr_stockid on radar.MGI_IMSR(stock_ID);
+ 
+
+EOSQL

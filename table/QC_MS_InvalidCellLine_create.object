@@ -1,0 +1,22 @@
+#!/bin/sh
+
+#
+# History
+#
+# 01/27/2004	mbw
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.QC_MS_InvalidCellLine (
+	_QCRecord_key                  int             not null,
+	_JobStream_key                 int             not null,
+	cellline                       varchar(255)    not null,
+	numberOfOccurrences            int             not null,
+	creation_date                  timestamp without time zone        not null
+);
+EOSQL

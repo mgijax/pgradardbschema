@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#
+# History
+#
+# 01/27/2004	mbw
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.QC_MS_AttrEdit (
+	_QCRecord_key                  int             not null,
+        source_key		       int	       not null,
+	attrName                       varchar(255)    not null,
+	attrValue                      int             not null,
+        incomingValue		       varchar(255)    null,
+	_JobStream_key                 int             not null,
+	creation_date                  timestamp without time zone        not null
+);
+EOSQL

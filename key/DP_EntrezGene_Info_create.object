@@ -1,0 +1,42 @@
+#!/bin/sh
+
+#
+# History
+#
+# 01/14/2005
+#	- TR 5939/EntrezGene
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+ALTER TABLE radar.DP_EntrezGene_Info ADD PRIMARY KEY (geneID);
+
+
+ALTER TABLE radar.DP_EntrezGene_Accession ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
+
+
+ALTER TABLE radar.DP_EntrezGene_DBXRef ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
+
+
+ALTER TABLE radar.DP_EntrezGene_History ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
+
+
+ALTER TABLE radar.DP_EntrezGene_MIM ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
+
+
+ALTER TABLE radar.DP_EntrezGene_PubMed ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
+
+
+ALTER TABLE radar.DP_EntrezGene_RefSeq ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
+
+
+ALTER TABLE radar.DP_EntrezGene_Synonym ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
+
+
+ALTER TABLE radar.DP_HomoloGene ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
+
+
+EOSQL

@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# History
+#
+# 08/05/2003	lec
+#	- TR 3404 (JSAM)
+#
+# 01/14/2004	dbm
+#	- Added keys for cDNA Load
+#
+cd `dirname $0` &. ./Configuration
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+ALTER TABLE radar.APP_FilesProcessed DROP CONSTRAINT APP_FilesProcessed__File_key_fkey CASCADE;
+ALTER TABLE radar.APP_FilesMirrored DROP CONSTRAINT APP_FilesMirrored_pkey CASCADE;
+
+EOSQL

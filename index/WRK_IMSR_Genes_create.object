@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#
+# History
+#
+# 01/28/20093	marka
+# - adding indexes to improve imsrload performance for imsrload-4-2-0-1
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create index WRK_IMSR_Genes_idx_wrkimsrgenes_mrkkey on radar.WRK_IMSR_Genes(MGI_Gene_key);
+
+
+EOSQL

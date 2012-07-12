@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#
+# History
+#
+# 12/21/2004	dbm
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+ALTER TABLE radar.QC_MGCLoad_Sequence_Duplicate ADD PRIMARY KEY (_QCRecord_key);
+
+
+EOSQL

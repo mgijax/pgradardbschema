@@ -1,0 +1,47 @@
+#!/bin/csh -f -x
+
+#
+# Application - Mirrored Files
+#
+# A record in this table represents the logging of
+#
+# _File_key = primary key
+# fileType = the type of file ("GenBank", "RefSeq", etc.)
+# fileName = the name of the file (full path)
+# fileSize = the size of the file (in bytes)
+# createdBy = who created this record
+# file_date = the timestamp of the file in the mirror_ftp download directory
+# creation_date = the date this record was created
+#
+#
+# History
+#
+# 04/28/2004	lec
+#	- JSAM
+#
+#
+
+cd `dirname $0` && source ./Configuration
+
+cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
+
+use ${DBNAME}
+go
+
+create table APP_FilesMirrored (
+	_File_key                      int             not null,
+	fileType                       varchar(30)     not null,
+	fileName                       varchar(255)    not null,
+	fileSize                       integer         not null,
+	createdBy                      varchar(30)     not null,
+	file_date                      datetime        not null,
+	creation_date                  datetime        not null
+)
+go
+
+checkpoint
+go
+
+quit
+
+EOSQL

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#
+# History
+#
+# 04/08/2004	lec
+#	- new
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.WRK_EntrezGene_Nomen (
+	taxID                   int             not null,
+	_Marker_key		int             not null,
+	geneID                  varchar(30)     not null,
+	mgiSymbol               varchar(50)     not null,
+	mgiName                 varchar(255)    not null,
+	egSymbol                varchar(50)     not null,
+	egName                  varchar(255)    not null
+);
+EOSQL

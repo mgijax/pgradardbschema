@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# History
+#
+# 01/19/2005	dbm
+#	- new
+#
+cd `dirname $0` &. ./Configuration
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+ALTER TABLE radar.MGI_Association DROP CONSTRAINT MGI_Association_pkey CASCADE;
+
+EOSQL

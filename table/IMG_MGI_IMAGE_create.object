@@ -1,0 +1,25 @@
+#!/bin/sh
+
+#
+# This table is the MGI ID to IMAGE ID mapping.
+#
+# It contains MGI ID and IMAGE ID pairs.
+#
+
+#
+# History
+#
+# 07/14/2003	dbm
+#	- TR 3404 (JSAM)
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.IMG_MGI_IMAGE (
+	mgiID                          varchar(30)     not null,
+	imageID                        varchar(30)     not null
+);
+EOSQL

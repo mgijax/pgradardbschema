@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#
+# History
+#
+# 11/13/2002	lec
+#	- TR 3404 (JSAM)
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+
+truncate table radar.MGI_CloneLoad_Clone
+
+;
+EOSQL
