@@ -1,0 +1,21 @@
+#!/bin/csh -f -x
+
+#
+# Installation script for RADAR schema product
+#
+# Usage:  Install 
+#
+
+cd `dirname $0`
+
+#
+# Create symbolic links.
+#
+foreach i (table key index procedure trigger)
+    cd $i
+    rm -rf Configuration DBPrefix logs
+    ln -s ../Configuration .
+    ln -s ../logs/$i logs
+    cd ..
+end
+

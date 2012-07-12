@@ -1,0 +1,7 @@
+TAG: pgradardbschema-5-0-0-1
+DATE: 07/12/2012
+STAFF: lec
+CHANGES: 
+moved radardbschema-pg-10 into separate product
+this product needs to be sync-ed with radardbschema
+

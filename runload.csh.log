@@ -1,0 +1,1735 @@
+Thu May 17 07:47:56 EDT 2012
+Drop schema rohan.lec.radar
+Thu May 17 07:47:56 EDT 2012
+Create schema rohan.lec.radar
+Thu May 17 07:47:56 EDT 2012
+Load rohan.lec.radar from /backups/rohan/postgres/radar.postgres.dump
+pg_restore: connecting to database for restore
+pg_restore: processing item 3168 ENCODING ENCODING
+pg_restore: processing item 3169 STDSTRINGS STDSTRINGS
+pg_restore: processing item 9 SCHEMA radar
+pg_restore: processing item 3170 ACL radar
+pg_restore: processing item 2388 TABLE app_filesmirrored
+pg_restore: creating TABLE app_filesmirrored
+pg_restore: processing item 2389 TABLE app_filesprocessed
+pg_restore: creating TABLE app_filesprocessed
+pg_restore: processing item 2390 TABLE app_jobstream
+pg_restore: creating TABLE app_jobstream
+pg_restore: processing item 2391 TABLE dp_entrezgene_accession
+pg_restore: creating TABLE dp_entrezgene_accession
+pg_restore: processing item 2392 TABLE dp_entrezgene_dbxref
+pg_restore: creating TABLE dp_entrezgene_dbxref
+pg_restore: processing item 2393 TABLE dp_entrezgene_history
+pg_restore: creating TABLE dp_entrezgene_history
+pg_restore: processing item 2394 TABLE dp_entrezgene_info
+pg_restore: creating TABLE dp_entrezgene_info
+pg_restore: processing item 2395 TABLE dp_entrezgene_mim
+pg_restore: creating TABLE dp_entrezgene_mim
+pg_restore: processing item 2396 TABLE dp_entrezgene_pubmed
+pg_restore: creating TABLE dp_entrezgene_pubmed
+pg_restore: processing item 2397 TABLE dp_entrezgene_refseq
+pg_restore: creating TABLE dp_entrezgene_refseq
+pg_restore: processing item 2398 TABLE dp_entrezgene_synonym
+pg_restore: creating TABLE dp_entrezgene_synonym
+pg_restore: processing item 2399 TABLE dp_homologene
+pg_restore: creating TABLE dp_homologene
+pg_restore: processing item 2400 TABLE dp_imsr
+pg_restore: creating TABLE dp_imsr
+pg_restore: processing item 2401 TABLE dp_mgc_clones
+pg_restore: creating TABLE dp_mgc_clones
+pg_restore: processing item 2402 TABLE dp_rpci_clones
+pg_restore: creating TABLE dp_rpci_clones
+pg_restore: processing item 2403 TABLE gb_est_reload
+pg_restore: creating TABLE gb_est_reload
+pg_restore: processing item 2404 TABLE img_mgi_image
+pg_restore: creating TABLE img_mgi_image
+pg_restore: processing item 2405 TABLE mgi_association
+pg_restore: creating TABLE mgi_association
+pg_restore: processing item 2406 TABLE mgi_clonelibrary
+pg_restore: creating TABLE mgi_clonelibrary
+pg_restore: processing item 2407 TABLE mgi_cloneload_accession
+pg_restore: creating TABLE mgi_cloneload_accession
+pg_restore: processing item 2408 TABLE mgi_cloneload_clone
+pg_restore: creating TABLE mgi_cloneload_clone
+pg_restore: processing item 2409 TABLE mgi_columns
+pg_restore: creating TABLE mgi_columns
+pg_restore: processing item 2412 TABLE mgi_dbinfo
+pg_restore: creating TABLE mgi_dbinfo
+pg_restore: processing item 2410 TABLE mgi_imsr
+pg_restore: creating TABLE mgi_imsr
+pg_restore: processing item 2411 TABLE mgi_tables
+pg_restore: creating TABLE mgi_tables
+pg_restore: processing item 2413 TABLE nia_parent_daughter_clones
+pg_restore: creating TABLE nia_parent_daughter_clones
+pg_restore: processing item 2414 TABLE qc_assocload_assoc_discrep
+pg_restore: creating TABLE qc_assocload_assoc_discrep
+pg_restore: processing item 2415 TABLE qc_assocload_target_discrep
+pg_restore: creating TABLE qc_assocload_target_discrep
+pg_restore: processing item 2446 TABLE qc_cdnaload_cloneid_discrep
+pg_restore: creating TABLE qc_cdnaload_cloneid_discrep
+pg_restore: processing item 2447 TABLE qc_cdnaload_cloneid_missing
+pg_restore: creating TABLE qc_cdnaload_cloneid_missing
+pg_restore: processing item 2448 TABLE qc_cdnaload_cloneid_unknown
+pg_restore: creating TABLE qc_cdnaload_cloneid_unknown
+pg_restore: processing item 2449 TABLE qc_cdnaload_library_discrep
+pg_restore: creating TABLE qc_cdnaload_library_discrep
+pg_restore: processing item 2450 TABLE qc_cdnaload_library_missing
+pg_restore: creating TABLE qc_cdnaload_library_missing
+pg_restore: processing item 2451 TABLE qc_cdnaload_library_no_parent
+pg_restore: creating TABLE qc_cdnaload_library_no_parent
+pg_restore: processing item 2416 TABLE qc_cloneload_dupclone
+pg_restore: creating TABLE qc_cloneload_dupclone
+pg_restore: processing item 2417 TABLE qc_cloneload_dupseq
+pg_restore: creating TABLE qc_cloneload_dupseq
+pg_restore: processing item 2418 TABLE qc_cloneload_multiclone
+pg_restore: creating TABLE qc_cloneload_multiclone
+pg_restore: processing item 2419 TABLE qc_cloneload_nonclone
+pg_restore: creating TABLE qc_cloneload_nonclone
+pg_restore: processing item 2420 TABLE qc_cloneload_seqonly
+pg_restore: creating TABLE qc_cloneload_seqonly
+pg_restore: processing item 2421 TABLE qc_imsr_allelesnotinmgi
+pg_restore: creating TABLE qc_imsr_allelesnotinmgi
+pg_restore: processing item 2422 TABLE qc_imsr_genesnotinmgi
+pg_restore: creating TABLE qc_imsr_genesnotinmgi
+pg_restore: processing item 2423 TABLE qc_imsr_missingcolumns
+pg_restore: creating TABLE qc_imsr_missingcolumns
+pg_restore: processing item 2424 TABLE qc_imsr_stockidsnotinmgi
+pg_restore: creating TABLE qc_imsr_stockidsnotinmgi
+pg_restore: processing item 2425 TABLE qc_imsr_strainnamesnotinmgi
+pg_restore: creating TABLE qc_imsr_strainnamesnotinmgi
+pg_restore: processing item 2426 TABLE qc_imsr_strainswithillornomut
+pg_restore: creating TABLE qc_imsr_strainswithillornomut
+pg_restore: processing item 2427 TABLE qc_imsr_strainswithillornostat
+pg_restore: creating TABLE qc_imsr_strainswithillornostat
+pg_restore: processing item 2428 TABLE qc_imsr_strainswithillornotype
+pg_restore: creating TABLE qc_imsr_strainswithillornotype
+pg_restore: processing item 2429 TABLE qc_mgcload_image_missing
+pg_restore: creating TABLE qc_mgcload_image_missing
+pg_restore: processing item 2430 TABLE qc_mgcload_mgc_duplicate
+pg_restore: creating TABLE qc_mgcload_mgc_duplicate
+pg_restore: processing item 2431 TABLE qc_mgcload_mgc_missing
+pg_restore: creating TABLE qc_mgcload_mgc_missing
+pg_restore: processing item 2432 TABLE qc_mgcload_sequence_duplicate
+pg_restore: creating TABLE qc_mgcload_sequence_duplicate
+pg_restore: processing item 2433 TABLE qc_mgcload_sequence_missing
+pg_restore: creating TABLE qc_mgcload_sequence_missing
+pg_restore: processing item 2434 TABLE qc_ms_attredit
+pg_restore: creating TABLE qc_ms_attredit
+pg_restore: processing item 2435 TABLE qc_ms_changedlibrary
+pg_restore: creating TABLE qc_ms_changedlibrary
+pg_restore: processing item 2436 TABLE qc_ms_invalidcellline
+pg_restore: creating TABLE qc_ms_invalidcellline
+pg_restore: processing item 2437 TABLE qc_ms_invalidgender
+pg_restore: creating TABLE qc_ms_invalidgender
+pg_restore: processing item 2438 TABLE qc_ms_invalidlibrary
+pg_restore: creating TABLE qc_ms_invalidlibrary
+pg_restore: processing item 2439 TABLE qc_ms_invalidstrain
+pg_restore: creating TABLE qc_ms_invalidstrain
+pg_restore: processing item 2440 TABLE qc_ms_invalidtissue
+pg_restore: creating TABLE qc_ms_invalidtissue
+pg_restore: processing item 2441 TABLE qc_ms_nameconflict
+pg_restore: creating TABLE qc_ms_nameconflict
+pg_restore: processing item 2442 TABLE qc_ms_unresolvedorganism
+pg_restore: creating TABLE qc_ms_unresolvedorganism
+pg_restore: processing item 2443 TABLE qc_seq_merged
+pg_restore: creating TABLE qc_seq_merged
+pg_restore: processing item 2444 TABLE qc_seq_oldref
+pg_restore: creating TABLE qc_seq_oldref
+pg_restore: processing item 2445 TABLE qc_seq_rawsourceconflict
+pg_restore: creating TABLE qc_seq_rawsourceconflict
+pg_restore: processing item 2452 TABLE riken_fantom_clones
+pg_restore: creating TABLE riken_fantom_clones
+pg_restore: processing item 2453 TABLE txt_matches
+pg_restore: creating TABLE txt_matches
+pg_restore: processing item 2454 TABLE txt_searches
+pg_restore: creating TABLE txt_searches
+pg_restore: processing item 2455 TABLE voc_dagsort
+pg_restore: creating TABLE voc_dagsort
+pg_restore: processing item 2456 TABLE voc_header
+pg_restore: creating TABLE voc_header
+pg_restore: processing item 2457 TABLE voc_note
+pg_restore: creating TABLE voc_note
+pg_restore: processing item 2458 TABLE voc_synonym
+pg_restore: creating TABLE voc_synonym
+pg_restore: processing item 2472 TABLE wrk_cdna_clones
+pg_restore: creating TABLE wrk_cdna_clones
+pg_restore: processing item 2459 TABLE wrk_cloneassociation
+pg_restore: creating TABLE wrk_cloneassociation
+pg_restore: processing item 2460 TABLE wrk_entrezgene_bucket0
+pg_restore: creating TABLE wrk_entrezgene_bucket0
+pg_restore: processing item 2461 TABLE wrk_entrezgene_bucket0tmp
+pg_restore: creating TABLE wrk_entrezgene_bucket0tmp
+pg_restore: processing item 2462 TABLE wrk_entrezgene_egset
+pg_restore: creating TABLE wrk_entrezgene_egset
+pg_restore: processing item 2464 TABLE wrk_entrezgene_mapping
+pg_restore: creating TABLE wrk_entrezgene_mapping
+pg_restore: processing item 2463 TABLE wrk_entrezgene_mgiset
+pg_restore: creating TABLE wrk_entrezgene_mgiset
+pg_restore: processing item 2465 TABLE wrk_entrezgene_nomen
+pg_restore: creating TABLE wrk_entrezgene_nomen
+pg_restore: processing item 2466 TABLE wrk_entrezgene_symatches
+pg_restore: creating TABLE wrk_entrezgene_symatches
+pg_restore: processing item 2467 TABLE wrk_entrezgene_synonym
+pg_restore: creating TABLE wrk_entrezgene_synonym
+pg_restore: processing item 2468 TABLE wrk_imsr_alleles
+pg_restore: creating TABLE wrk_imsr_alleles
+pg_restore: processing item 2469 TABLE wrk_imsr_genes
+pg_restore: creating TABLE wrk_imsr_genes
+pg_restore: processing item 2470 TABLE wrk_imsr_strains
+pg_restore: creating TABLE wrk_imsr_strains
+pg_restore: processing item 2471 TABLE wrk_imsr_synonym
+pg_restore: creating TABLE wrk_imsr_synonym
+pg_restore: entering main parallel loop
+pg_restore: launching item 3083 TABLE DATA app_filesmirrored
+pg_restore: launching item 3084 TABLE DATA app_filesprocessed
+pg_restore: launching item 3085 TABLE DATA app_jobstream
+pg_restore: launching item 3086 TABLE DATA dp_entrezgene_accession
+pg_restore: restoring data for table "app_filesmirrored"
+pg_restore: restoring data for table "app_filesprocessed"
+pg_restore: restoring data for table "app_jobstream"
+pg_restore: restoring data for table "dp_entrezgene_accession"
+pg_restore: finished item 3084 TABLE DATA app_filesprocessed
+pg_restore: launching item 3087 TABLE DATA dp_entrezgene_dbxref
+pg_restore: finished item 3085 TABLE DATA app_jobstream
+pg_restore: launching item 3088 TABLE DATA dp_entrezgene_history
+pg_restore: restoring data for table "dp_entrezgene_dbxref"
+pg_restore: restoring data for table "dp_entrezgene_history"
+pg_restore: finished item 3083 TABLE DATA app_filesmirrored
+pg_restore: launching item 3089 TABLE DATA dp_entrezgene_info
+pg_restore: restoring data for table "dp_entrezgene_info"
+pg_restore: finished item 3087 TABLE DATA dp_entrezgene_dbxref
+pg_restore: launching item 3090 TABLE DATA dp_entrezgene_mim
+pg_restore: restoring data for table "dp_entrezgene_mim"
+pg_restore: finished item 3089 TABLE DATA dp_entrezgene_info
+pg_restore: launching item 3091 TABLE DATA dp_entrezgene_pubmed
+pg_restore: restoring data for table "dp_entrezgene_pubmed"
+pg_restore: finished item 3088 TABLE DATA dp_entrezgene_history
+pg_restore: launching item 3092 TABLE DATA dp_entrezgene_refseq
+pg_restore: restoring data for table "dp_entrezgene_refseq"
+pg_restore: finished item 3090 TABLE DATA dp_entrezgene_mim
+pg_restore: launching item 3093 TABLE DATA dp_entrezgene_synonym
+pg_restore: restoring data for table "dp_entrezgene_synonym"
+pg_restore: finished item 3093 TABLE DATA dp_entrezgene_synonym
+pg_restore: launching item 3094 TABLE DATA dp_homologene
+pg_restore: restoring data for table "dp_homologene"
+pg_restore: finished item 3094 TABLE DATA dp_homologene
+pg_restore: launching item 3095 TABLE DATA dp_imsr
+pg_restore: restoring data for table "dp_imsr"
+pg_restore: finished item 3095 TABLE DATA dp_imsr
+pg_restore: launching item 3096 TABLE DATA dp_mgc_clones
+pg_restore: restoring data for table "dp_mgc_clones"
+pg_restore: finished item 3096 TABLE DATA dp_mgc_clones
+pg_restore: launching item 3097 TABLE DATA dp_rpci_clones
+pg_restore: restoring data for table "dp_rpci_clones"
+pg_restore: finished item 3092 TABLE DATA dp_entrezgene_refseq
+pg_restore: launching item 3098 TABLE DATA gb_est_reload
+pg_restore: restoring data for table "gb_est_reload"
+pg_restore: finished item 3091 TABLE DATA dp_entrezgene_pubmed
+pg_restore: launching item 3099 TABLE DATA img_mgi_image
+pg_restore: restoring data for table "img_mgi_image"
+pg_restore: finished item 3097 TABLE DATA dp_rpci_clones
+pg_restore: launching item 3100 TABLE DATA mgi_association
+pg_restore: restoring data for table "mgi_association"
+pg_restore: finished item 3098 TABLE DATA gb_est_reload
+pg_restore: launching item 3101 TABLE DATA mgi_clonelibrary
+pg_restore: restoring data for table "mgi_clonelibrary"
+pg_restore: finished item 3101 TABLE DATA mgi_clonelibrary
+pg_restore: launching item 3102 TABLE DATA mgi_cloneload_accession
+pg_restore: restoring data for table "mgi_cloneload_accession"
+pg_restore: finished item 3086 TABLE DATA dp_entrezgene_accession
+pg_restore: launching item 3103 TABLE DATA mgi_cloneload_clone
+pg_restore: restoring data for table "mgi_cloneload_clone"
+pg_restore: finished item 3102 TABLE DATA mgi_cloneload_accession
+pg_restore: launching item 3104 TABLE DATA mgi_columns
+pg_restore: finished item 3099 TABLE DATA img_mgi_image
+pg_restore: launching item 3107 TABLE DATA mgi_dbinfo
+pg_restore: restoring data for table "mgi_columns"
+pg_restore: restoring data for table "mgi_dbinfo"
+pg_restore: finished item 3104 TABLE DATA mgi_columns
+pg_restore: launching item 3105 TABLE DATA mgi_imsr
+pg_restore: finished item 3107 TABLE DATA mgi_dbinfo
+pg_restore: launching item 3106 TABLE DATA mgi_tables
+pg_restore: restoring data for table "mgi_imsr"
+pg_restore: restoring data for table "mgi_tables"
+pg_restore: finished item 3106 TABLE DATA mgi_tables
+pg_restore: launching item 3108 TABLE DATA nia_parent_daughter_clones
+pg_restore: restoring data for table "nia_parent_daughter_clones"
+pg_restore: finished item 3105 TABLE DATA mgi_imsr
+pg_restore: launching item 3109 TABLE DATA qc_assocload_assoc_discrep
+pg_restore: restoring data for table "qc_assocload_assoc_discrep"
+pg_restore: finished item 3109 TABLE DATA qc_assocload_assoc_discrep
+pg_restore: launching item 3110 TABLE DATA qc_assocload_target_discrep
+pg_restore: restoring data for table "qc_assocload_target_discrep"
+pg_restore: finished item 3110 TABLE DATA qc_assocload_target_discrep
+pg_restore: launching item 3141 TABLE DATA qc_cdnaload_cloneid_discrep
+pg_restore: restoring data for table "qc_cdnaload_cloneid_discrep"
+pg_restore: finished item 3141 TABLE DATA qc_cdnaload_cloneid_discrep
+pg_restore: launching item 3142 TABLE DATA qc_cdnaload_cloneid_missing
+pg_restore: restoring data for table "qc_cdnaload_cloneid_missing"
+pg_restore: finished item 3108 TABLE DATA nia_parent_daughter_clones
+pg_restore: launching item 3143 TABLE DATA qc_cdnaload_cloneid_unknown
+pg_restore: restoring data for table "qc_cdnaload_cloneid_unknown"
+pg_restore: finished item 3142 TABLE DATA qc_cdnaload_cloneid_missing
+pg_restore: launching item 3144 TABLE DATA qc_cdnaload_library_discrep
+pg_restore: finished item 3143 TABLE DATA qc_cdnaload_cloneid_unknown
+pg_restore: launching item 3145 TABLE DATA qc_cdnaload_library_missing
+pg_restore: restoring data for table "qc_cdnaload_library_discrep"
+pg_restore: restoring data for table "qc_cdnaload_library_missing"
+pg_restore: finished item 3144 TABLE DATA qc_cdnaload_library_discrep
+pg_restore: launching item 3146 TABLE DATA qc_cdnaload_library_no_parent
+pg_restore: restoring data for table "qc_cdnaload_library_no_parent"
+pg_restore: finished item 3145 TABLE DATA qc_cdnaload_library_missing
+pg_restore: launching item 3111 TABLE DATA qc_cloneload_dupclone
+pg_restore: restoring data for table "qc_cloneload_dupclone"
+pg_restore: finished item 3146 TABLE DATA qc_cdnaload_library_no_parent
+pg_restore: launching item 3112 TABLE DATA qc_cloneload_dupseq
+pg_restore: finished item 3111 TABLE DATA qc_cloneload_dupclone
+pg_restore: launching item 3113 TABLE DATA qc_cloneload_multiclone
+pg_restore: restoring data for table "qc_cloneload_dupseq"
+pg_restore: restoring data for table "qc_cloneload_multiclone"
+pg_restore: finished item 3112 TABLE DATA qc_cloneload_dupseq
+pg_restore: launching item 3114 TABLE DATA qc_cloneload_nonclone
+pg_restore: restoring data for table "qc_cloneload_nonclone"
+pg_restore: finished item 3113 TABLE DATA qc_cloneload_multiclone
+pg_restore: launching item 3115 TABLE DATA qc_cloneload_seqonly
+pg_restore: restoring data for table "qc_cloneload_seqonly"
+pg_restore: finished item 3114 TABLE DATA qc_cloneload_nonclone
+pg_restore: launching item 3116 TABLE DATA qc_imsr_allelesnotinmgi
+pg_restore: restoring data for table "qc_imsr_allelesnotinmgi"
+pg_restore: finished item 3115 TABLE DATA qc_cloneload_seqonly
+pg_restore: launching item 3117 TABLE DATA qc_imsr_genesnotinmgi
+pg_restore: restoring data for table "qc_imsr_genesnotinmgi"
+pg_restore: finished item 3116 TABLE DATA qc_imsr_allelesnotinmgi
+pg_restore: launching item 3118 TABLE DATA qc_imsr_missingcolumns
+pg_restore: restoring data for table "qc_imsr_missingcolumns"
+pg_restore: finished item 3117 TABLE DATA qc_imsr_genesnotinmgi
+pg_restore: launching item 3119 TABLE DATA qc_imsr_stockidsnotinmgi
+pg_restore: finished item 3118 TABLE DATA qc_imsr_missingcolumns
+pg_restore: launching item 3120 TABLE DATA qc_imsr_strainnamesnotinmgi
+pg_restore: restoring data for table "qc_imsr_stockidsnotinmgi"
+pg_restore: restoring data for table "qc_imsr_strainnamesnotinmgi"
+pg_restore: finished item 3119 TABLE DATA qc_imsr_stockidsnotinmgi
+pg_restore: launching item 3121 TABLE DATA qc_imsr_strainswithillornomut
+pg_restore: finished item 3120 TABLE DATA qc_imsr_strainnamesnotinmgi
+pg_restore: launching item 3122 TABLE DATA qc_imsr_strainswithillornostat
+pg_restore: restoring data for table "qc_imsr_strainswithillornomut"
+pg_restore: restoring data for table "qc_imsr_strainswithillornostat"
+pg_restore: finished item 3121 TABLE DATA qc_imsr_strainswithillornomut
+pg_restore: launching item 3123 TABLE DATA qc_imsr_strainswithillornotype
+pg_restore: finished item 3122 TABLE DATA qc_imsr_strainswithillornostat
+pg_restore: launching item 3124 TABLE DATA qc_mgcload_image_missing
+pg_restore: restoring data for table "qc_imsr_strainswithillornotype"
+pg_restore: restoring data for table "qc_mgcload_image_missing"
+pg_restore: finished item 3123 TABLE DATA qc_imsr_strainswithillornotype
+pg_restore: launching item 3125 TABLE DATA qc_mgcload_mgc_duplicate
+pg_restore: finished item 3124 TABLE DATA qc_mgcload_image_missing
+pg_restore: launching item 3126 TABLE DATA qc_mgcload_mgc_missing
+pg_restore: restoring data for table "qc_mgcload_mgc_duplicate"
+pg_restore: restoring data for table "qc_mgcload_mgc_missing"
+pg_restore: finished item 3126 TABLE DATA qc_mgcload_mgc_missing
+pg_restore: launching item 3127 TABLE DATA qc_mgcload_sequence_duplicate
+pg_restore: restoring data for table "qc_mgcload_sequence_duplicate"
+pg_restore: finished item 3125 TABLE DATA qc_mgcload_mgc_duplicate
+pg_restore: launching item 3128 TABLE DATA qc_mgcload_sequence_missing
+pg_restore: restoring data for table "qc_mgcload_sequence_missing"
+pg_restore: finished item 3128 TABLE DATA qc_mgcload_sequence_missing
+pg_restore: launching item 3129 TABLE DATA qc_ms_attredit
+pg_restore: restoring data for table "qc_ms_attredit"
+pg_restore: finished item 3127 TABLE DATA qc_mgcload_sequence_duplicate
+pg_restore: launching item 3130 TABLE DATA qc_ms_changedlibrary
+pg_restore: restoring data for table "qc_ms_changedlibrary"
+pg_restore: finished item 3103 TABLE DATA mgi_cloneload_clone
+pg_restore: launching item 3131 TABLE DATA qc_ms_invalidcellline
+pg_restore: restoring data for table "qc_ms_invalidcellline"
+pg_restore: finished item 3130 TABLE DATA qc_ms_changedlibrary
+pg_restore: launching item 3132 TABLE DATA qc_ms_invalidgender
+pg_restore: restoring data for table "qc_ms_invalidgender"
+pg_restore: finished item 3132 TABLE DATA qc_ms_invalidgender
+pg_restore: launching item 3133 TABLE DATA qc_ms_invalidlibrary
+pg_restore: restoring data for table "qc_ms_invalidlibrary"
+pg_restore: finished item 3129 TABLE DATA qc_ms_attredit
+pg_restore: launching item 3134 TABLE DATA qc_ms_invalidstrain
+pg_restore: restoring data for table "qc_ms_invalidstrain"
+pg_restore: finished item 3134 TABLE DATA qc_ms_invalidstrain
+pg_restore: launching item 3135 TABLE DATA qc_ms_invalidtissue
+pg_restore: restoring data for table "qc_ms_invalidtissue"
+pg_restore: finished item 3135 TABLE DATA qc_ms_invalidtissue
+pg_restore: launching item 3136 TABLE DATA qc_ms_nameconflict
+pg_restore: restoring data for table "qc_ms_nameconflict"
+pg_restore: finished item 3136 TABLE DATA qc_ms_nameconflict
+pg_restore: launching item 3137 TABLE DATA qc_ms_unresolvedorganism
+pg_restore: restoring data for table "qc_ms_unresolvedorganism"
+pg_restore: finished item 3137 TABLE DATA qc_ms_unresolvedorganism
+pg_restore: launching item 3138 TABLE DATA qc_seq_merged
+pg_restore: restoring data for table "qc_seq_merged"
+pg_restore: finished item 3138 TABLE DATA qc_seq_merged
+pg_restore: launching item 3139 TABLE DATA qc_seq_oldref
+pg_restore: restoring data for table "qc_seq_oldref"
+pg_restore: finished item 3131 TABLE DATA qc_ms_invalidcellline
+pg_restore: launching item 3140 TABLE DATA qc_seq_rawsourceconflict
+pg_restore: restoring data for table "qc_seq_rawsourceconflict"
+pg_restore: finished item 3140 TABLE DATA qc_seq_rawsourceconflict
+pg_restore: launching item 3147 TABLE DATA riken_fantom_clones
+pg_restore: restoring data for table "riken_fantom_clones"
+pg_restore: finished item 3147 TABLE DATA riken_fantom_clones
+pg_restore: launching item 3148 TABLE DATA txt_matches
+pg_restore: restoring data for table "txt_matches"
+pg_restore: finished item 3148 TABLE DATA txt_matches
+pg_restore: launching item 3149 TABLE DATA txt_searches
+pg_restore: restoring data for table "txt_searches"
+pg_restore: finished item 3149 TABLE DATA txt_searches
+pg_restore: launching item 3150 TABLE DATA voc_dagsort
+pg_restore: restoring data for table "voc_dagsort"
+pg_restore: finished item 3150 TABLE DATA voc_dagsort
+pg_restore: launching item 3151 TABLE DATA voc_header
+pg_restore: restoring data for table "voc_header"
+pg_restore: finished item 3151 TABLE DATA voc_header
+pg_restore: launching item 3152 TABLE DATA voc_note
+pg_restore: restoring data for table "voc_note"
+pg_restore: finished item 3152 TABLE DATA voc_note
+pg_restore: launching item 3153 TABLE DATA voc_synonym
+pg_restore: restoring data for table "voc_synonym"
+pg_restore: finished item 3153 TABLE DATA voc_synonym
+pg_restore: launching item 3167 TABLE DATA wrk_cdna_clones
+pg_restore: restoring data for table "wrk_cdna_clones"
+pg_restore: finished item 3167 TABLE DATA wrk_cdna_clones
+pg_restore: launching item 3154 TABLE DATA wrk_cloneassociation
+pg_restore: restoring data for table "wrk_cloneassociation"
+pg_restore: finished item 3133 TABLE DATA qc_ms_invalidlibrary
+pg_restore: launching item 3155 TABLE DATA wrk_entrezgene_bucket0
+pg_restore: restoring data for table "wrk_entrezgene_bucket0"
+pg_restore: finished item 3139 TABLE DATA qc_seq_oldref
+pg_restore: launching item 3156 TABLE DATA wrk_entrezgene_bucket0tmp
+pg_restore: restoring data for table "wrk_entrezgene_bucket0tmp"
+pg_restore: finished item 3156 TABLE DATA wrk_entrezgene_bucket0tmp
+pg_restore: launching item 3157 TABLE DATA wrk_entrezgene_egset
+pg_restore: restoring data for table "wrk_entrezgene_egset"
+pg_restore: finished item 3154 TABLE DATA wrk_cloneassociation
+pg_restore: launching item 3159 TABLE DATA wrk_entrezgene_mapping
+pg_restore: restoring data for table "wrk_entrezgene_mapping"
+pg_restore: finished item 3155 TABLE DATA wrk_entrezgene_bucket0
+pg_restore: launching item 3158 TABLE DATA wrk_entrezgene_mgiset
+pg_restore: finished item 3159 TABLE DATA wrk_entrezgene_mapping
+pg_restore: launching item 3160 TABLE DATA wrk_entrezgene_nomen
+pg_restore: restoring data for table "wrk_entrezgene_mgiset"
+pg_restore: restoring data for table "wrk_entrezgene_nomen"
+pg_restore: finished item 3160 TABLE DATA wrk_entrezgene_nomen
+pg_restore: launching item 3161 TABLE DATA wrk_entrezgene_symatches
+pg_restore: restoring data for table "wrk_entrezgene_symatches"
+pg_restore: finished item 3161 TABLE DATA wrk_entrezgene_symatches
+pg_restore: launching item 3162 TABLE DATA wrk_entrezgene_synonym
+pg_restore: restoring data for table "wrk_entrezgene_synonym"
+pg_restore: finished item 3162 TABLE DATA wrk_entrezgene_synonym
+pg_restore: launching item 3163 TABLE DATA wrk_imsr_alleles
+pg_restore: restoring data for table "wrk_imsr_alleles"
+pg_restore: finished item 3163 TABLE DATA wrk_imsr_alleles
+pg_restore: launching item 3164 TABLE DATA wrk_imsr_genes
+pg_restore: restoring data for table "wrk_imsr_genes"
+pg_restore: finished item 3164 TABLE DATA wrk_imsr_genes
+pg_restore: launching item 3165 TABLE DATA wrk_imsr_strains
+pg_restore: restoring data for table "wrk_imsr_strains"
+pg_restore: finished item 3165 TABLE DATA wrk_imsr_strains
+pg_restore: launching item 3166 TABLE DATA wrk_imsr_synonym
+pg_restore: restoring data for table "wrk_imsr_synonym"
+pg_restore: finished item 3166 TABLE DATA wrk_imsr_synonym
+pg_restore: launching item 2752 INDEX app_filesprocessed_idx_createdby
+pg_restore: creating INDEX app_filesprocessed_idx_createdby
+pg_restore: finished item 2752 INDEX app_filesprocessed_idx_createdby
+pg_restore: launching item 2753 INDEX app_filesprocessed_idx_file_key
+pg_restore: creating INDEX app_filesprocessed_idx_file_key
+pg_restore: finished item 2753 INDEX app_filesprocessed_idx_file_key
+pg_restore: launching item 2754 INDEX app_filesprocessed_idx_primary
+pg_restore: creating INDEX app_filesprocessed_idx_primary
+pg_restore: finished item 2754 INDEX app_filesprocessed_idx_primary
+pg_restore: launching item 2758 CONSTRAINT app_jobstream_pkey
+pg_restore: creating CONSTRAINT app_jobstream_pkey
+pg_restore: finished item 2758 CONSTRAINT app_jobstream_pkey
+pg_restore: launching item 2755 INDEX app_jobstream_idx_jobstream_key
+pg_restore: creating INDEX app_jobstream_idx_jobstream_key
+pg_restore: finished item 2755 INDEX app_jobstream_idx_jobstream_key
+pg_restore: launching item 2756 INDEX app_jobstream_idx_jobstreamname
+pg_restore: creating INDEX app_jobstream_idx_jobstreamname
+pg_restore: finished item 2756 INDEX app_jobstream_idx_jobstreamname
+pg_restore: launching item 3034 FK CONSTRAINT app_filesprocessed__jobstream_key
+pg_restore: creating FK CONSTRAINT app_filesprocessed__jobstream_key
+pg_restore: finished item 3034 FK CONSTRAINT app_filesprocessed__jobstream_key
+pg_restore: launching item 2750 INDEX app_filesmirrored_idx_file_key
+pg_restore: creating INDEX app_filesmirrored_idx_file_key
+pg_restore: finished item 2750 INDEX app_filesmirrored_idx_file_key
+pg_restore: launching item 2751 INDEX app_filesmirrored_idx_filetype
+pg_restore: creating INDEX app_filesmirrored_idx_filetype
+pg_restore: finished item 2751 INDEX app_filesmirrored_idx_filetype
+pg_restore: launching item 2763 INDEX dp_entrezgene_dbxref_idx_dbxrefid
+pg_restore: creating INDEX dp_entrezgene_dbxref_idx_dbxrefid
+pg_restore: finished item 3158 TABLE DATA wrk_entrezgene_mgiset
+pg_restore: launching item 2764 INDEX dp_entrezgene_dbxref_idx_geneid
+pg_restore: creating INDEX dp_entrezgene_dbxref_idx_geneid
+pg_restore: finished item 2763 INDEX dp_entrezgene_dbxref_idx_dbxrefid
+pg_restore: launching item 2765 INDEX dp_entrezgene_dbxref_idx_taxid
+pg_restore: creating INDEX dp_entrezgene_dbxref_idx_taxid
+pg_restore: finished item 2764 INDEX dp_entrezgene_dbxref_idx_geneid
+pg_restore: launching item 2775 CONSTRAINT dp_entrezgene_info_pkey
+pg_restore: creating CONSTRAINT dp_entrezgene_info_pkey
+pg_restore: finished item 2765 INDEX dp_entrezgene_dbxref_idx_taxid
+pg_restore: launching item 2766 INDEX dp_entrezgene_history_idx_geneid
+pg_restore: creating INDEX dp_entrezgene_history_idx_geneid
+pg_restore: finished item 2775 CONSTRAINT dp_entrezgene_info_pkey
+pg_restore: launching item 2769 INDEX dp_entrezgene_info_idx_geneid
+pg_restore: creating INDEX dp_entrezgene_info_idx_geneid
+pg_restore: finished item 2769 INDEX dp_entrezgene_info_idx_geneid
+pg_restore: launching item 2770 INDEX dp_entrezgene_info_idx_locustag
+pg_restore: creating INDEX dp_entrezgene_info_idx_locustag
+pg_restore: finished item 2766 INDEX dp_entrezgene_history_idx_geneid
+pg_restore: launching item 2771 INDEX dp_entrezgene_info_idx_status
+pg_restore: creating INDEX dp_entrezgene_info_idx_status
+pg_restore: finished item 2770 INDEX dp_entrezgene_info_idx_locustag
+pg_restore: launching item 2772 INDEX dp_entrezgene_info_idx_symbol
+pg_restore: creating INDEX dp_entrezgene_info_idx_symbol
+pg_restore: finished item 2771 INDEX dp_entrezgene_info_idx_status
+pg_restore: launching item 2773 INDEX dp_entrezgene_info_idx_taxid
+pg_restore: creating INDEX dp_entrezgene_info_idx_taxid
+pg_restore: finished item 3100 TABLE DATA mgi_association
+pg_restore: launching item 2767 INDEX dp_entrezgene_history_idx_oldgeneid
+pg_restore: creating INDEX dp_entrezgene_history_idx_oldgeneid
+pg_restore: finished item 2773 INDEX dp_entrezgene_info_idx_taxid
+pg_restore: launching item 2768 INDEX dp_entrezgene_history_idx_taxid
+pg_restore: creating INDEX dp_entrezgene_history_idx_taxid
+pg_restore: finished item 2772 INDEX dp_entrezgene_info_idx_symbol
+pg_restore: launching item 3035 FK CONSTRAINT dp_entrezgene_dbxref_geneid
+pg_restore: creating FK CONSTRAINT dp_entrezgene_dbxref_geneid
+pg_restore: finished item 3035 FK CONSTRAINT dp_entrezgene_dbxref_geneid
+pg_restore: launching item 2776 INDEX dp_entrezgene_mim_idx_geneid
+pg_restore: creating INDEX dp_entrezgene_mim_idx_geneid
+pg_restore: finished item 2776 INDEX dp_entrezgene_mim_idx_geneid
+pg_restore: launching item 2777 INDEX dp_entrezgene_mim_idx_mimid
+pg_restore: creating INDEX dp_entrezgene_mim_idx_mimid
+pg_restore: finished item 2768 INDEX dp_entrezgene_history_idx_taxid
+pg_restore: launching item 2785 INDEX dp_entrezgene_synonym_idx_geneid
+pg_restore: finished item 2777 INDEX dp_entrezgene_mim_idx_mimid
+pg_restore: launching item 2786 INDEX dp_entrezgene_synonym_idx_taxid
+pg_restore: creating INDEX dp_entrezgene_synonym_idx_geneid
+pg_restore: creating INDEX dp_entrezgene_synonym_idx_taxid
+pg_restore: finished item 3157 TABLE DATA wrk_entrezgene_egset
+pg_restore: launching item 2787 INDEX dp_homologene_idx_groupid
+pg_restore: finished item 2767 INDEX dp_entrezgene_history_idx_oldgeneid
+pg_restore: launching item 2788 INDEX dp_homologene_idx_symbol
+pg_restore: creating INDEX dp_homologene_idx_groupid
+pg_restore: creating INDEX dp_homologene_idx_symbol
+pg_restore: finished item 2786 INDEX dp_entrezgene_synonym_idx_taxid
+pg_restore: launching item 2794 CONSTRAINT dp_mgc_clones_pkey
+pg_restore: creating CONSTRAINT dp_mgc_clones_pkey
+pg_restore: finished item 2794 CONSTRAINT dp_mgc_clones_pkey
+pg_restore: launching item 2789 INDEX dp_mgc_clones_idx_imageid
+pg_restore: creating INDEX dp_mgc_clones_idx_imageid
+pg_restore: finished item 2785 INDEX dp_entrezgene_synonym_idx_geneid
+pg_restore: launching item 3038 FK CONSTRAINT dp_entrezgene_synonym_geneid
+pg_restore: creating FK CONSTRAINT dp_entrezgene_synonym_geneid
+pg_restore: finished item 2789 INDEX dp_mgc_clones_idx_imageid
+pg_restore: launching item 2790 INDEX dp_mgc_clones_idx_mgcclone_key
+pg_restore: creating INDEX dp_mgc_clones_idx_mgcclone_key
+pg_restore: finished item 2790 INDEX dp_mgc_clones_idx_mgcclone_key
+pg_restore: launching item 2791 INDEX dp_mgc_clones_idx_mgcid
+pg_restore: creating INDEX dp_mgc_clones_idx_mgcid
+pg_restore: finished item 2791 INDEX dp_mgc_clones_idx_mgcid
+pg_restore: launching item 2792 INDEX dp_mgc_clones_idx_seqid
+pg_restore: creating INDEX dp_mgc_clones_idx_seqid
+pg_restore: finished item 2787 INDEX dp_homologene_idx_groupid
+pg_restore: launching item 2781 INDEX dp_entrezgene_refseq_idx_geneid
+pg_restore: creating INDEX dp_entrezgene_refseq_idx_geneid
+pg_restore: finished item 3038 FK CONSTRAINT dp_entrezgene_synonym_geneid
+pg_restore: launching item 2782 INDEX dp_entrezgene_refseq_idx_genomic
+pg_restore: finished item 2792 INDEX dp_mgc_clones_idx_seqid
+pg_restore: launching item 3039 FK CONSTRAINT dp_mgc_clones__jobstream_key
+pg_restore: creating INDEX dp_entrezgene_refseq_idx_genomic
+pg_restore: creating FK CONSTRAINT dp_mgc_clones__jobstream_key
+pg_restore: finished item 3039 FK CONSTRAINT dp_mgc_clones__jobstream_key
+pg_restore: launching item 2783 INDEX dp_entrezgene_refseq_idx_rna
+pg_restore: creating INDEX dp_entrezgene_refseq_idx_rna
+pg_restore: finished item 2788 INDEX dp_homologene_idx_symbol
+pg_restore: launching item 2784 INDEX dp_entrezgene_refseq_idx_taxid
+pg_restore: creating INDEX dp_entrezgene_refseq_idx_taxid
+pg_restore: finished item 2784 INDEX dp_entrezgene_refseq_idx_taxid
+pg_restore: launching item 2778 INDEX dp_entrezgene_pubmed_idx_geneid
+pg_restore: creating INDEX dp_entrezgene_pubmed_idx_geneid
+pg_restore: finished item 2781 INDEX dp_entrezgene_refseq_idx_geneid
+pg_restore: launching item 2779 INDEX dp_entrezgene_pubmed_idx_pubmedid
+pg_restore: creating INDEX dp_entrezgene_pubmed_idx_pubmedid
+pg_restore: finished item 2783 INDEX dp_entrezgene_refseq_idx_rna
+pg_restore: launching item 2780 INDEX dp_entrezgene_pubmed_idx_taxid
+pg_restore: creating INDEX dp_entrezgene_pubmed_idx_taxid
+pg_restore: finished item 2782 INDEX dp_entrezgene_refseq_idx_genomic
+pg_restore: launching item 3037 FK CONSTRAINT dp_entrezgene_refseq_geneid
+pg_restore: creating FK CONSTRAINT dp_entrezgene_refseq_geneid
+pg_restore: finished item 3037 FK CONSTRAINT dp_entrezgene_refseq_geneid
+pg_restore: launching item 2799 CONSTRAINT dp_rpci_clones_pkey
+pg_restore: creating CONSTRAINT dp_rpci_clones_pkey
+pg_restore: finished item 2799 CONSTRAINT dp_rpci_clones_pkey
+pg_restore: launching item 2795 INDEX dp_rpci_clones_idx_cloneid
+pg_restore: creating INDEX dp_rpci_clones_idx_cloneid
+pg_restore: finished item 2795 INDEX dp_rpci_clones_idx_cloneid
+pg_restore: launching item 2796 INDEX dp_rpci_clones_idx_rpciclone_key
+pg_restore: creating INDEX dp_rpci_clones_idx_rpciclone_key
+pg_restore: finished item 2780 INDEX dp_entrezgene_pubmed_idx_taxid
+pg_restore: launching item 2797 INDEX dp_rpci_clones_idx_seqid
+pg_restore: creating INDEX dp_rpci_clones_idx_seqid
+pg_restore: finished item 2797 INDEX dp_rpci_clones_idx_seqid
+pg_restore: launching item 2803 CONSTRAINT gb_est_reload_pkey
+pg_restore: finished item 2796 INDEX dp_rpci_clones_idx_rpciclone_key
+pg_restore: launching item 3040 FK CONSTRAINT dp_rpci_clones__jobstream_key
+pg_restore: creating CONSTRAINT gb_est_reload_pkey
+pg_restore: creating FK CONSTRAINT dp_rpci_clones__jobstream_key
+pg_restore: finished item 3040 FK CONSTRAINT dp_rpci_clones__jobstream_key
+pg_restore: launching item 2818 CONSTRAINT mgi_clonelibrary_pkey
+pg_restore: creating CONSTRAINT mgi_clonelibrary_pkey
+pg_restore: finished item 2818 CONSTRAINT mgi_clonelibrary_pkey
+pg_restore: launching item 2813 INDEX mgi_clonelibrary_idx_badname
+pg_restore: creating INDEX mgi_clonelibrary_idx_badname
+pg_restore: finished item 2813 INDEX mgi_clonelibrary_idx_badname
+pg_restore: launching item 2814 INDEX mgi_clonelibrary_idx_cloneset
+pg_restore: creating INDEX mgi_clonelibrary_idx_cloneset
+pg_restore: finished item 2814 INDEX mgi_clonelibrary_idx_cloneset
+pg_restore: launching item 2815 INDEX mgi_clonelibrary_idx_goodname
+pg_restore: creating INDEX mgi_clonelibrary_idx_goodname
+pg_restore: finished item 2815 INDEX mgi_clonelibrary_idx_goodname
+pg_restore: launching item 2816 INDEX mgi_clonelibrary_idx_primary
+pg_restore: creating INDEX mgi_clonelibrary_idx_primary
+pg_restore: finished item 2816 INDEX mgi_clonelibrary_idx_primary
+pg_restore: launching item 2759 INDEX dp_entrezgene_accession_idx_geneid
+pg_restore: creating INDEX dp_entrezgene_accession_idx_geneid
+pg_restore: finished item 2778 INDEX dp_entrezgene_pubmed_idx_geneid
+pg_restore: launching item 2760 INDEX dp_entrezgene_accession_idx_genomic
+pg_restore: creating INDEX dp_entrezgene_accession_idx_genomic
+pg_restore: finished item 2803 CONSTRAINT gb_est_reload_pkey
+pg_restore: launching item 2800 INDEX gb_est_reload_idx_primaryseqid
+pg_restore: creating INDEX gb_est_reload_idx_primaryseqid
+pg_restore: finished item 2779 INDEX dp_entrezgene_pubmed_idx_pubmedid
+pg_restore: launching item 3036 FK CONSTRAINT dp_entrezgene_pubmed_geneid
+pg_restore: creating FK CONSTRAINT dp_entrezgene_pubmed_geneid
+pg_restore: finished item 2800 INDEX gb_est_reload_idx_primaryseqid
+pg_restore: launching item 2801 INDEX gb_est_reload_idx_reload_key
+pg_restore: creating INDEX gb_est_reload_idx_reload_key
+pg_restore: finished item 3036 FK CONSTRAINT dp_entrezgene_pubmed_geneid
+pg_restore: launching item 2761 INDEX dp_entrezgene_accession_idx_rna
+pg_restore: creating INDEX dp_entrezgene_accession_idx_rna
+pg_restore: finished item 2801 INDEX gb_est_reload_idx_reload_key
+pg_restore: launching item 2762 INDEX dp_entrezgene_accession_idx_taxid
+pg_restore: creating INDEX dp_entrezgene_accession_idx_taxid
+pg_restore: finished item 2759 INDEX dp_entrezgene_accession_idx_geneid
+pg_restore: launching item 2823 CONSTRAINT mgi_cloneload_accession_pkey
+pg_restore: creating CONSTRAINT mgi_cloneload_accession_pkey
+pg_restore: finished item 2823 CONSTRAINT mgi_cloneload_accession_pkey
+pg_restore: launching item 2819 INDEX mgi_cloneload_accession_idx_accid
+pg_restore: creating INDEX mgi_cloneload_accession_idx_accid
+pg_restore: finished item 2760 INDEX dp_entrezgene_accession_idx_genomic
+pg_restore: launching item 2820 INDEX mgi_cloneload_accession_idx_clone_key
+pg_restore: creating INDEX mgi_cloneload_accession_idx_clone_key
+pg_restore: finished item 2820 INDEX mgi_cloneload_accession_idx_clone_key
+pg_restore: launching item 2821 INDEX mgi_cloneload_accession_idx_cloneaccession_key
+pg_restore: creating INDEX mgi_cloneload_accession_idx_cloneaccession_key
+pg_restore: finished item 2762 INDEX dp_entrezgene_accession_idx_taxid
+pg_restore: launching item 2806 CONSTRAINT img_mgi_image_pkey
+pg_restore: creating CONSTRAINT img_mgi_image_pkey
+pg_restore: finished item 2819 INDEX mgi_cloneload_accession_idx_accid
+pg_restore: launching item 2833 CONSTRAINT mgi_columns_pkey
+pg_restore: finished item 2821 INDEX mgi_cloneload_accession_idx_cloneaccession_key
+pg_restore: launching item 3042 FK CONSTRAINT mgi_cloneload_accession__jobstream_key
+pg_restore: creating CONSTRAINT mgi_columns_pkey
+pg_restore: creating FK CONSTRAINT mgi_cloneload_accession__jobstream_key
+pg_restore: finished item 2833 CONSTRAINT mgi_columns_pkey
+pg_restore: launching item 2829 INDEX mgi_columns_index_creation_date
+pg_restore: creating INDEX mgi_columns_index_creation_date
+pg_restore: finished item 2829 INDEX mgi_columns_index_creation_date
+pg_restore: launching item 2830 INDEX mgi_columns_index_modification_date
+pg_restore: creating INDEX mgi_columns_index_modification_date
+pg_restore: finished item 2830 INDEX mgi_columns_index_modification_date
+pg_restore: launching item 2831 INDEX mgi_columns_index_table_column
+pg_restore: creating INDEX mgi_columns_index_table_column
+pg_restore: finished item 2831 INDEX mgi_columns_index_table_column
+pg_restore: launching item 2843 CONSTRAINT mgi_dbinfo_pkey
+pg_restore: creating CONSTRAINT mgi_dbinfo_pkey
+pg_restore: finished item 2843 CONSTRAINT mgi_dbinfo_pkey
+pg_restore: launching item 2841 CONSTRAINT mgi_tables_pkey
+pg_restore: creating CONSTRAINT mgi_tables_pkey
+pg_restore: finished item 2841 CONSTRAINT mgi_tables_pkey
+pg_restore: launching item 2837 INDEX mgi_tables_index_creation_date
+pg_restore: creating INDEX mgi_tables_index_creation_date
+pg_restore: finished item 2837 INDEX mgi_tables_index_creation_date
+pg_restore: launching item 2838 INDEX mgi_tables_index_modification_date
+pg_restore: creating INDEX mgi_tables_index_modification_date
+pg_restore: finished item 2838 INDEX mgi_tables_index_modification_date
+pg_restore: launching item 2839 INDEX mgi_tables_index_table_name
+pg_restore: creating INDEX mgi_tables_index_table_name
+pg_restore: finished item 2839 INDEX mgi_tables_index_table_name
+pg_restore: launching item 3045 FK CONSTRAINT mgi_columns_table_name
+pg_restore: creating FK CONSTRAINT mgi_columns_table_name
+pg_restore: finished item 3045 FK CONSTRAINT mgi_columns_table_name
+pg_restore: launching item 2834 INDEX mgi_imsr_idx_mgiimsr_state
+pg_restore: creating INDEX mgi_imsr_idx_mgiimsr_state
+pg_restore: finished item 2834 INDEX mgi_imsr_idx_mgiimsr_state
+pg_restore: launching item 2835 INDEX mgi_imsr_idx_mgiimsr_stockdesignation
+pg_restore: creating INDEX mgi_imsr_idx_mgiimsr_stockdesignation
+pg_restore: finished item 2835 INDEX mgi_imsr_idx_mgiimsr_stockdesignation
+pg_restore: launching item 2836 INDEX mgi_imsr_idx_mgiimsr_stockid
+pg_restore: creating INDEX mgi_imsr_idx_mgiimsr_stockid
+pg_restore: finished item 2836 INDEX mgi_imsr_idx_mgiimsr_stockid
+pg_restore: launching item 2853 CONSTRAINT qc_assocload_assoc_discrep_pkey
+pg_restore: finished item 3042 FK CONSTRAINT mgi_cloneload_accession__jobstream_key
+pg_restore: launching item 2858 CONSTRAINT qc_assocload_target_discrep_pkey
+pg_restore: creating CONSTRAINT qc_assocload_assoc_discrep_pkey
+pg_restore: finished item 2853 CONSTRAINT qc_assocload_assoc_discrep_pkey
+pg_restore: launching item 2847 INDEX qc_assocload_assoc_discrep_idx_mgitype_key
+pg_restore: creating CONSTRAINT qc_assocload_target_discrep_pkey
+pg_restore: finished item 2858 CONSTRAINT qc_assocload_target_discrep_pkey
+pg_restore: launching item 2848 INDEX qc_assocload_assoc_discrep_idx_object_key
+pg_restore: creating INDEX qc_assocload_assoc_discrep_idx_mgitype_key
+pg_restore: finished item 2847 INDEX qc_assocload_assoc_discrep_idx_mgitype_key
+pg_restore: launching item 2849 INDEX qc_assocload_assoc_discrep_idx_primary
+pg_restore: creating INDEX qc_assocload_assoc_discrep_idx_object_key
+pg_restore: finished item 2848 INDEX qc_assocload_assoc_discrep_idx_object_key
+pg_restore: launching item 2850 INDEX qc_assocload_assoc_discrep_idx_tgtmgitype_key
+pg_restore: creating INDEX qc_assocload_assoc_discrep_idx_primary
+pg_restore: finished item 2849 INDEX qc_assocload_assoc_discrep_idx_primary
+pg_restore: launching item 2851 INDEX qc_assocload_assoc_discrep_idx_tgtobject_key
+pg_restore: creating INDEX qc_assocload_assoc_discrep_idx_tgtmgitype_key
+pg_restore: finished item 2850 INDEX qc_assocload_assoc_discrep_idx_tgtmgitype_key
+pg_restore: launching item 2854 INDEX qc_assocload_target_discrep_idx_mgitype_key
+pg_restore: creating INDEX qc_assocload_assoc_discrep_idx_tgtobject_key
+pg_restore: finished item 2851 INDEX qc_assocload_assoc_discrep_idx_tgtobject_key
+pg_restore: launching item 3046 FK CONSTRAINT qc_assocload_assoc_discrep__jobstream_key
+pg_restore: creating INDEX qc_assocload_target_discrep_idx_mgitype_key
+pg_restore: finished item 2854 INDEX qc_assocload_target_discrep_idx_mgitype_key
+pg_restore: launching item 2855 INDEX qc_assocload_target_discrep_idx_object_key
+pg_restore: creating FK CONSTRAINT qc_assocload_assoc_discrep__jobstream_key
+pg_restore: creating INDEX qc_assocload_target_discrep_idx_object_key
+pg_restore: finished item 3046 FK CONSTRAINT qc_assocload_assoc_discrep__jobstream_key
+pg_restore: launching item 2856 INDEX qc_assocload_target_discrep_idx_primary
+pg_restore: finished item 2855 INDEX qc_assocload_target_discrep_idx_object_key
+pg_restore: launching item 2955 CONSTRAINT qc_cdnaload_cloneid_discrep_pkey
+pg_restore: creating INDEX qc_assocload_target_discrep_idx_primary
+pg_restore: creating CONSTRAINT qc_cdnaload_cloneid_discrep_pkey
+pg_restore: finished item 2856 INDEX qc_assocload_target_discrep_idx_primary
+pg_restore: launching item 3047 FK CONSTRAINT qc_assocload_target_discrep__jobstream_key
+pg_restore: finished item 2955 CONSTRAINT qc_cdnaload_cloneid_discrep_pkey
+pg_restore: launching item 2952 INDEX qc_cdnaload_cloneid_discrep_idx_clonenum
+pg_restore: creating FK CONSTRAINT qc_assocload_target_discrep__jobstream_key
+pg_restore: creating INDEX qc_cdnaload_cloneid_discrep_idx_clonenum
+pg_restore: finished item 2952 INDEX qc_cdnaload_cloneid_discrep_idx_clonenum
+pg_restore: launching item 2953 INDEX qc_cdnaload_cloneid_discrep_idx_primary
+pg_restore: finished item 3047 FK CONSTRAINT qc_assocload_target_discrep__jobstream_key
+pg_restore: launching item 2846 CONSTRAINT nia_parent_daughter_clones_pkey
+pg_restore: creating INDEX qc_cdnaload_cloneid_discrep_idx_primary
+pg_restore: creating CONSTRAINT nia_parent_daughter_clones_pkey
+pg_restore: finished item 2953 INDEX qc_cdnaload_cloneid_discrep_idx_primary
+pg_restore: launching item 3075 FK CONSTRAINT qc_cdnaload_cloneid_discrep__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_cdnaload_cloneid_discrep__jobstream_key
+pg_restore: finished item 3075 FK CONSTRAINT qc_cdnaload_cloneid_discrep__jobstream_key
+pg_restore: launching item 2958 CONSTRAINT qc_cdnaload_cloneid_missing_pkey
+pg_restore: creating CONSTRAINT qc_cdnaload_cloneid_missing_pkey
+pg_restore: finished item 2958 CONSTRAINT qc_cdnaload_cloneid_missing_pkey
+pg_restore: launching item 2956 INDEX qc_cdnaload_cloneid_missing_idx_primary
+pg_restore: finished item 2846 CONSTRAINT nia_parent_daughter_clones_pkey
+pg_restore: launching item 2844 INDEX nia_parent_daughter_clones_idx_primary
+pg_restore: creating INDEX qc_cdnaload_cloneid_missing_idx_primary
+pg_restore: creating INDEX nia_parent_daughter_clones_idx_primary
+pg_restore: finished item 2956 INDEX qc_cdnaload_cloneid_missing_idx_primary
+pg_restore: launching item 3076 FK CONSTRAINT qc_cdnaload_cloneid_missing__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_cdnaload_cloneid_missing__jobstream_key
+pg_restore: finished item 2844 INDEX nia_parent_daughter_clones_idx_primary
+pg_restore: launching item 2961 CONSTRAINT qc_cdnaload_cloneid_unknown_pkey
+pg_restore: finished item 3076 FK CONSTRAINT qc_cdnaload_cloneid_missing__jobstream_key
+pg_restore: launching item 2965 CONSTRAINT qc_cdnaload_library_discrep_pkey
+pg_restore: creating CONSTRAINT qc_cdnaload_cloneid_unknown_pkey
+pg_restore: finished item 2961 CONSTRAINT qc_cdnaload_cloneid_unknown_pkey
+pg_restore: launching item 2959 INDEX qc_cdnaload_cloneid_unknown_idx_primary
+pg_restore: creating CONSTRAINT qc_cdnaload_library_discrep_pkey
+pg_restore: finished item 2965 CONSTRAINT qc_cdnaload_library_discrep_pkey
+pg_restore: launching item 2962 INDEX qc_cdnaload_library_discrep_idx_clonenum
+pg_restore: creating INDEX qc_cdnaload_cloneid_unknown_idx_primary
+pg_restore: finished item 2959 INDEX qc_cdnaload_cloneid_unknown_idx_primary
+pg_restore: launching item 3077 FK CONSTRAINT qc_cdnaload_cloneid_unknown__jobstream_key
+pg_restore: creating INDEX qc_cdnaload_library_discrep_idx_clonenum
+pg_restore: finished item 2962 INDEX qc_cdnaload_library_discrep_idx_clonenum
+pg_restore: launching item 2963 INDEX qc_cdnaload_library_discrep_idx_primary
+pg_restore: creating FK CONSTRAINT qc_cdnaload_cloneid_unknown__jobstream_key
+pg_restore: finished item 3077 FK CONSTRAINT qc_cdnaload_cloneid_unknown__jobstream_key
+pg_restore: launching item 2968 CONSTRAINT qc_cdnaload_library_missing_pkey
+pg_restore: creating INDEX qc_cdnaload_library_discrep_idx_primary
+pg_restore: finished item 2963 INDEX qc_cdnaload_library_discrep_idx_primary
+pg_restore: launching item 3078 FK CONSTRAINT qc_cdnaload_library_discrep__jobstream_key
+pg_restore: creating CONSTRAINT qc_cdnaload_library_missing_pkey
+pg_restore: finished item 2968 CONSTRAINT qc_cdnaload_library_missing_pkey
+pg_restore: launching item 2966 INDEX qc_cdnaload_library_missing_idx_primary
+pg_restore: creating FK CONSTRAINT qc_cdnaload_library_discrep__jobstream_key
+pg_restore: finished item 3078 FK CONSTRAINT qc_cdnaload_library_discrep__jobstream_key
+pg_restore: launching item 2971 CONSTRAINT qc_cdnaload_library_no_parent_pkey
+pg_restore: creating INDEX qc_cdnaload_library_missing_idx_primary
+pg_restore: creating CONSTRAINT qc_cdnaload_library_no_parent_pkey
+pg_restore: finished item 2966 INDEX qc_cdnaload_library_missing_idx_primary
+pg_restore: launching item 3079 FK CONSTRAINT qc_cdnaload_library_missing__jobstream_key
+pg_restore: finished item 2971 CONSTRAINT qc_cdnaload_library_no_parent_pkey
+pg_restore: launching item 2969 INDEX qc_cdnaload_library_no_parent_idx_primary
+pg_restore: creating FK CONSTRAINT qc_cdnaload_library_missing__jobstream_key
+pg_restore: creating INDEX qc_cdnaload_library_no_parent_idx_primary
+pg_restore: finished item 3079 FK CONSTRAINT qc_cdnaload_library_missing__jobstream_key
+pg_restore: launching item 2864 CONSTRAINT qc_cloneload_dupclone_pkey
+pg_restore: finished item 2969 INDEX qc_cdnaload_library_no_parent_idx_primary
+pg_restore: launching item 3080 FK CONSTRAINT qc_cdnaload_library_no_parent__jobstream_key
+pg_restore: creating CONSTRAINT qc_cloneload_dupclone_pkey
+pg_restore: creating FK CONSTRAINT qc_cdnaload_library_no_parent__jobstream_key
+pg_restore: finished item 2864 CONSTRAINT qc_cloneload_dupclone_pkey
+pg_restore: launching item 2859 INDEX qc_cloneload_dupclone_idx_accid
+pg_restore: finished item 3080 FK CONSTRAINT qc_cdnaload_library_no_parent__jobstream_key
+pg_restore: launching item 2860 INDEX qc_cloneload_dupclone_idx_clone_key
+pg_restore: creating INDEX qc_cloneload_dupclone_idx_accid
+pg_restore: creating INDEX qc_cloneload_dupclone_idx_clone_key
+pg_restore: finished item 2859 INDEX qc_cloneload_dupclone_idx_accid
+pg_restore: launching item 2861 INDEX qc_cloneload_dupclone_idx_cloneid
+pg_restore: finished item 2860 INDEX qc_cloneload_dupclone_idx_clone_key
+pg_restore: launching item 2862 INDEX qc_cloneload_dupclone_idx_primary
+pg_restore: creating INDEX qc_cloneload_dupclone_idx_cloneid
+pg_restore: creating INDEX qc_cloneload_dupclone_idx_primary
+pg_restore: finished item 2861 INDEX qc_cloneload_dupclone_idx_cloneid
+pg_restore: launching item 2870 CONSTRAINT qc_cloneload_dupseq_pkey
+pg_restore: finished item 2862 INDEX qc_cloneload_dupclone_idx_primary
+pg_restore: launching item 3049 FK CONSTRAINT qc_cloneload_dupclone__jobstream_key
+pg_restore: creating CONSTRAINT qc_cloneload_dupseq_pkey
+pg_restore: creating FK CONSTRAINT qc_cloneload_dupclone__jobstream_key
+pg_restore: finished item 2870 CONSTRAINT qc_cloneload_dupseq_pkey
+pg_restore: launching item 2865 INDEX qc_cloneload_dupseq_idx_accid
+pg_restore: finished item 3049 FK CONSTRAINT qc_cloneload_dupclone__jobstream_key
+pg_restore: launching item 2866 INDEX qc_cloneload_dupseq_idx_clone_key
+pg_restore: creating INDEX qc_cloneload_dupseq_idx_accid
+pg_restore: creating INDEX qc_cloneload_dupseq_idx_clone_key
+pg_restore: finished item 2865 INDEX qc_cloneload_dupseq_idx_accid
+pg_restore: launching item 2867 INDEX qc_cloneload_dupseq_idx_primary
+pg_restore: finished item 2866 INDEX qc_cloneload_dupseq_idx_clone_key
+pg_restore: launching item 2868 INDEX qc_cloneload_dupseq_idx_seqid
+pg_restore: creating INDEX qc_cloneload_dupseq_idx_primary
+pg_restore: creating INDEX qc_cloneload_dupseq_idx_seqid
+pg_restore: finished item 2868 INDEX qc_cloneload_dupseq_idx_seqid
+pg_restore: launching item 2876 CONSTRAINT qc_cloneload_multiclone_pkey
+pg_restore: finished item 2867 INDEX qc_cloneload_dupseq_idx_primary
+pg_restore: launching item 3050 FK CONSTRAINT qc_cloneload_dupseq__jobstream_key
+pg_restore: creating CONSTRAINT qc_cloneload_multiclone_pkeypg_restore: 
+creating FK CONSTRAINT qc_cloneload_dupseq__jobstream_key
+pg_restore: finished item 2876 CONSTRAINT qc_cloneload_multiclone_pkey
+pg_restore: launching item 2871 INDEX qc_cloneload_multiclone_idx_accid
+pg_restore: creating INDEX qc_cloneload_multiclone_idx_accid
+pg_restore: finished item 3050 FK CONSTRAINT qc_cloneload_dupseq__jobstream_key
+pg_restore: launching item 2872 INDEX qc_cloneload_multiclone_idx_clone_key
+pg_restore: finished item 2871 INDEX qc_cloneload_multiclone_idx_accid
+pg_restore: launching item 2873 INDEX qc_cloneload_multiclone_idx_mgiid
+pg_restore: creating INDEX qc_cloneload_multiclone_idx_clone_key
+pg_restore: creating INDEX qc_cloneload_multiclone_idx_mgiid
+pg_restore: finished item 2872 INDEX qc_cloneload_multiclone_idx_clone_key
+pg_restore: launching item 2874 INDEX qc_cloneload_multiclone_idx_primary
+pg_restore: finished item 2873 INDEX qc_cloneload_multiclone_idx_mgiid
+pg_restore: launching item 2881 CONSTRAINT qc_cloneload_nonclone_pkey
+pg_restore: creating INDEX qc_cloneload_multiclone_idx_primary
+pg_restore: creating CONSTRAINT qc_cloneload_nonclone_pkey
+pg_restore: finished item 2874 INDEX qc_cloneload_multiclone_idx_primary
+pg_restore: launching item 3052 FK CONSTRAINT qc_cloneload_multiclone__jobstream_key
+pg_restore: finished item 2881 CONSTRAINT qc_cloneload_nonclone_pkey
+pg_restore: launching item 2877 INDEX qc_cloneload_nonclone_idx_clone_key
+pg_restore: creating FK CONSTRAINT qc_cloneload_multiclone__jobstream_key
+pg_restore: creating INDEX qc_cloneload_nonclone_idx_clone_key
+pg_restore: finished item 2877 INDEX qc_cloneload_nonclone_idx_clone_key
+pg_restore: launching item 2878 INDEX qc_cloneload_nonclone_idx_mgiid
+pg_restore: creating INDEX qc_cloneload_nonclone_idx_mgiid
+pg_restore: finished item 2878 INDEX qc_cloneload_nonclone_idx_mgiid
+pg_restore: launching item 2879 INDEX qc_cloneload_nonclone_idx_primary
+pg_restore: finished item 3052 FK CONSTRAINT qc_cloneload_multiclone__jobstream_key
+pg_restore: launching item 2887 CONSTRAINT qc_cloneload_seqonly_pkey
+pg_restore: creating INDEX qc_cloneload_nonclone_idx_primary
+pg_restore: creating CONSTRAINT qc_cloneload_seqonly_pkey
+pg_restore: finished item 2879 INDEX qc_cloneload_nonclone_idx_primary
+pg_restore: launching item 3054 FK CONSTRAINT qc_cloneload_nonclone__jobstream_key
+pg_restore: finished item 2887 CONSTRAINT qc_cloneload_seqonly_pkey
+pg_restore: launching item 2882 INDEX qc_cloneload_seqonly_idx_clone_key
+pg_restore: creating FK CONSTRAINT qc_cloneload_nonclone__jobstream_key
+pg_restore: creating INDEX qc_cloneload_seqonly_idx_clone_key
+pg_restore: finished item 2882 INDEX qc_cloneload_seqonly_idx_clone_key
+pg_restore: launching item 2883 INDEX qc_cloneload_seqonly_idx_mgiid
+pg_restore: finished item 3054 FK CONSTRAINT qc_cloneload_nonclone__jobstream_key
+pg_restore: launching item 2884 INDEX qc_cloneload_seqonly_idx_primary
+pg_restore: creating INDEX qc_cloneload_seqonly_idx_mgiid
+pg_restore: creating INDEX qc_cloneload_seqonly_idx_primary
+pg_restore: finished item 2883 INDEX qc_cloneload_seqonly_idx_mgiid
+pg_restore: launching item 2885 INDEX qc_cloneload_seqonly_idx_seqid
+pg_restore: finished item 2884 INDEX qc_cloneload_seqonly_idx_primary
+pg_restore: launching item 2891 CONSTRAINT qc_mgcload_image_missing_pkey
+pg_restore: creating INDEX qc_cloneload_seqonly_idx_seqid
+pg_restore: creating CONSTRAINT qc_mgcload_image_missing_pkey
+pg_restore: finished item 2885 INDEX qc_cloneload_seqonly_idx_seqid
+pg_restore: launching item 3056 FK CONSTRAINT qc_cloneload_seqonly__jobstream_key
+pg_restore: finished item 2891 CONSTRAINT qc_mgcload_image_missing_pkey
+pg_restore: launching item 2888 INDEX qc_mgcload_image_missing_idx_mgcclone_key
+pg_restore: creating FK CONSTRAINT qc_cloneload_seqonly__jobstream_key
+pg_restore: creating INDEX qc_mgcload_image_missing_idx_mgcclone_key
+pg_restore: finished item 3056 FK CONSTRAINT qc_cloneload_seqonly__jobstream_key
+pg_restore: launching item 2889 INDEX qc_mgcload_image_missing_idx_primary
+pg_restore: finished item 2888 INDEX qc_mgcload_image_missing_idx_mgcclone_key
+pg_restore: launching item 2899 CONSTRAINT qc_mgcload_mgc_missing_pkey
+pg_restore: creating INDEX qc_mgcload_image_missing_idx_primary
+pg_restore: creating CONSTRAINT qc_mgcload_mgc_missing_pkey
+pg_restore: finished item 2899 CONSTRAINT qc_mgcload_mgc_missing_pkey
+pg_restore: launching item 2896 INDEX qc_mgcload_mgc_missing_idx_mgcclone_key
+pg_restore: finished item 2889 INDEX qc_mgcload_image_missing_idx_primary
+pg_restore: launching item 3058 FK CONSTRAINT qc_mgcload_image_missing__jobstream_key
+pg_restore: creating INDEX qc_mgcload_mgc_missing_idx_mgcclone_key
+pg_restore: creating FK CONSTRAINT qc_mgcload_image_missing__jobstream_key
+pg_restore: finished item 2896 INDEX qc_mgcload_mgc_missing_idx_mgcclone_key
+pg_restore: launching item 2897 INDEX qc_mgcload_mgc_missing_idx_primary
+pg_restore: finished item 3058 FK CONSTRAINT qc_mgcload_image_missing__jobstream_key
+pg_restore: launching item 2895 CONSTRAINT qc_mgcload_mgc_duplicate_pkey
+pg_restore: creating INDEX qc_mgcload_mgc_missing_idx_primary
+pg_restore: creating CONSTRAINT qc_mgcload_mgc_duplicate_pkey
+pg_restore: finished item 2897 INDEX qc_mgcload_mgc_missing_idx_primary
+pg_restore: launching item 3060 FK CONSTRAINT qc_mgcload_mgc_missing__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_mgcload_mgc_missing__jobstream_key
+pg_restore: finished item 3060 FK CONSTRAINT qc_mgcload_mgc_missing__jobstream_key
+pg_restore: launching item 2907 CONSTRAINT qc_mgcload_sequence_missing_pkey
+pg_restore: creating CONSTRAINT qc_mgcload_sequence_missing_pkey
+pg_restore: finished item 2895 CONSTRAINT qc_mgcload_mgc_duplicate_pkey
+pg_restore: launching item 2892 INDEX qc_mgcload_mgc_duplicate_idx_mgcclone_key
+pg_restore: finished item 2907 CONSTRAINT qc_mgcload_sequence_missing_pkey
+pg_restore: launching item 2893 INDEX qc_mgcload_mgc_duplicate_idx_primary
+pg_restore: creating INDEX qc_mgcload_mgc_duplicate_idx_mgcclone_key
+pg_restore: creating INDEX qc_mgcload_mgc_duplicate_idx_primary
+pg_restore: finished item 2892 INDEX qc_mgcload_mgc_duplicate_idx_mgcclone_key
+pg_restore: launching item 2904 INDEX qc_mgcload_sequence_missing_idx_mgcclone_key
+pg_restore: finished item 2893 INDEX qc_mgcload_mgc_duplicate_idx_primary
+pg_restore: launching item 3059 FK CONSTRAINT qc_mgcload_mgc_duplicate__jobstream_key
+pg_restore: creating INDEX qc_mgcload_sequence_missing_idx_mgcclone_key
+pg_restore: creating FK CONSTRAINT qc_mgcload_mgc_duplicate__jobstream_key
+pg_restore: finished item 2904 INDEX qc_mgcload_sequence_missing_idx_mgcclone_key
+pg_restore: launching item 2905 INDEX qc_mgcload_sequence_missing_idx_primary
+pg_restore: creating INDEX qc_mgcload_sequence_missing_idx_primary
+pg_restore: finished item 2905 INDEX qc_mgcload_sequence_missing_idx_primary
+pg_restore: launching item 2903 CONSTRAINT qc_mgcload_sequence_duplicate_pkey
+pg_restore: finished item 3059 FK CONSTRAINT qc_mgcload_mgc_duplicate__jobstream_key
+pg_restore: launching item 3062 FK CONSTRAINT qc_mgcload_sequence_missing__jobstream_key
+pg_restore: creating CONSTRAINT qc_mgcload_sequence_duplicate_pkey
+pg_restore: creating FK CONSTRAINT qc_mgcload_sequence_missing__jobstream_key
+pg_restore: finished item 3062 FK CONSTRAINT qc_mgcload_sequence_missing__jobstream_key
+pg_restore: launching item 2828 CONSTRAINT mgi_cloneload_clone_pkey
+pg_restore: finished item 2903 CONSTRAINT qc_mgcload_sequence_duplicate_pkey
+pg_restore: launching item 2900 INDEX qc_mgcload_sequence_duplicate_idx_mgcclone_key
+pg_restore: creating CONSTRAINT mgi_cloneload_clone_pkey
+pg_restore: creating INDEX qc_mgcload_sequence_duplicate_idx_mgcclone_key
+pg_restore: finished item 2900 INDEX qc_mgcload_sequence_duplicate_idx_mgcclone_key
+pg_restore: launching item 2901 INDEX qc_mgcload_sequence_duplicate_idx_primary
+pg_restore: creating INDEX qc_mgcload_sequence_duplicate_idx_primary
+pg_restore: finished item 2901 INDEX qc_mgcload_sequence_duplicate_idx_primary
+pg_restore: launching item 3061 FK CONSTRAINT qc_mgcload_sequence_duplicate__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_mgcload_sequence_duplicate__jobstream_key
+pg_restore: finished item 3061 FK CONSTRAINT qc_mgcload_sequence_duplicate__jobstream_key
+pg_restore: launching item 2913 CONSTRAINT qc_ms_changedlibrary_pkey
+pg_restore: creating CONSTRAINT qc_ms_changedlibrary_pkey
+pg_restore: finished item 2913 CONSTRAINT qc_ms_changedlibrary_pkey
+pg_restore: launching item 2911 INDEX qc_ms_changedlibrary_idx_primary
+pg_restore: creating INDEX qc_ms_changedlibrary_idx_primary
+pg_restore: finished item 2761 INDEX dp_entrezgene_accession_idx_rna
+pg_restore: launching item 2921 CONSTRAINT qc_ms_invalidgender_pkey
+pg_restore: finished item 2911 INDEX qc_ms_changedlibrary_idx_primary
+pg_restore: launching item 3064 FK CONSTRAINT qc_ms_changedlibrary__jobstream_key
+pg_restore: creating CONSTRAINT qc_ms_invalidgender_pkey
+pg_restore: creating FK CONSTRAINT qc_ms_changedlibrary__jobstream_key
+pg_restore: finished item 2828 CONSTRAINT mgi_cloneload_clone_pkey
+pg_restore: launching item 2824 INDEX mgi_cloneload_clone_idx_clone_key
+pg_restore: creating INDEX mgi_cloneload_clone_idx_clone_key
+pg_restore: finished item 2921 CONSTRAINT qc_ms_invalidgender_pkey
+pg_restore: launching item 2825 INDEX mgi_cloneload_clone_idx_clonename
+pg_restore: creating INDEX mgi_cloneload_clone_idx_clonename
+pg_restore: finished item 3064 FK CONSTRAINT qc_ms_changedlibrary__jobstream_key
+pg_restore: launching item 2826 INDEX mgi_cloneload_clone_idx_jnumid
+pg_restore: creating INDEX mgi_cloneload_clone_idx_jnumid
+pg_restore: finished item 2806 CONSTRAINT img_mgi_image_pkey
+pg_restore: launching item 2804 INDEX img_mgi_image_idx_primary
+pg_restore: creating INDEX img_mgi_image_idx_primary
+pg_restore: finished item 2825 INDEX mgi_cloneload_clone_idx_clonename
+pg_restore: launching item 2918 INDEX qc_ms_invalidgender_idx_jobstream_key
+pg_restore: finished item 2826 INDEX mgi_cloneload_clone_idx_jnumid
+pg_restore: launching item 2919 INDEX qc_ms_invalidgender_idx_qcrecord_key
+pg_restore: creating INDEX qc_ms_invalidgender_idx_jobstream_key
+pg_restore: finished item 2824 INDEX mgi_cloneload_clone_idx_clone_key
+pg_restore: launching item 3043 FK CONSTRAINT mgi_cloneload_accession__clone_key
+pg_restore: finished item 2918 INDEX qc_ms_invalidgender_idx_jobstream_key
+pg_restore: launching item 2910 CONSTRAINT qc_ms_attredit_pkey
+pg_restore: creating INDEX qc_ms_invalidgender_idx_qcrecord_key
+pg_restore: creating FK CONSTRAINT mgi_cloneload_accession__clone_key
+pg_restore: creating CONSTRAINT qc_ms_attredit_pkey
+pg_restore: finished item 2919 INDEX qc_ms_invalidgender_idx_qcrecord_key
+pg_restore: launching item 3066 FK CONSTRAINT qc_ms_invalidgender__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_ms_invalidgender__jobstream_key
+pg_restore: finished item 3066 FK CONSTRAINT qc_ms_invalidgender__jobstream_key
+pg_restore: launching item 2929 CONSTRAINT qc_ms_invalidstrain_pkey
+pg_restore: creating CONSTRAINT qc_ms_invalidstrain_pkey
+pg_restore: finished item 2929 CONSTRAINT qc_ms_invalidstrain_pkey
+pg_restore: launching item 2926 INDEX qc_ms_invalidstrain_idx_jobstream_key
+pg_restore: creating INDEX qc_ms_invalidstrain_idx_jobstream_key
+pg_restore: finished item 2926 INDEX qc_ms_invalidstrain_idx_jobstream_key
+pg_restore: launching item 2927 INDEX qc_ms_invalidstrain_idx_qcrecord_key
+pg_restore: creating INDEX qc_ms_invalidstrain_idx_qcrecord_key
+pg_restore: finished item 2910 CONSTRAINT qc_ms_attredit_pkey
+pg_restore: launching item 2908 INDEX qc_ms_attredit_idx_primary
+pg_restore: creating INDEX qc_ms_attredit_idx_primary
+pg_restore: finished item 2927 INDEX qc_ms_invalidstrain_idx_qcrecord_key
+pg_restore: launching item 3068 FK CONSTRAINT qc_ms_invalidstrain__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_ms_invalidstrain__jobstream_key
+pg_restore: finished item 3068 FK CONSTRAINT qc_ms_invalidstrain__jobstream_key
+pg_restore: launching item 2933 CONSTRAINT qc_ms_invalidtissue_pkey
+pg_restore: creating CONSTRAINT qc_ms_invalidtissue_pkey
+pg_restore: finished item 2908 INDEX qc_ms_attredit_idx_primary
+pg_restore: launching item 3063 FK CONSTRAINT qc_ms_attredit__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_ms_attredit__jobstream_key
+pg_restore: finished item 3043 FK CONSTRAINT mgi_cloneload_accession__clone_key
+pg_restore: launching item 3048 FK CONSTRAINT qc_cloneload_dupclone__clone_key
+pg_restore: creating FK CONSTRAINT qc_cloneload_dupclone__clone_key
+pg_restore: finished item 3048 FK CONSTRAINT qc_cloneload_dupclone__clone_key
+pg_restore: launching item 3051 FK CONSTRAINT qc_cloneload_dupseq__clone_key
+pg_restore: finished item 2933 CONSTRAINT qc_ms_invalidtissue_pkey
+pg_restore: launching item 2930 INDEX qc_ms_invalidtissue_idx_jobstream_key
+pg_restore: creating FK CONSTRAINT qc_cloneload_dupseq__clone_key
+pg_restore: creating INDEX qc_ms_invalidtissue_idx_jobstream_key
+pg_restore: finished item 3051 FK CONSTRAINT qc_cloneload_dupseq__clone_key
+pg_restore: launching item 3053 FK CONSTRAINT qc_cloneload_multiclone__clone_key
+pg_restore: creating FK CONSTRAINT qc_cloneload_multiclone__clone_key
+pg_restore: finished item 3053 FK CONSTRAINT qc_cloneload_multiclone__clone_key
+pg_restore: launching item 3055 FK CONSTRAINT qc_cloneload_nonclone__clone_key
+pg_restore: finished item 2930 INDEX qc_ms_invalidtissue_idx_jobstream_key
+pg_restore: launching item 2931 INDEX qc_ms_invalidtissue_idx_qcrecord_key
+pg_restore: creating FK CONSTRAINT qc_cloneload_nonclone__clone_key
+pg_restore: creating INDEX qc_ms_invalidtissue_idx_qcrecord_key
+pg_restore: finished item 3055 FK CONSTRAINT qc_cloneload_nonclone__clone_key
+pg_restore: launching item 3057 FK CONSTRAINT qc_cloneload_seqonly__clone_key
+pg_restore: creating FK CONSTRAINT qc_cloneload_seqonly__clone_key
+pg_restore: finished item 3057 FK CONSTRAINT qc_cloneload_seqonly__clone_key
+pg_restore: launching item 2936 CONSTRAINT qc_ms_nameconflict_pkey
+pg_restore: finished item 2931 INDEX qc_ms_invalidtissue_idx_qcrecord_key
+pg_restore: launching item 2939 CONSTRAINT qc_ms_unresolvedorganism_pkey
+pg_restore: finished item 3063 FK CONSTRAINT qc_ms_attredit__jobstream_key
+pg_restore: launching item 3044 FK CONSTRAINT mgi_cloneload_clone__jobstream_key
+pg_restore: creating CONSTRAINT qc_ms_nameconflict_pkey
+pg_restore: creating CONSTRAINT qc_ms_unresolvedorganism_pkey
+pg_restore: creating FK CONSTRAINT mgi_cloneload_clone__jobstream_key
+pg_restore: finished item 2936 CONSTRAINT qc_ms_nameconflict_pkey
+pg_restore: launching item 2934 INDEX qc_ms_nameconflict_idx_primary
+pg_restore: finished item 2939 CONSTRAINT qc_ms_unresolvedorganism_pkey
+pg_restore: launching item 2937 INDEX qc_ms_unresolvedorganism_idx_primary
+pg_restore: creating INDEX qc_ms_nameconflict_idx_primary
+pg_restore: creating INDEX qc_ms_unresolvedorganism_idx_primary
+pg_restore: finished item 2934 INDEX qc_ms_nameconflict_idx_primary
+pg_restore: launching item 2943 CONSTRAINT qc_seq_merged_pkey
+pg_restore: finished item 2937 INDEX qc_ms_unresolvedorganism_idx_primary
+pg_restore: launching item 2917 CONSTRAINT qc_ms_invalidcellline_pkey
+pg_restore: creating CONSTRAINT qc_seq_merged_pkey
+pg_restore: creating CONSTRAINT qc_ms_invalidcellline_pkey
+pg_restore: finished item 2943 CONSTRAINT qc_seq_merged_pkey
+pg_restore: launching item 2940 INDEX qc_seq_merged_idx_jobstream_key
+pg_restore: creating INDEX qc_seq_merged_idx_jobstream_key
+pg_restore: finished item 2940 INDEX qc_seq_merged_idx_jobstream_key
+pg_restore: launching item 2941 INDEX qc_seq_merged_idx_qcrecord_key
+pg_restore: creating INDEX qc_seq_merged_idx_qcrecord_key
+pg_restore: finished item 2941 INDEX qc_seq_merged_idx_qcrecord_key
+pg_restore: launching item 2951 CONSTRAINT qc_seq_rawsourceconflict_pkey
+pg_restore: creating CONSTRAINT qc_seq_rawsourceconflict_pkey
+pg_restore: finished item 3044 FK CONSTRAINT mgi_cloneload_clone__jobstream_key
+pg_restore: launching item 3069 FK CONSTRAINT qc_ms_invalidtissue__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_ms_invalidtissue__jobstream_key
+pg_restore: finished item 2951 CONSTRAINT qc_seq_rawsourceconflict_pkey
+pg_restore: launching item 2948 INDEX qc_seq_rawsourceconflict_idx_jobstream_key
+pg_restore: creating INDEX qc_seq_rawsourceconflict_idx_jobstream_key
+pg_restore: finished item 3069 FK CONSTRAINT qc_ms_invalidtissue__jobstream_key
+pg_restore: launching item 3070 FK CONSTRAINT qc_ms_nameconflict__jobstream_key
+pg_restore: finished item 2948 INDEX qc_seq_rawsourceconflict_idx_jobstream_key
+pg_restore: launching item 2949 INDEX qc_seq_rawsourceconflict_idx_qcrecord_key
+pg_restore: creating FK CONSTRAINT qc_ms_nameconflict__jobstream_key
+pg_restore: creating INDEX qc_seq_rawsourceconflict_idx_qcrecord_key
+pg_restore: finished item 3070 FK CONSTRAINT qc_ms_nameconflict__jobstream_key
+pg_restore: launching item 3071 FK CONSTRAINT qc_ms_unresolvedorganism__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_ms_unresolvedorganism__jobstream_key
+pg_restore: finished item 2949 INDEX qc_seq_rawsourceconflict_idx_qcrecord_key
+pg_restore: launching item 2974 CONSTRAINT riken_fantom_clones_pkey
+pg_restore: creating CONSTRAINT riken_fantom_clones_pkey
+pg_restore: finished item 3071 FK CONSTRAINT qc_ms_unresolvedorganism__jobstream_key
+pg_restore: launching item 3072 FK CONSTRAINT qc_seq_merged__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_seq_merged__jobstream_key
+pg_restore: finished item 2974 CONSTRAINT riken_fantom_clones_pkey
+pg_restore: launching item 2972 INDEX riken_fantom_clones_idx_primary
+pg_restore: creating INDEX riken_fantom_clones_idx_primary
+pg_restore: finished item 2917 CONSTRAINT qc_ms_invalidcellline_pkey
+pg_restore: launching item 2914 INDEX qc_ms_invalidcellline_idx_jobstream_key
+pg_restore: creating INDEX qc_ms_invalidcellline_idx_jobstream_key
+pg_restore: finished item 3072 FK CONSTRAINT qc_seq_merged__jobstream_key
+pg_restore: launching item 2915 INDEX qc_ms_invalidcellline_idx_qcrecord_key
+pg_restore: creating INDEX qc_ms_invalidcellline_idx_qcrecord_key
+pg_restore: finished item 2972 INDEX riken_fantom_clones_idx_primary
+pg_restore: launching item 3074 FK CONSTRAINT qc_seq_rawsourceconflict__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_seq_rawsourceconflict__jobstream_key
+pg_restore: finished item 3074 FK CONSTRAINT qc_seq_rawsourceconflict__jobstream_key
+pg_restore: launching item 2979 CONSTRAINT txt_matches_pkey
+pg_restore: creating CONSTRAINT txt_matches_pkey
+pg_restore: finished item 2979 CONSTRAINT txt_matches_pkey
+pg_restore: launching item 2975 INDEX txt_matches_idx_object_key
+pg_restore: creating INDEX txt_matches_idx_object_key
+pg_restore: finished item 2975 INDEX txt_matches_idx_object_key
+pg_restore: launching item 2976 INDEX txt_matches_idx_primary_key
+pg_restore: creating INDEX txt_matches_idx_primary_key
+pg_restore: finished item 2976 INDEX txt_matches_idx_primary_key
+pg_restore: launching item 2977 INDEX txt_matches_idx_search_key
+pg_restore: creating INDEX txt_matches_idx_search_key
+pg_restore: finished item 2914 INDEX qc_ms_invalidcellline_idx_jobstream_key
+pg_restore: launching item 2984 CONSTRAINT txt_searches_pkey
+pg_restore: finished item 2915 INDEX qc_ms_invalidcellline_idx_qcrecord_key
+pg_restore: launching item 3065 FK CONSTRAINT qc_ms_invalidcellline__jobstream_key
+pg_restore: creating CONSTRAINT txt_searches_pkey
+pg_restore: creating FK CONSTRAINT qc_ms_invalidcellline__jobstream_key
+pg_restore: finished item 2977 INDEX txt_matches_idx_search_key
+pg_restore: launching item 2987 CONSTRAINT voc_dagsort_pkey
+pg_restore: creating CONSTRAINT voc_dagsort_pkey
+pg_restore: finished item 2984 CONSTRAINT txt_searches_pkey
+pg_restore: launching item 2980 INDEX txt_searches_idx_search_key
+pg_restore: finished item 2987 CONSTRAINT voc_dagsort_pkey
+pg_restore: launching item 2981 INDEX txt_searches_idx_searchstring
+pg_restore: creating INDEX txt_searches_idx_search_key
+pg_restore: finished item 2980 INDEX txt_searches_idx_search_key
+pg_restore: launching item 2982 INDEX txt_searches_idx_searchtime
+pg_restore: creating INDEX txt_searches_idx_searchstring
+pg_restore: finished item 2981 INDEX txt_searches_idx_searchstring
+pg_restore: launching item 2985 INDEX voc_dagsort_idx_primary
+pg_restore: creating INDEX txt_searches_idx_searchtime
+pg_restore: creating INDEX voc_dagsort_idx_primary
+pg_restore: finished item 2982 INDEX txt_searches_idx_searchtime
+pg_restore: launching item 3081 FK CONSTRAINT txt_matches__search_key
+pg_restore: creating FK CONSTRAINT txt_matches__search_key
+pg_restore: finished item 2985 INDEX voc_dagsort_idx_primary
+pg_restore: launching item 2990 CONSTRAINT voc_header_pkey
+pg_restore: finished item 2804 INDEX img_mgi_image_idx_primary
+pg_restore: launching item 2993 CONSTRAINT voc_note_pkey
+pg_restore: creating CONSTRAINT voc_header_pkey
+pg_restore: creating CONSTRAINT voc_note_pkey
+pg_restore: finished item 3081 FK CONSTRAINT txt_matches__search_key
+pg_restore: launching item 2994 INDEX voc_synonym_idx_accid
+pg_restore: finished item 3065 FK CONSTRAINT qc_ms_invalidcellline__jobstream_key
+pg_restore: launching item 2995 INDEX voc_synonym_idx_synonymtype
+pg_restore: creating INDEX voc_synonym_idx_accid
+pg_restore: finished item 2990 CONSTRAINT voc_header_pkey
+pg_restore: launching item 2988 INDEX voc_header_idx_primary
+pg_restore: finished item 2993 CONSTRAINT voc_note_pkey
+pg_restore: launching item 2991 INDEX voc_note_idx_primary
+pg_restore: creating INDEX voc_synonym_idx_synonymtype
+pg_restore: creating INDEX voc_header_idx_primary
+pg_restore: creating INDEX voc_note_idx_primary
+pg_restore: finished item 2994 INDEX voc_synonym_idx_accid
+pg_restore: launching item 3033 CONSTRAINT wrk_cdna_clones_pkey
+pg_restore: creating CONSTRAINT wrk_cdna_clones_pkey
+pg_restore: finished item 2988 INDEX voc_header_idx_primary
+pg_restore: launching item 2925 CONSTRAINT qc_ms_invalidlibrary_pkey
+pg_restore: finished item 2995 INDEX voc_synonym_idx_synonymtype
+pg_restore: launching item 2947 CONSTRAINT qc_seq_oldref_pkey
+pg_restore: finished item 2991 INDEX voc_note_idx_primary
+pg_restore: launching item 3005 INDEX wrk_entrezgene_bucket0tmp_idx_geneid
+pg_restore: finished item 3033 CONSTRAINT wrk_cdna_clones_pkey
+pg_restore: launching item 3027 INDEX wrk_cdna_clones_idx_accid
+pg_restore: creating CONSTRAINT qc_ms_invalidlibrary_pkey
+pg_restore: creating CONSTRAINT qc_seq_oldref_pkey
+pg_restore: creating INDEX wrk_entrezgene_bucket0tmp_idx_geneid
+pg_restore: creating INDEX wrk_cdna_clones_idx_accid
+pg_restore: finished item 3027 INDEX wrk_cdna_clones_idx_accid
+pg_restore: launching item 3028 INDEX wrk_cdna_clones_idx_clone_key
+pg_restore: creating INDEX wrk_cdna_clones_idx_clone_key
+pg_restore: finished item 3028 INDEX wrk_cdna_clones_idx_clone_key
+pg_restore: launching item 3029 INDEX wrk_cdna_clones_idx_clonenum
+pg_restore: creating INDEX wrk_cdna_clones_idx_clonenum
+pg_restore: finished item 3029 INDEX wrk_cdna_clones_idx_clonenum
+pg_restore: launching item 3030 INDEX wrk_cdna_clones_idx_librarynum
+pg_restore: creating INDEX wrk_cdna_clones_idx_librarynum
+pg_restore: finished item 3030 INDEX wrk_cdna_clones_idx_librarynum
+pg_restore: launching item 3031 INDEX wrk_cdna_clones_idx_logicaldb
+pg_restore: creating INDEX wrk_cdna_clones_idx_logicaldb
+pg_restore: finished item 3031 INDEX wrk_cdna_clones_idx_logicaldb
+pg_restore: launching item 3006 INDEX wrk_entrezgene_bucket0tmp_idx_idtype
+pg_restore: creating INDEX wrk_entrezgene_bucket0tmp_idx_idtype
+pg_restore: finished item 3005 INDEX wrk_entrezgene_bucket0tmp_idx_geneid
+pg_restore: launching item 3007 INDEX wrk_entrezgene_bucket0tmp_idx_mgiid
+pg_restore: creating INDEX wrk_entrezgene_bucket0tmp_idx_mgiid
+pg_restore: finished item 3006 INDEX wrk_entrezgene_bucket0tmp_idx_idtype
+pg_restore: launching item 3000 CONSTRAINT wrk_cloneassociation_pkey
+pg_restore: creating CONSTRAINT wrk_cloneassociation_pkey
+pg_restore: finished item 3007 INDEX wrk_entrezgene_bucket0tmp_idx_mgiid
+pg_restore: launching item 3001 INDEX wrk_entrezgene_bucket0_idx_accid
+pg_restore: creating INDEX wrk_entrezgene_bucket0_idx_accid
+pg_restore: finished item 2947 CONSTRAINT qc_seq_oldref_pkey
+pg_restore: launching item 2944 INDEX qc_seq_oldref_idx_jobstream_key
+pg_restore: creating INDEX qc_seq_oldref_idx_jobstream_key
+pg_restore: finished item 2925 CONSTRAINT qc_ms_invalidlibrary_pkey
+pg_restore: launching item 2922 INDEX qc_ms_invalidlibrary_idx_jobstream_key
+pg_restore: creating INDEX qc_ms_invalidlibrary_idx_jobstream_key
+pg_restore: finished item 2944 INDEX qc_seq_oldref_idx_jobstream_key
+pg_restore: launching item 2923 INDEX qc_ms_invalidlibrary_idx_qcrecord_key
+pg_restore: creating INDEX qc_ms_invalidlibrary_idx_qcrecord_key
+pg_restore: finished item 3000 CONSTRAINT wrk_cloneassociation_pkey
+pg_restore: launching item 2945 INDEX qc_seq_oldref_idx_qcrecord_key
+pg_restore: creating INDEX qc_seq_oldref_idx_qcrecord_key
+pg_restore: finished item 2922 INDEX qc_ms_invalidlibrary_idx_jobstream_key
+pg_restore: launching item 2996 INDEX wrk_cloneassociation_idx_accid
+pg_restore: creating INDEX wrk_cloneassociation_idx_accid
+pg_restore: finished item 2923 INDEX qc_ms_invalidlibrary_idx_qcrecord_key
+pg_restore: launching item 3067 FK CONSTRAINT qc_ms_invalidlibrary__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_ms_invalidlibrary__jobstream_key
+pg_restore: finished item 2945 INDEX qc_seq_oldref_idx_qcrecord_key
+pg_restore: launching item 2997 INDEX wrk_cloneassociation_idx_clone_key
+pg_restore: creating INDEX wrk_cloneassociation_idx_clone_key
+pg_restore: finished item 3067 FK CONSTRAINT qc_ms_invalidlibrary__jobstream_key
+pg_restore: launching item 3073 FK CONSTRAINT qc_seq_oldref__jobstream_key
+pg_restore: creating FK CONSTRAINT qc_seq_oldref__jobstream_key
+pg_restore: finished item 3073 FK CONSTRAINT qc_seq_oldref__jobstream_key
+pg_restore: launching item 2998 INDEX wrk_cloneassociation_idx_logicaldb
+pg_restore: creating INDEX wrk_cloneassociation_idx_logicaldb
+pg_restore: finished item 3001 INDEX wrk_entrezgene_bucket0_idx_accid
+pg_restore: launching item 3002 INDEX wrk_entrezgene_bucket0_idx_geneid
+pg_restore: creating INDEX wrk_entrezgene_bucket0_idx_geneid
+pg_restore: finished item 2997 INDEX wrk_cloneassociation_idx_clone_key
+pg_restore: launching item 3003 INDEX wrk_entrezgene_bucket0_idx_mgiid
+pg_restore: creating INDEX wrk_entrezgene_bucket0_idx_mgiid
+pg_restore: finished item 2996 INDEX wrk_cloneassociation_idx_accid
+pg_restore: launching item 3004 INDEX wrk_entrezgene_bucket0_idx_taxid
+pg_restore: creating INDEX wrk_entrezgene_bucket0_idx_taxid
+pg_restore: finished item 2998 INDEX wrk_cloneassociation_idx_logicaldb
+pg_restore: launching item 3082 FK CONSTRAINT wrk_cloneassociation__clone_key
+pg_restore: creating FK CONSTRAINT wrk_cloneassociation__clone_key
+pg_restore: finished item 3002 INDEX wrk_entrezgene_bucket0_idx_geneid
+pg_restore: launching item 3016 INDEX wrk_entrezgene_mapping_idx_geneid
+pg_restore: finished item 3004 INDEX wrk_entrezgene_bucket0_idx_taxid
+pg_restore: launching item 3017 INDEX wrk_entrezgene_mapping_idx_marker_key
+pg_restore: creating INDEX wrk_entrezgene_mapping_idx_geneid
+pg_restore: creating INDEX wrk_entrezgene_mapping_idx_marker_key
+pg_restore: finished item 3016 INDEX wrk_entrezgene_mapping_idx_geneid
+pg_restore: launching item 3018 INDEX wrk_entrezgene_mapping_idx_taxid
+pg_restore: finished item 3017 INDEX wrk_entrezgene_mapping_idx_marker_key
+pg_restore: launching item 3019 INDEX wrk_entrezgene_nomen_idx_geneid
+pg_restore: creating INDEX wrk_entrezgene_mapping_idx_taxid
+pg_restore: creating INDEX wrk_entrezgene_nomen_idx_geneid
+pg_restore: finished item 3018 INDEX wrk_entrezgene_mapping_idx_taxid
+pg_restore: launching item 3020 INDEX wrk_entrezgene_nomen_idx_marker_key
+pg_restore: finished item 3019 INDEX wrk_entrezgene_nomen_idx_geneid
+pg_restore: launching item 3021 INDEX wrk_entrezgene_nomen_idx_taxid
+pg_restore: creating INDEX wrk_entrezgene_nomen_idx_marker_key
+pg_restore: finished item 3003 INDEX wrk_entrezgene_bucket0_idx_mgiid
+pg_restore: launching item 3022 INDEX wrk_entrezgene_symatches_idx_geneid
+pg_restore: creating INDEX wrk_entrezgene_nomen_idx_taxid
+pg_restore: finished item 3020 INDEX wrk_entrezgene_nomen_idx_marker_key
+pg_restore: launching item 3023 INDEX wrk_entrezgene_symatches_idx_mgiid
+pg_restore: finished item 3021 INDEX wrk_entrezgene_nomen_idx_taxid
+pg_restore: launching item 3024 INDEX wrk_entrezgene_synonym_idx_geneid
+pg_restore: creating INDEX wrk_entrezgene_symatches_idx_geneid
+pg_restore: creating INDEX wrk_entrezgene_symatches_idx_mgiid
+pg_restore: finished item 3022 INDEX wrk_entrezgene_symatches_idx_geneid
+pg_restore: launching item 3025 INDEX wrk_entrezgene_synonym_idx_marker_key
+pg_restore: creating INDEX wrk_entrezgene_synonym_idx_geneid
+pg_restore: finished item 3023 INDEX wrk_entrezgene_symatches_idx_mgiid
+pg_restore: launching item 3026 INDEX wrk_entrezgene_synonym_idx_taxid
+pg_restore: creating INDEX wrk_entrezgene_synonym_idx_marker_key
+pg_restore: creating INDEX wrk_entrezgene_synonym_idx_taxid
+pg_restore: finished item 3082 FK CONSTRAINT wrk_cloneassociation__clone_key
+pg_restore: launching item 3012 INDEX wrk_entrezgene_mgiset_idx_compareid
+pg_restore: creating INDEX wrk_entrezgene_mgiset_idx_compareid
+pg_restore: finished item 3025 INDEX wrk_entrezgene_synonym_idx_marker_key
+pg_restore: launching item 3013 INDEX wrk_entrezgene_mgiset_idx_idtype
+pg_restore: creating INDEX wrk_entrezgene_mgiset_idx_idtype
+pg_restore: finished item 3026 INDEX wrk_entrezgene_synonym_idx_taxid
+pg_restore: launching item 3014 INDEX wrk_entrezgene_mgiset_idx_mgiid
+pg_restore: creating INDEX wrk_entrezgene_mgiset_idx_mgiid
+pg_restore: finished item 3024 INDEX wrk_entrezgene_synonym_idx_geneid
+pg_restore: launching item 3015 INDEX wrk_entrezgene_mgiset_idx_taxid
+pg_restore: creating INDEX wrk_entrezgene_mgiset_idx_taxid
+pg_restore: finished item 3015 INDEX wrk_entrezgene_mgiset_idx_taxid
+pg_restore: launching item 2812 CONSTRAINT mgi_association_pkey
+pg_restore: creating CONSTRAINT mgi_association_pkey
+pg_restore: finished item 3012 INDEX wrk_entrezgene_mgiset_idx_compareid
+pg_restore: launching item 3008 INDEX wrk_entrezgene_egset_idx_compareid
+pg_restore: creating INDEX wrk_entrezgene_egset_idx_compareid
+pg_restore: finished item 3013 INDEX wrk_entrezgene_mgiset_idx_idtype
+pg_restore: launching item 3009 INDEX wrk_entrezgene_egset_idx_geneid
+pg_restore: creating INDEX wrk_entrezgene_egset_idx_geneid
+pg_restore: finished item 3014 INDEX wrk_entrezgene_mgiset_idx_mgiid
+pg_restore: launching item 3010 INDEX wrk_entrezgene_egset_idx_idtype
+pg_restore: creating INDEX wrk_entrezgene_egset_idx_idtype
+pg_restore: finished item 2812 CONSTRAINT mgi_association_pkey
+pg_restore: launching item 2807 INDEX mgi_association_idx_accid
+pg_restore: creating INDEX mgi_association_idx_accid
+pg_restore: finished item 3010 INDEX wrk_entrezgene_egset_idx_idtype
+pg_restore: launching item 2808 INDEX mgi_association_idx_assoc_key
+pg_restore: creating INDEX mgi_association_idx_assoc_key
+pg_restore: finished item 3009 INDEX wrk_entrezgene_egset_idx_geneid
+pg_restore: launching item 2809 INDEX mgi_association_idx_logicaldb
+pg_restore: creating INDEX mgi_association_idx_logicaldb
+pg_restore: finished item 3008 INDEX wrk_entrezgene_egset_idx_compareid
+pg_restore: launching item 2810 INDEX mgi_association_idx_record_key
+pg_restore: creating INDEX mgi_association_idx_record_key
+pg_restore: finished item 2810 INDEX mgi_association_idx_record_key
+pg_restore: launching item 3011 INDEX wrk_entrezgene_egset_idx_taxid
+pg_restore: creating INDEX wrk_entrezgene_egset_idx_taxid
+pg_restore: finished item 3011 INDEX wrk_entrezgene_egset_idx_taxid
+pg_restore: finished item 2809 INDEX mgi_association_idx_logicaldb
+pg_restore: finished item 2807 INDEX mgi_association_idx_accid
+pg_restore: finished item 2808 INDEX mgi_association_idx_assoc_key
+pg_restore: launching item 3041 FK CONSTRAINT mgi_association__jobstream_key
+pg_restore: creating FK CONSTRAINT mgi_association__jobstream_key
+pg_restore: finished item 3041 FK CONSTRAINT mgi_association__jobstream_key
+pg_restore: finished main parallel loop
+pg_restore: setting owner and privileges for TABLE app_filesmirrored
+pg_restore: setting owner and privileges for TABLE app_filesprocessed
+pg_restore: setting owner and privileges for TABLE app_jobstream
+pg_restore: setting owner and privileges for TABLE dp_entrezgene_accession
+pg_restore: setting owner and privileges for TABLE dp_entrezgene_dbxref
+pg_restore: setting owner and privileges for TABLE dp_entrezgene_history
+pg_restore: setting owner and privileges for TABLE dp_entrezgene_info
+pg_restore: setting owner and privileges for TABLE dp_entrezgene_mim
+pg_restore: setting owner and privileges for TABLE dp_entrezgene_pubmed
+pg_restore: setting owner and privileges for TABLE dp_entrezgene_refseq
+pg_restore: setting owner and privileges for TABLE dp_entrezgene_synonym
+pg_restore: setting owner and privileges for TABLE dp_homologene
+pg_restore: setting owner and privileges for TABLE dp_imsr
+pg_restore: setting owner and privileges for TABLE dp_mgc_clones
+pg_restore: setting owner and privileges for TABLE dp_rpci_clones
+pg_restore: setting owner and privileges for TABLE gb_est_reload
+pg_restore: setting owner and privileges for TABLE img_mgi_image
+pg_restore: setting owner and privileges for TABLE mgi_association
+pg_restore: setting owner and privileges for TABLE mgi_clonelibrary
+pg_restore: setting owner and privileges for TABLE mgi_cloneload_accession
+pg_restore: setting owner and privileges for TABLE mgi_cloneload_clone
+pg_restore: setting owner and privileges for TABLE mgi_columns
+pg_restore: setting owner and privileges for TABLE mgi_dbinfo
+pg_restore: setting owner and privileges for TABLE mgi_imsr
+pg_restore: setting owner and privileges for TABLE mgi_tables
+pg_restore: setting owner and privileges for TABLE nia_parent_daughter_clones
+pg_restore: setting owner and privileges for TABLE qc_assocload_assoc_discrep
+pg_restore: setting owner and privileges for TABLE qc_assocload_target_discrep
+pg_restore: setting owner and privileges for TABLE qc_cdnaload_cloneid_discrep
+pg_restore: setting owner and privileges for TABLE qc_cdnaload_cloneid_missing
+pg_restore: setting owner and privileges for TABLE qc_cdnaload_cloneid_unknown
+pg_restore: setting owner and privileges for TABLE qc_cdnaload_library_discrep
+pg_restore: setting owner and privileges for TABLE qc_cdnaload_library_missing
+pg_restore: setting owner and privileges for TABLE qc_cdnaload_library_no_parent
+pg_restore: setting owner and privileges for TABLE qc_cloneload_dupclone
+pg_restore: setting owner and privileges for TABLE qc_cloneload_dupseq
+pg_restore: setting owner and privileges for TABLE qc_cloneload_multiclone
+pg_restore: setting owner and privileges for TABLE qc_cloneload_nonclone
+pg_restore: setting owner and privileges for TABLE qc_cloneload_seqonly
+pg_restore: setting owner and privileges for TABLE qc_imsr_allelesnotinmgi
+pg_restore: setting owner and privileges for TABLE qc_imsr_genesnotinmgi
+pg_restore: setting owner and privileges for TABLE qc_imsr_missingcolumns
+pg_restore: setting owner and privileges for TABLE qc_imsr_stockidsnotinmgi
+pg_restore: setting owner and privileges for TABLE qc_imsr_strainnamesnotinmgi
+pg_restore: setting owner and privileges for TABLE qc_imsr_strainswithillornomut
+pg_restore: setting owner and privileges for TABLE qc_imsr_strainswithillornostat
+pg_restore: setting owner and privileges for TABLE qc_imsr_strainswithillornotype
+pg_restore: setting owner and privileges for TABLE qc_mgcload_image_missing
+pg_restore: setting owner and privileges for TABLE qc_mgcload_mgc_duplicate
+pg_restore: setting owner and privileges for TABLE qc_mgcload_mgc_missing
+pg_restore: setting owner and privileges for TABLE qc_mgcload_sequence_duplicate
+pg_restore: setting owner and privileges for TABLE qc_mgcload_sequence_missing
+pg_restore: setting owner and privileges for TABLE qc_ms_attredit
+pg_restore: setting owner and privileges for TABLE qc_ms_changedlibrary
+pg_restore: setting owner and privileges for TABLE qc_ms_invalidcellline
+pg_restore: setting owner and privileges for TABLE qc_ms_invalidgender
+pg_restore: setting owner and privileges for TABLE qc_ms_invalidlibrary
+pg_restore: setting owner and privileges for TABLE qc_ms_invalidstrain
+pg_restore: setting owner and privileges for TABLE qc_ms_invalidtissue
+pg_restore: setting owner and privileges for TABLE qc_ms_nameconflict
+pg_restore: setting owner and privileges for TABLE qc_ms_unresolvedorganism
+pg_restore: setting owner and privileges for TABLE qc_seq_merged
+pg_restore: setting owner and privileges for TABLE qc_seq_oldref
+pg_restore: setting owner and privileges for TABLE qc_seq_rawsourceconflict
+pg_restore: setting owner and privileges for TABLE riken_fantom_clones
+pg_restore: setting owner and privileges for TABLE txt_matches
+pg_restore: setting owner and privileges for TABLE txt_searches
+pg_restore: setting owner and privileges for TABLE voc_dagsort
+pg_restore: setting owner and privileges for TABLE voc_header
+pg_restore: setting owner and privileges for TABLE voc_note
+pg_restore: setting owner and privileges for TABLE voc_synonym
+pg_restore: setting owner and privileges for TABLE wrk_cdna_clones
+pg_restore: setting owner and privileges for TABLE wrk_cloneassociation
+pg_restore: setting owner and privileges for TABLE wrk_entrezgene_bucket0
+pg_restore: setting owner and privileges for TABLE wrk_entrezgene_bucket0tmp
+pg_restore: setting owner and privileges for TABLE wrk_entrezgene_egset
+pg_restore: setting owner and privileges for TABLE wrk_entrezgene_mapping
+pg_restore: setting owner and privileges for TABLE wrk_entrezgene_mgiset
+pg_restore: setting owner and privileges for TABLE wrk_entrezgene_nomen
+pg_restore: setting owner and privileges for TABLE wrk_entrezgene_symatches
+pg_restore: setting owner and privileges for TABLE wrk_entrezgene_synonym
+pg_restore: setting owner and privileges for TABLE wrk_imsr_alleles
+pg_restore: setting owner and privileges for TABLE wrk_imsr_genes
+pg_restore: setting owner and privileges for TABLE wrk_imsr_strains
+pg_restore: setting owner and privileges for TABLE wrk_imsr_synonym
+pg_restore: setting owner and privileges for TABLE DATA app_filesmirrored
+pg_restore: setting owner and privileges for TABLE DATA app_filesprocessed
+pg_restore: setting owner and privileges for TABLE DATA app_jobstream
+pg_restore: setting owner and privileges for TABLE DATA dp_entrezgene_accession
+pg_restore: setting owner and privileges for TABLE DATA dp_entrezgene_dbxref
+pg_restore: setting owner and privileges for TABLE DATA dp_entrezgene_history
+pg_restore: setting owner and privileges for TABLE DATA dp_entrezgene_info
+pg_restore: setting owner and privileges for TABLE DATA dp_entrezgene_mim
+pg_restore: setting owner and privileges for TABLE DATA dp_entrezgene_pubmed
+pg_restore: setting owner and privileges for TABLE DATA dp_entrezgene_refseq
+pg_restore: setting owner and privileges for TABLE DATA dp_entrezgene_synonym
+pg_restore: setting owner and privileges for TABLE DATA dp_homologene
+pg_restore: setting owner and privileges for TABLE DATA dp_imsr
+pg_restore: setting owner and privileges for TABLE DATA dp_mgc_clones
+pg_restore: setting owner and privileges for TABLE DATA dp_rpci_clones
+pg_restore: setting owner and privileges for TABLE DATA gb_est_reload
+pg_restore: setting owner and privileges for TABLE DATA img_mgi_image
+pg_restore: setting owner and privileges for TABLE DATA mgi_association
+pg_restore: setting owner and privileges for TABLE DATA mgi_clonelibrary
+pg_restore: setting owner and privileges for TABLE DATA mgi_cloneload_accession
+pg_restore: setting owner and privileges for TABLE DATA mgi_cloneload_clone
+pg_restore: setting owner and privileges for TABLE DATA mgi_columns
+pg_restore: setting owner and privileges for TABLE DATA mgi_dbinfo
+pg_restore: setting owner and privileges for TABLE DATA mgi_imsr
+pg_restore: setting owner and privileges for TABLE DATA mgi_tables
+pg_restore: setting owner and privileges for TABLE DATA nia_parent_daughter_clones
+pg_restore: setting owner and privileges for TABLE DATA qc_assocload_assoc_discrep
+pg_restore: setting owner and privileges for TABLE DATA qc_assocload_target_discrep
+pg_restore: setting owner and privileges for TABLE DATA qc_cdnaload_cloneid_discrep
+pg_restore: setting owner and privileges for TABLE DATA qc_cdnaload_cloneid_missing
+pg_restore: setting owner and privileges for TABLE DATA qc_cdnaload_cloneid_unknown
+pg_restore: setting owner and privileges for TABLE DATA qc_cdnaload_library_discrep
+pg_restore: setting owner and privileges for TABLE DATA qc_cdnaload_library_missing
+pg_restore: setting owner and privileges for TABLE DATA qc_cdnaload_library_no_parent
+pg_restore: setting owner and privileges for TABLE DATA qc_cloneload_dupclone
+pg_restore: setting owner and privileges for TABLE DATA qc_cloneload_dupseq
+pg_restore: setting owner and privileges for TABLE DATA qc_cloneload_multiclone
+pg_restore: setting owner and privileges for TABLE DATA qc_cloneload_nonclone
+pg_restore: setting owner and privileges for TABLE DATA qc_cloneload_seqonly
+pg_restore: setting owner and privileges for TABLE DATA qc_imsr_allelesnotinmgi
+pg_restore: setting owner and privileges for TABLE DATA qc_imsr_genesnotinmgi
+pg_restore: setting owner and privileges for TABLE DATA qc_imsr_missingcolumns
+pg_restore: setting owner and privileges for TABLE DATA qc_imsr_stockidsnotinmgi
+pg_restore: setting owner and privileges for TABLE DATA qc_imsr_strainnamesnotinmgi
+pg_restore: setting owner and privileges for TABLE DATA qc_imsr_strainswithillornomut
+pg_restore: setting owner and privileges for TABLE DATA qc_imsr_strainswithillornostat
+pg_restore: setting owner and privileges for TABLE DATA qc_imsr_strainswithillornotype
+pg_restore: setting owner and privileges for TABLE DATA qc_mgcload_image_missing
+pg_restore: setting owner and privileges for TABLE DATA qc_mgcload_mgc_duplicate
+pg_restore: setting owner and privileges for TABLE DATA qc_mgcload_mgc_missing
+pg_restore: setting owner and privileges for TABLE DATA qc_mgcload_sequence_duplicate
+pg_restore: setting owner and privileges for TABLE DATA qc_mgcload_sequence_missing
+pg_restore: setting owner and privileges for TABLE DATA qc_ms_attredit
+pg_restore: setting owner and privileges for TABLE DATA qc_ms_changedlibrary
+pg_restore: setting owner and privileges for TABLE DATA qc_ms_invalidcellline
+pg_restore: setting owner and privileges for TABLE DATA qc_ms_invalidgender
+pg_restore: setting owner and privileges for TABLE DATA qc_ms_invalidlibrary
+pg_restore: setting owner and privileges for TABLE DATA qc_ms_invalidstrain
+pg_restore: setting owner and privileges for TABLE DATA qc_ms_invalidtissue
+pg_restore: setting owner and privileges for TABLE DATA qc_ms_nameconflict
+pg_restore: setting owner and privileges for TABLE DATA qc_ms_unresolvedorganism
+pg_restore: setting owner and privileges for TABLE DATA qc_seq_merged
+pg_restore: setting owner and privileges for TABLE DATA qc_seq_oldref
+pg_restore: setting owner and privileges for TABLE DATA qc_seq_rawsourceconflict
+pg_restore: setting owner and privileges for TABLE DATA riken_fantom_clones
+pg_restore: setting owner and privileges for TABLE DATA txt_matches
+pg_restore: setting owner and privileges for TABLE DATA txt_searches
+pg_restore: setting owner and privileges for TABLE DATA voc_dagsort
+pg_restore: setting owner and privileges for TABLE DATA voc_header
+pg_restore: setting owner and privileges for TABLE DATA voc_note
+pg_restore: setting owner and privileges for TABLE DATA voc_synonym
+pg_restore: setting owner and privileges for TABLE DATA wrk_cdna_clones
+pg_restore: setting owner and privileges for TABLE DATA wrk_cloneassociation
+pg_restore: setting owner and privileges for TABLE DATA wrk_entrezgene_bucket0
+pg_restore: setting owner and privileges for TABLE DATA wrk_entrezgene_bucket0tmp
+pg_restore: setting owner and privileges for TABLE DATA wrk_entrezgene_egset
+pg_restore: setting owner and privileges for TABLE DATA wrk_entrezgene_mapping
+pg_restore: setting owner and privileges for TABLE DATA wrk_entrezgene_mgiset
+pg_restore: setting owner and privileges for TABLE DATA wrk_entrezgene_nomen
+pg_restore: setting owner and privileges for TABLE DATA wrk_entrezgene_symatches
+pg_restore: setting owner and privileges for TABLE DATA wrk_entrezgene_synonym
+pg_restore: setting owner and privileges for TABLE DATA wrk_imsr_alleles
+pg_restore: setting owner and privileges for TABLE DATA wrk_imsr_genes
+pg_restore: setting owner and privileges for TABLE DATA wrk_imsr_strains
+pg_restore: setting owner and privileges for TABLE DATA wrk_imsr_synonym
+pg_restore: setting owner and privileges for CONSTRAINT app_jobstream_pkey
+pg_restore: setting owner and privileges for CONSTRAINT dp_entrezgene_info_pkey
+pg_restore: setting owner and privileges for CONSTRAINT dp_mgc_clones_pkey
+pg_restore: setting owner and privileges for CONSTRAINT dp_rpci_clones_pkey
+pg_restore: setting owner and privileges for CONSTRAINT gb_est_reload_pkey
+pg_restore: setting owner and privileges for CONSTRAINT img_mgi_image_pkey
+pg_restore: setting owner and privileges for CONSTRAINT mgi_association_pkey
+pg_restore: setting owner and privileges for CONSTRAINT mgi_clonelibrary_pkey
+pg_restore: setting owner and privileges for CONSTRAINT mgi_cloneload_accession_pkey
+pg_restore: setting owner and privileges for CONSTRAINT mgi_cloneload_clone_pkey
+pg_restore: setting owner and privileges for CONSTRAINT mgi_columns_pkey
+pg_restore: setting owner and privileges for CONSTRAINT mgi_dbinfo_pkey
+pg_restore: setting owner and privileges for CONSTRAINT mgi_tables_pkey
+pg_restore: setting owner and privileges for CONSTRAINT nia_parent_daughter_clones_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_assocload_assoc_discrep_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_assocload_target_discrep_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_cdnaload_cloneid_discrep_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_cdnaload_cloneid_missing_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_cdnaload_cloneid_unknown_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_cdnaload_library_discrep_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_cdnaload_library_missing_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_cdnaload_library_no_parent_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_cloneload_dupclone_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_cloneload_dupseq_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_cloneload_multiclone_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_cloneload_nonclone_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_cloneload_seqonly_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_mgcload_image_missing_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_mgcload_mgc_duplicate_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_mgcload_mgc_missing_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_mgcload_sequence_duplicate_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_mgcload_sequence_missing_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_ms_attredit_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_ms_changedlibrary_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_ms_invalidcellline_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_ms_invalidgender_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_ms_invalidlibrary_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_ms_invalidstrain_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_ms_invalidtissue_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_ms_nameconflict_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_ms_unresolvedorganism_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_seq_merged_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_seq_oldref_pkey
+pg_restore: setting owner and privileges for CONSTRAINT qc_seq_rawsourceconflict_pkey
+pg_restore: setting owner and privileges for CONSTRAINT riken_fantom_clones_pkey
+pg_restore: setting owner and privileges for CONSTRAINT txt_matches_pkey
+pg_restore: setting owner and privileges for CONSTRAINT txt_searches_pkey
+pg_restore: setting owner and privileges for CONSTRAINT voc_dagsort_pkey
+pg_restore: setting owner and privileges for CONSTRAINT voc_header_pkey
+pg_restore: setting owner and privileges for CONSTRAINT voc_note_pkey
+pg_restore: setting owner and privileges for CONSTRAINT wrk_cdna_clones_pkey
+pg_restore: setting owner and privileges for CONSTRAINT wrk_cloneassociation_pkey
+pg_restore: setting owner and privileges for INDEX app_filesmirrored_idx_file_key
+pg_restore: setting owner and privileges for INDEX app_filesmirrored_idx_filetype
+pg_restore: setting owner and privileges for INDEX app_filesprocessed_idx_createdby
+pg_restore: setting owner and privileges for INDEX app_filesprocessed_idx_file_key
+pg_restore: setting owner and privileges for INDEX app_filesprocessed_idx_primary
+pg_restore: setting owner and privileges for INDEX app_jobstream_idx_jobstream_key
+pg_restore: setting owner and privileges for INDEX app_jobstream_idx_jobstreamname
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_accession_idx_geneid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_accession_idx_genomic
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_accession_idx_rna
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_accession_idx_taxid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_dbxref_idx_dbxrefid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_dbxref_idx_geneid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_dbxref_idx_taxid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_history_idx_geneid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_history_idx_oldgeneid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_history_idx_taxid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_info_idx_geneid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_info_idx_locustag
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_info_idx_status
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_info_idx_symbol
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_info_idx_taxid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_mim_idx_geneid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_mim_idx_mimid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_pubmed_idx_geneid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_pubmed_idx_pubmedid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_pubmed_idx_taxid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_refseq_idx_geneid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_refseq_idx_genomic
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_refseq_idx_rna
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_refseq_idx_taxid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_synonym_idx_geneid
+pg_restore: setting owner and privileges for INDEX dp_entrezgene_synonym_idx_taxid
+pg_restore: setting owner and privileges for INDEX dp_homologene_idx_groupid
+pg_restore: setting owner and privileges for INDEX dp_homologene_idx_symbol
+pg_restore: setting owner and privileges for INDEX dp_mgc_clones_idx_imageid
+pg_restore: setting owner and privileges for INDEX dp_mgc_clones_idx_mgcclone_key
+pg_restore: setting owner and privileges for INDEX dp_mgc_clones_idx_mgcid
+pg_restore: setting owner and privileges for INDEX dp_mgc_clones_idx_seqid
+pg_restore: setting owner and privileges for INDEX dp_rpci_clones_idx_cloneid
+pg_restore: setting owner and privileges for INDEX dp_rpci_clones_idx_rpciclone_key
+pg_restore: setting owner and privileges for INDEX dp_rpci_clones_idx_seqid
+pg_restore: setting owner and privileges for INDEX gb_est_reload_idx_primaryseqid
+pg_restore: setting owner and privileges for INDEX gb_est_reload_idx_reload_key
+pg_restore: setting owner and privileges for INDEX img_mgi_image_idx_primary
+pg_restore: setting owner and privileges for INDEX mgi_association_idx_accid
+pg_restore: setting owner and privileges for INDEX mgi_association_idx_assoc_key
+pg_restore: setting owner and privileges for INDEX mgi_association_idx_logicaldb
+pg_restore: setting owner and privileges for INDEX mgi_association_idx_record_key
+pg_restore: setting owner and privileges for INDEX mgi_clonelibrary_idx_badname
+pg_restore: setting owner and privileges for INDEX mgi_clonelibrary_idx_cloneset
+pg_restore: setting owner and privileges for INDEX mgi_clonelibrary_idx_goodname
+pg_restore: setting owner and privileges for INDEX mgi_clonelibrary_idx_primary
+pg_restore: setting owner and privileges for INDEX mgi_cloneload_accession_idx_accid
+pg_restore: setting owner and privileges for INDEX mgi_cloneload_accession_idx_clone_key
+pg_restore: setting owner and privileges for INDEX mgi_cloneload_accession_idx_cloneaccession_key
+pg_restore: setting owner and privileges for INDEX mgi_cloneload_clone_idx_clone_key
+pg_restore: setting owner and privileges for INDEX mgi_cloneload_clone_idx_clonename
+pg_restore: setting owner and privileges for INDEX mgi_cloneload_clone_idx_jnumid
+pg_restore: setting owner and privileges for INDEX mgi_columns_index_creation_date
+pg_restore: setting owner and privileges for INDEX mgi_columns_index_modification_date
+pg_restore: setting owner and privileges for INDEX mgi_columns_index_table_column
+pg_restore: setting owner and privileges for INDEX mgi_imsr_idx_mgiimsr_state
+pg_restore: setting owner and privileges for INDEX mgi_imsr_idx_mgiimsr_stockdesignation
+pg_restore: setting owner and privileges for INDEX mgi_imsr_idx_mgiimsr_stockid
+pg_restore: setting owner and privileges for INDEX mgi_tables_index_creation_date
+pg_restore: setting owner and privileges for INDEX mgi_tables_index_modification_date
+pg_restore: setting owner and privileges for INDEX mgi_tables_index_table_name
+pg_restore: setting owner and privileges for INDEX nia_parent_daughter_clones_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_assocload_assoc_discrep_idx_mgitype_key
+pg_restore: setting owner and privileges for INDEX qc_assocload_assoc_discrep_idx_object_key
+pg_restore: setting owner and privileges for INDEX qc_assocload_assoc_discrep_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_assocload_assoc_discrep_idx_tgtmgitype_key
+pg_restore: setting owner and privileges for INDEX qc_assocload_assoc_discrep_idx_tgtobject_key
+pg_restore: setting owner and privileges for INDEX qc_assocload_target_discrep_idx_mgitype_key
+pg_restore: setting owner and privileges for INDEX qc_assocload_target_discrep_idx_object_key
+pg_restore: setting owner and privileges for INDEX qc_assocload_target_discrep_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cdnaload_cloneid_discrep_idx_clonenum
+pg_restore: setting owner and privileges for INDEX qc_cdnaload_cloneid_discrep_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cdnaload_cloneid_missing_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cdnaload_cloneid_unknown_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cdnaload_library_discrep_idx_clonenum
+pg_restore: setting owner and privileges for INDEX qc_cdnaload_library_discrep_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cdnaload_library_missing_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cdnaload_library_no_parent_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cloneload_dupclone_idx_accid
+pg_restore: setting owner and privileges for INDEX qc_cloneload_dupclone_idx_clone_key
+pg_restore: setting owner and privileges for INDEX qc_cloneload_dupclone_idx_cloneid
+pg_restore: setting owner and privileges for INDEX qc_cloneload_dupclone_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cloneload_dupseq_idx_accid
+pg_restore: setting owner and privileges for INDEX qc_cloneload_dupseq_idx_clone_key
+pg_restore: setting owner and privileges for INDEX qc_cloneload_dupseq_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cloneload_dupseq_idx_seqid
+pg_restore: setting owner and privileges for INDEX qc_cloneload_multiclone_idx_accid
+pg_restore: setting owner and privileges for INDEX qc_cloneload_multiclone_idx_clone_key
+pg_restore: setting owner and privileges for INDEX qc_cloneload_multiclone_idx_mgiid
+pg_restore: setting owner and privileges for INDEX qc_cloneload_multiclone_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cloneload_nonclone_idx_clone_key
+pg_restore: setting owner and privileges for INDEX qc_cloneload_nonclone_idx_mgiid
+pg_restore: setting owner and privileges for INDEX qc_cloneload_nonclone_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cloneload_seqonly_idx_clone_key
+pg_restore: setting owner and privileges for INDEX qc_cloneload_seqonly_idx_mgiid
+pg_restore: setting owner and privileges for INDEX qc_cloneload_seqonly_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_cloneload_seqonly_idx_seqid
+pg_restore: setting owner and privileges for INDEX qc_mgcload_image_missing_idx_mgcclone_key
+pg_restore: setting owner and privileges for INDEX qc_mgcload_image_missing_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_mgcload_mgc_duplicate_idx_mgcclone_key
+pg_restore: setting owner and privileges for INDEX qc_mgcload_mgc_duplicate_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_mgcload_mgc_missing_idx_mgcclone_key
+pg_restore: setting owner and privileges for INDEX qc_mgcload_mgc_missing_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_mgcload_sequence_duplicate_idx_mgcclone_key
+pg_restore: setting owner and privileges for INDEX qc_mgcload_sequence_duplicate_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_mgcload_sequence_missing_idx_mgcclone_key
+pg_restore: setting owner and privileges for INDEX qc_mgcload_sequence_missing_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_ms_attredit_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_ms_changedlibrary_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_ms_invalidcellline_idx_jobstream_key
+pg_restore: setting owner and privileges for INDEX qc_ms_invalidcellline_idx_qcrecord_key
+pg_restore: setting owner and privileges for INDEX qc_ms_invalidgender_idx_jobstream_key
+pg_restore: setting owner and privileges for INDEX qc_ms_invalidgender_idx_qcrecord_key
+pg_restore: setting owner and privileges for INDEX qc_ms_invalidlibrary_idx_jobstream_key
+pg_restore: setting owner and privileges for INDEX qc_ms_invalidlibrary_idx_qcrecord_key
+pg_restore: setting owner and privileges for INDEX qc_ms_invalidstrain_idx_jobstream_key
+pg_restore: setting owner and privileges for INDEX qc_ms_invalidstrain_idx_qcrecord_key
+pg_restore: setting owner and privileges for INDEX qc_ms_invalidtissue_idx_jobstream_key
+pg_restore: setting owner and privileges for INDEX qc_ms_invalidtissue_idx_qcrecord_key
+pg_restore: setting owner and privileges for INDEX qc_ms_nameconflict_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_ms_unresolvedorganism_idx_primary
+pg_restore: setting owner and privileges for INDEX qc_seq_merged_idx_jobstream_key
+pg_restore: setting owner and privileges for INDEX qc_seq_merged_idx_qcrecord_key
+pg_restore: setting owner and privileges for INDEX qc_seq_oldref_idx_jobstream_key
+pg_restore: setting owner and privileges for INDEX qc_seq_oldref_idx_qcrecord_key
+pg_restore: setting owner and privileges for INDEX qc_seq_rawsourceconflict_idx_jobstream_key
+pg_restore: setting owner and privileges for INDEX qc_seq_rawsourceconflict_idx_qcrecord_key
+pg_restore: setting owner and privileges for INDEX riken_fantom_clones_idx_primary
+pg_restore: setting owner and privileges for INDEX txt_matches_idx_object_key
+pg_restore: setting owner and privileges for INDEX txt_matches_idx_primary_key
+pg_restore: setting owner and privileges for INDEX txt_matches_idx_search_key
+pg_restore: setting owner and privileges for INDEX txt_searches_idx_search_key
+pg_restore: setting owner and privileges for INDEX txt_searches_idx_searchstring
+pg_restore: setting owner and privileges for INDEX txt_searches_idx_searchtime
+pg_restore: setting owner and privileges for INDEX voc_dagsort_idx_primary
+pg_restore: setting owner and privileges for INDEX voc_header_idx_primary
+pg_restore: setting owner and privileges for INDEX voc_note_idx_primary
+pg_restore: setting owner and privileges for INDEX voc_synonym_idx_accid
+pg_restore: setting owner and privileges for INDEX voc_synonym_idx_synonymtype
+pg_restore: setting owner and privileges for INDEX wrk_cdna_clones_idx_accid
+pg_restore: setting owner and privileges for INDEX wrk_cdna_clones_idx_clone_key
+pg_restore: setting owner and privileges for INDEX wrk_cdna_clones_idx_clonenum
+pg_restore: setting owner and privileges for INDEX wrk_cdna_clones_idx_librarynum
+pg_restore: setting owner and privileges for INDEX wrk_cdna_clones_idx_logicaldb
+pg_restore: setting owner and privileges for INDEX wrk_cloneassociation_idx_accid
+pg_restore: setting owner and privileges for INDEX wrk_cloneassociation_idx_clone_key
+pg_restore: setting owner and privileges for INDEX wrk_cloneassociation_idx_logicaldb
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_bucket0_idx_accid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_bucket0_idx_geneid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_bucket0_idx_mgiid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_bucket0_idx_taxid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_bucket0tmp_idx_geneid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_bucket0tmp_idx_idtype
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_bucket0tmp_idx_mgiid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_egset_idx_compareid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_egset_idx_geneid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_egset_idx_idtype
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_egset_idx_taxid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_mapping_idx_geneid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_mapping_idx_marker_key
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_mapping_idx_taxid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_mgiset_idx_compareid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_mgiset_idx_idtype
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_mgiset_idx_mgiid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_mgiset_idx_taxid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_nomen_idx_geneid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_nomen_idx_marker_key
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_nomen_idx_taxid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_symatches_idx_geneid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_symatches_idx_mgiid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_synonym_idx_geneid
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_synonym_idx_marker_key
+pg_restore: setting owner and privileges for INDEX wrk_entrezgene_synonym_idx_taxid
+pg_restore: setting owner and privileges for FK CONSTRAINT app_filesprocessed__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT dp_entrezgene_dbxref_geneid
+pg_restore: setting owner and privileges for FK CONSTRAINT dp_entrezgene_pubmed_geneid
+pg_restore: setting owner and privileges for FK CONSTRAINT dp_entrezgene_refseq_geneid
+pg_restore: setting owner and privileges for FK CONSTRAINT dp_entrezgene_synonym_geneid
+pg_restore: setting owner and privileges for FK CONSTRAINT dp_mgc_clones__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT dp_rpci_clones__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT mgi_association__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT mgi_cloneload_accession__clone_key
+pg_restore: setting owner and privileges for FK CONSTRAINT mgi_cloneload_accession__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT mgi_cloneload_clone__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT mgi_columns_table_name
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_assocload_assoc_discrep__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_assocload_target_discrep__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cdnaload_cloneid_discrep__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cdnaload_cloneid_missing__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cdnaload_cloneid_unknown__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cdnaload_library_discrep__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cdnaload_library_missing__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cdnaload_library_no_parent__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cloneload_dupclone__clone_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cloneload_dupclone__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cloneload_dupseq__clone_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cloneload_dupseq__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cloneload_multiclone__clone_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cloneload_multiclone__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cloneload_nonclone__clone_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cloneload_nonclone__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cloneload_seqonly__clone_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_cloneload_seqonly__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_mgcload_image_missing__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_mgcload_mgc_duplicate__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_mgcload_mgc_missing__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_mgcload_sequence_duplicate__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_mgcload_sequence_missing__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_ms_attredit__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_ms_changedlibrary__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_ms_invalidcellline__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_ms_invalidgender__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_ms_invalidlibrary__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_ms_invalidstrain__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_ms_invalidtissue__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_ms_nameconflict__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_ms_unresolvedorganism__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_seq_merged__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_seq_oldref__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT qc_seq_rawsourceconflict__jobstream_key
+pg_restore: setting owner and privileges for FK CONSTRAINT txt_matches__search_key
+pg_restore: setting owner and privileges for FK CONSTRAINT wrk_cloneassociation__clone_key
+Thu May 17 07:51:28 EDT 2012
+Grant mgd_public permission on schema rohan.lec.radar
+Thu May 17 07:51:28 EDT 2012
