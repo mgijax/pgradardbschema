@@ -18,4 +18,7 @@ drop index radar.DP_EntrezGene_MIM_idx_mimID
 drop index radar.DP_EntrezGene_MIM_idx_geneID
 ;
 
+drop index radar.DP_EntrezGene_MIM_idx_annotationType
+;
+
 EOSQL
