@@ -20,4 +20,6 @@ create index DP_EntrezGene_MIM_idx_geneID on radar.DP_EntrezGene_MIM (geneID)
 
 create index DP_EntrezGene_MIM_idx_annotationType on radar.DP_EntrezGene_MIM (annotationType)
 
+create index DP_EntrezGene_MIM_idx_source on radar.DP_EntrezGene_MIM (source)
+
 EOSQL
