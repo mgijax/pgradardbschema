@@ -1,4 +1,4 @@
-#!/bin/csh -f -x
+#!/bin/csh -f
 
 #
 # Installation script for RADAR schema product
