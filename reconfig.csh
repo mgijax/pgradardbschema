@@ -1,4 +1,4 @@
-#!/bin/csh -x -f
+#!/bin/csh -f
 
 #
 # Drop and re-create database triggers, stored procedures and views

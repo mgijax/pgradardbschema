@@ -1,4 +1,4 @@
-#!/bin/csh -f -x
+#!/bin/csh -f
 
 #
 # Script to call all drop csh scripts
