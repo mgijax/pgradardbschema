@@ -57,7 +57,7 @@ pkey=`grep "sp_primarykey" ${i} | sed "s/sp_primarykey //g" | cut -f1,2 -d"," | 
 fkey=`grep "sp_foreignkey" ${i} | sed "s/sp_foreignkey //g" | cut -f1,3 -d"," | sed "s/, /+/g"`
 
 ed $i <<END
-g/csh -f -x/s//sh/g
+g/csh -f/s//sh/g
 g/source/s//./g
 g/sp_primarykey ${t}, /s//ALTER TABLE radar.${t} ADD PRIMARY KEY (/
 g/PRIMARY KEY/s/$/);/
@@ -92,7 +92,7 @@ END
 
 dropScript=${t}_drop.object
 ed ${dropScript} <<END
-g/csh -f -x/s//sh/g
+g/csh -f/s//sh/g
 g/& source/s//./g
 g/sp_dropkey foreign, /d
 g/sp_dropkey primary, /s//ALTER TABLE radar./

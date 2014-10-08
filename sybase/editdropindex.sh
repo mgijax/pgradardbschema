@@ -21,7 +21,7 @@ do
 t=`basename $i _drop.object`
 
 ed $i <<END
-g/csh -f -x/s//sh/g
+g/csh -f/s//sh/g
 g/ source/s// ./g
 g/drop index /s//drop index radar./g
 g/${t}.idx/s//${t}_idx/g

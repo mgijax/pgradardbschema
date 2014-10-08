@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # This table is used to create the Duplicate Clone ID QC report for the

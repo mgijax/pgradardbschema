@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # This table is the MGI ID to IMAGE ID mapping.

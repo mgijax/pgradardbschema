@@ -20,7 +20,7 @@ for i in *truncate.object
 do
 
 ed $i <<END
-g/csh -f -x/s//sh/g
+g/csh -f/s//sh/g
 g/source/s//./g
 g/truncate table /s//truncate table radar./g
 /cat
