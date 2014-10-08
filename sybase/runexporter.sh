@@ -6,7 +6,7 @@
 
 cd `dirname $0` && . ../Configuration
 
-LOG=$0.log
+LOG=${EXPORTLOGS}/`basename $0`.log
 rm -rf ${LOG}
 touch ${LOG}
 
