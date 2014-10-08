@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/csh -f
 
 #
 # History
@@ -16,8 +16,7 @@ create table radar.DP_EntrezGene_MIM (
 	mimID           varchar(30)     not null,
 	geneID          varchar(30)     not null,
 	annotationType  varchar(30)     not null,
-        source          varchar(30)     not null,
-        medgencui       varchar(30)     not null
-
+	source          varchar(30)     not null,
+	medgencui       varchar(30)     not null
 );
 EOSQL

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/csh -f
 
 #
 # This table is used to create the Seq-Only QC report for the

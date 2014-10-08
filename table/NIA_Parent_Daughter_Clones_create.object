@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/csh -f
 
 #
 # This table is the NIA parent-daughter clone mapping.

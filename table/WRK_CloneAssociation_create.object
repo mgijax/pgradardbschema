@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/csh -f
 
 #
 # This table is the clone mapping for the Clone Load Product (cloneload).

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/csh -f
 
 #
 # This table is used to create the Non-Clone QC report for the

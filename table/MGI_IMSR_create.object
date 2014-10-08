@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/csh -f
 
 #
 # This table is a representation the standard IMSR Data load format.  Data

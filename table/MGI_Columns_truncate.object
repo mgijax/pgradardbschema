@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/csh -f
 
 #
 # This file was generated automatically by revengineer_schema.py -- edit with care.
