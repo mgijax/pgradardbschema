@@ -34,7 +34,7 @@ else
 fi
 
 #
-# sybase:  bcp out the mgd data files
+# sybase:  bcp out the radar data files
 #
 
 #
@@ -88,10 +88,10 @@ if [ $runAll -eq '1' ]
 then
 
 echo 'drop database...' | tee -a ${LOG}
-${PG_DBUTILS}/bin/dropSchema.csh ${PG_DBSERVER} ${PG_DBNAME} mgd | tee -a ${LOG}
-echo 'create schema for 'mgd'...' | tee -a ${LOG}
-${PG_DBUTILS}/bin/createSchema.csh ${PG_DBSERVER} ${PG_DBNAME} mgd | tee -a ${LOG}
-echo 'create tables for 'mgd'...' | tee -a ${LOG}
+${PG_DBUTILS}/bin/dropSchema.csh ${PG_DBSERVER} ${PG_DBNAME} radar | tee -a ${LOG}
+echo 'create schema for 'radar'...' | tee -a ${LOG}
+${PG_DBUTILS}/bin/createSchema.csh ${PG_DBSERVER} ${PG_DBNAME} radar | tee -a ${LOG}
+echo 'create tables for 'radar'...' | tee -a ${LOG}
 ${PG_RADAR_DBSCHEMADIR}/table/table_create.sh
 
 else
@@ -130,7 +130,7 @@ do
 
 i=`basename ${i} _create.object`
 
-psql -h ${PG_DBSERVER} -U ${PG_DBUSER} -d ${PG_DBNAME} --command "\copy mgd.$i from '${EXPORTDATA}/${i}.new' with null as ''" | tee -a ${LOG}.${i}.copy &
+psql -h ${PG_DBSERVER} -U ${PG_DBUSER} -d ${PG_DBNAME} --command "\copy radar.$i from '${EXPORTDATA}/${i}.new' with null as ''" | tee -a ${LOG}.${i}.copy &
 
 counter=`expr $counter + 1`
 
