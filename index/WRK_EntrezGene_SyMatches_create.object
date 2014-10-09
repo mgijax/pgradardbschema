@@ -13,10 +13,10 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index WRK_EntrezGene_SyMatches_idx_geneID on radar.WRK_EntrezGene_SyMatches (geneID)
-
+;
 
 create index WRK_EntrezGene_SyMatches_idx_mgiID on radar.WRK_EntrezGene_SyMatches (mgiID)
-
+;
 
 
 EOSQL

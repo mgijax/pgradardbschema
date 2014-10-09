@@ -13,10 +13,10 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index DP_RPCI_Clones_idx_cloneID on radar.DP_RPCI_Clones (cloneID)
-
+;
 
 create index DP_RPCI_Clones_idx_seqID on radar.DP_RPCI_Clones (seqID)
-
+;
 
 
 EOSQL

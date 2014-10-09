@@ -13,13 +13,13 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index MGI_IMSR_idx_mgiimsr_stockdesignation on radar.MGI_IMSR(stock_designation)
-
+;
 
 create index MGI_IMSR_idx_mgiimsr_state on radar.MGI_IMSR(state)
-
+;
 
 create index MGI_IMSR_idx_mgiimsr_stockid on radar.MGI_IMSR(stock_ID)
- 
+; 
 
 
 EOSQL

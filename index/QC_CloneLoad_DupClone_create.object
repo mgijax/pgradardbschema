@@ -13,13 +13,13 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index QC_CloneLoad_DupClone_idx_Clone_key on radar.QC_CloneLoad_DupClone (_Clone_key)
-
+;
 
 create index QC_CloneLoad_DupClone_idx_cloneID on radar.QC_CloneLoad_DupClone (cloneID)
-
+;
 
 create index QC_CloneLoad_DupClone_idx_accID on radar.QC_CloneLoad_DupClone (accID)
-
+;
 
 
 EOSQL

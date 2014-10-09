@@ -13,10 +13,10 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index APP_FilesProcessed_idx_File_key on radar.APP_FilesProcessed (_File_key)
-
+;
 
 create index APP_FilesProcessed_idx_createdBy on radar.APP_FilesProcessed (createdBy)
-
+;
 
 
 EOSQL

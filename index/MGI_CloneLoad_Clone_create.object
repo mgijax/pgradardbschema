@@ -13,10 +13,10 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index MGI_CloneLoad_Clone_idx_cloneName on radar.MGI_CloneLoad_Clone (cloneName)
-
+;
 
 create index MGI_CloneLoad_Clone_idx_jnumID on radar.MGI_CloneLoad_Clone (jnumID)
-
+;
 
 
 EOSQL

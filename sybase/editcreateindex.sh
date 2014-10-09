@@ -31,7 +31,7 @@ g/ nonclustered /s// /g
 g/ clustered /s// /g
 g/idx/s//${t}_idx/g
 g/ on /s// on radar./g
-g/^go/s///g
+g/^go/s//;/g
 /cat
 d
 .

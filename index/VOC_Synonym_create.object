@@ -13,10 +13,10 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index VOC_Synonym_idx_accID on radar.VOC_Synonym (accID)
-
+;
 
 create index VOC_Synonym_idx_synonymType on radar.VOC_Synonym (synonymType)
-
+;
 
 
 EOSQL

@@ -16,7 +16,7 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index GB_EST_Reload_idx_primarySeqID on radar.GB_EST_Reload (primarySeqID)
-
+;
 
 
 EOSQL
