@@ -178,5 +178,7 @@ fi
 
 psql -h ${PG_DBSERVER} -U ${PG_DBUSER} -d ${PG_DBNAME} --command "select count(*) from pg_stat_user_tables where schemaname = 'radar'"
 
+psql -h ${PG_DBSERVER} -U ${PG_DBUSER} -d ${PG_DBNAME} --command "select count(*) from pg_stat_user_indexes where schemaname = 'radar'"
+
 date | tee -a ${LOG}
 
