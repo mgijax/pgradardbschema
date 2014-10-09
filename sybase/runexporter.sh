@@ -160,8 +160,6 @@ echo 'run create index for all tables...' | tee -a ${LOG}
 ${PG_RADAR_DBSCHEMADIR}/index/index_create.sh
 echo 'run create key for all tables...' | tee -a ${LOG}
 ${PG_RADAR_DBSCHEMADIR}/key/key_create.sh
-echo 'run create trigger for all tables...' | tee -a ${LOG}
-${PG_RADAR_DBSCHEMADIR}/trigger/trigger_create.sh
 
 else
 #
@@ -176,19 +174,9 @@ ${PG_RADAR_DBSCHEMADIR}/index/${i}_create.object
 echo 'adding keys...' | tee -a ${LOG}
 ${PG_RADAR_DBSCHEMADIR}/key/${i}_create.object
 
-if [ -f ${PG_RADAR_DBSCHEMADIR}/trigger/${i}_delete_create.object ]
-then
-	echo 'adding delete trigger...' | tee -a ${LOG}
-	${PG_RADAR_DBSCHEMADIR}/trigger/${i}_delete_create.object
 fi
 
-if [ -f ${PG_RADAR_DBSCHEMADIR}/trigger/${i}_insert_create.object ]
-then
-	echo 'adding insert trigger...' | tee -a ${LOG}
-	${PG_RADAR_DBSCHEMADIR}/trigger/${i}_insert_create.object
-fi
-
-fi
+psql -h ${PG_DBSERVER} -U ${PG_DBUSER} -d ${PG_DBNAME} --command "select count(*) from pg_stat_user_tables where schemaname = 'radar'"
 
 date | tee -a ${LOG}
 
