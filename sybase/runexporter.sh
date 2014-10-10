@@ -156,10 +156,10 @@ date | tee -a ${LOG}
 #
 if [ $runAll -eq '1' ]
 then
-echo 'run create index for all tables...' | tee -a ${LOG}
-${PG_RADAR_DBSCHEMADIR}/index/index_create.sh
 echo 'run create key for all tables...' | tee -a ${LOG}
 ${PG_RADAR_DBSCHEMADIR}/key/key_create.sh
+echo 'run create index for all tables...' | tee -a ${LOG}
+${PG_RADAR_DBSCHEMADIR}/index/index_create.sh
 
 else
 #
@@ -168,11 +168,11 @@ else
 
 i=`basename ${findObject} _create.object`
 
-echo 'adding indexes...' | tee -a ${LOG}
-${PG_RADAR_DBSCHEMADIR}/index/${i}_create.object
-
 echo 'adding keys...' | tee -a ${LOG}
 ${PG_RADAR_DBSCHEMADIR}/key/${i}_create.object
+
+echo 'adding indexes...' | tee -a ${LOG}
+${PG_RADAR_DBSCHEMADIR}/index/${i}_create.object
 
 fi
 
