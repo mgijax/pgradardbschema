@@ -17,10 +17,10 @@ cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 DROP FUNCTION APP_createJobStream(varchar,varchar);
 
 CREATE OR REPLACE FUNCTION APP_createJobStream (
-jobStreamName varchar(30),
+v_jobStreamName varchar(30),
 createdBy varchar(30)
 )
-RETURNS VOID AS
+RETURNS INT AS
 \$\$
 
 DECLARE
@@ -31,15 +31,9 @@ BEGIN
 
 /* if another job stream of the same name is already running, */
 /* then do not create a new job stream */
-if exists (select 1 from APP_JobStream where jobStreamName = jobStreamName and end_date is null)
+if exists (select 1 from APP_JobStream where jobStreamName = v_jobStreamName and end_date is null)
 then
-	select into jobStreamKey -1
-	;
-
-	select jobStreamKey
-	;
-
-	return;
+	return -1;
 end if;
 
 /* get next job stream key */
@@ -51,16 +45,11 @@ then
 	select into jobStreamKey 1;
 end if;
 
-select into jobStreamKey 1
-;
-
 /* create a job stream record */
-insert into APP_JobStream values (jobStreamKey, jobStreamName, createdBy, NULL, current_date, NULL)
+insert into APP_JobStream values (jobStreamKey, v_jobStreamName, createdBy, NULL, current_date, NULL)
 ;
 
-select jobStreamKey
-;
-
+return jobStreamKey;
 
 END;
 \$\$
