@@ -1,0 +1,74 @@
+#!/bin/sh
+#
+# This procedure creates a new APP_JobStream record.
+#
+#
+# History
+#
+# 08/06/2003	lec
+#	- TR 3404 (JSAM)
+#
+#
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+DROP FUNCTION APP_createJobStream(varchar,varchar);
+
+CREATE OR REPLACE FUNCTION APP_createJobStream (
+jobStreamName varchar(30),
+createdBy varchar(30)
+)
+RETURNS VOID AS
+\$\$
+
+DECLARE
+jobStreamKey int;
+
+
+BEGIN
+
+/* if another job stream of the same name is already running, */
+/* then do not create a new job stream */
+if exists (select 1 from APP_JobStream where jobStreamName = jobStreamName and end_date is null)
+then
+	select into jobStreamKey -1
+	;
+
+	select jobStreamKey
+	;
+
+	return;
+end if;
+
+/* get next job stream key */
+select into jobStreamKey max(_JobStream_key) + 1 from APP_JobStream
+;
+
+if jobStreamKey is null
+then
+	select into jobStreamKey 1;
+end if;
+
+select into jobStreamKey 1
+;
+
+/* create a job stream record */
+insert into APP_JobStream values (jobStreamKey, jobStreamName, createdBy, NULL, current_date, NULL)
+;
+
+select jobStreamKey
+;
+
+
+END;
+\$\$
+LANGUAGE plpgsql;
+
+GRANT EXECUTE ON FUNCTION APP_createJobStream(varchar,varchar) TO public;
+
+
+COMMENT ON FUNCTION APP_createJobStream(varchar,varchar) IS '';
+
+EOSQL

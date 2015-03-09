@@ -1,0 +1,50 @@
+#!/bin/sh
+#
+# This procedure closes a APP_JobStream record.
+#
+#
+# History
+#
+# 08/06/2003	lec
+#	- TR 3404 (JSAM)
+#
+#
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+DROP FUNCTION APP_endJobStream(int,int);
+
+CREATE OR REPLACE FUNCTION APP_endJobStream (
+jobStreamKey int,
+jobStreamReturnCode int
+)
+RETURNS VOID AS
+\$\$
+
+
+BEGIN
+
+if not exists (select 1 from APP_JobStream where _JobStream_key = jobStreamKey)
+then
+    return;
+end if;
+
+update APP_JobStream
+set end_date = current_date,
+    returnCode = @jobStreamReturnCode
+where _JobStream_key = @jobStreamKey;
+
+return;
+
+END;
+\$\$
+LANGUAGE plpgsql;
+
+GRANT EXECUTE ON FUNCTION APP_endJobStream(int,int) TO public;
+
+
+COMMENT ON FUNCTION APP_endJobStream(int,int) IS '';
+
+EOSQL
