@@ -12,13 +12,13 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.WRK_CloneAssociation_idx_Clone_key
+drop index if exists radar.WRK_CloneAssociation_idx_Clone_key
 ;
 
-drop index radar.WRK_CloneAssociation_idx_accID
+drop index if exists radar.WRK_CloneAssociation_idx_accID
 ;
 
-drop index radar.WRK_CloneAssociation_idx_logicalDB
+drop index if exists radar.WRK_CloneAssociation_idx_logicalDB
 ;
 
 EOSQL

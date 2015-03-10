@@ -10,4 +10,6 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 
+CLUSTER radar.MGI_Columns USING MGI_Columns_pkey;
+
 EOSQL

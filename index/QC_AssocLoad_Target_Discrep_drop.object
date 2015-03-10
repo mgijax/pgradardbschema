@@ -12,10 +12,10 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.QC_AssocLoad_Target_Discrep_idx_MGIType_key
+drop index if exists radar.QC_AssocLoad_Target_Discrep_idx_MGIType_key
 ;
 
-drop index radar.QC_AssocLoad_Target_Discrep_idx_Object_key
+drop index if exists radar.QC_AssocLoad_Target_Discrep_idx_Object_key
 ;
 
 EOSQL

@@ -13,7 +13,9 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index QC_MGCLoad_MGC_Duplicate_idx_MGCClone_key on radar.QC_MGCLoad_MGC_Duplicate (_MGCClone_key)
-;
 
+
+
+CLUSTER radar.QC_MGCLoad_MGC_Duplicate USING QC_MGCLoad_MGC_Duplicate_pkey;
 
 EOSQL

@@ -20,25 +20,33 @@ fi
 #
 # copy radardbschema/table/*_create.object to postgres directory
 #
-cd ../table
+cd ${PG_RADAR_DBSCHEMADIR}/table
 cp ../../radardbschema/table/${findObject} .
 
 #
 # convert each radar-format table script to a postgres script
 #
+#g/bit/s//boolean/g
 
 for i in ${findObject}
 do
 
 ed $i <<END
 g/csh -f/s//sh/g
-g/\&\& source/s//\&\& ./g
+g/ source/s// ./g
 g/create table /s//create table radar./g
-g/datetime/s//timestamp without time zone/g
-g/bit/s//boolean/g
+g/tinyint/s//smallint/g
+g/datetime/s//timestamp DEFAULT now()/g
+g/_CreatedBy_key.*int/s//_CreatedBy_key                 int DEFAULT 1001/g
+g/_ModifiedBy_key.*int/s//_ModifiedBy_key                int DEFAULT 1001/g
+g/bit/s//smallint/g
+g/float/s//numeric/g
+g/numericValue/s//floatValue/g
+g/offset/s//cmOffset/g
+g/varchar(255)/s//text/g
 g/numeric(8,0)    identity/s//serial/g
 g/^)/s//);/
-/^cat
+/cat
 d
 a
 cat - <<EOSQL | \${PG_DBUTILS}/bin/doisql.csh \$0
@@ -49,7 +57,7 @@ d
 d
 d
 .
-/^go
+/^on
 ;d
 a
 EOSQL

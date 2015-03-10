@@ -13,4 +13,6 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 
+CLUSTER radar.QC_cDNALoad_Library_No_Parent USING QC_cDNALoad_Library_No_Parent_pkey;
+
 EOSQL

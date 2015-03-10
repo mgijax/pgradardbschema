@@ -13,7 +13,9 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index QC_cDNALoad_Library_Discrep_idx_cloneNum on radar.QC_cDNALoad_Library_Discrep (cloneNum)
-;
 
+
+
+CLUSTER radar.QC_cDNALoad_Library_Discrep USING QC_cDNALoad_Library_Discrep_pkey;
 
 EOSQL

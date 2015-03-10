@@ -13,7 +13,9 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index QC_MS_InvalidLibrary_idx_JobStream_key on radar.QC_MS_InvalidLibrary (_JobStream_key)
-;
 
+
+
+CLUSTER radar.QC_MS_InvalidLibrary USING QC_MS_InvalidLibrary_pkey;
 
 EOSQL

@@ -13,4 +13,6 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 
+CLUSTER radar.QC_MS_UnresolvedOrganism USING QC_MS_UnresolvedOrganism_pkey;
+
 EOSQL

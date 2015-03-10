@@ -13,4 +13,6 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 
+CLUSTER radar.NIA_Parent_Daughter_Clones USING NIA_Parent_Daughter_Clones_pkey;
+
 EOSQL

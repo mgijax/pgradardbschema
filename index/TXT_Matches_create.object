@@ -13,10 +13,12 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index TXT_Matches_idx_Search_key on radar.TXT_Matches (_Search_key)
-;
+
 
 create index TXT_Matches_idx_Object_key on radar.TXT_Matches (_Object_key)
-;
 
+
+
+CLUSTER radar.TXT_Matches USING TXT_Matches_pkey;
 
 EOSQL

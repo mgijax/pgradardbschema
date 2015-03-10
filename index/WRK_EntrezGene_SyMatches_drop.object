@@ -12,10 +12,10 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.WRK_EntrezGene_SyMatches_idx_geneID
+drop index if exists radar.WRK_EntrezGene_SyMatches_idx_geneID
 ;
 
-drop index radar.WRK_EntrezGene_SyMatches_idx_mgiID
+drop index if exists radar.WRK_EntrezGene_SyMatches_idx_mgiID
 ;
 
 EOSQL

@@ -12,7 +12,7 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.QC_cDNALoad_CloneID_Discrep_idx_cloneNum
+drop index if exists radar.QC_cDNALoad_CloneID_Discrep_idx_cloneNum
 ;
 
 EOSQL

@@ -12,8 +12,8 @@ fi
 #
 # copy radardbschema/index/*_drop.object to postgres directory
 #
-cd ../index
-cp ${RADAR_DBSCHEMADIR}/index/${findObject} .
+cd ${PG_RADAR_DBSCHEMADIR}/index
+cp ../../radardbschema/index/${findObject} .
 
 for i in ${findObject}
 do
@@ -23,7 +23,7 @@ t=`basename $i _drop.object`
 ed $i <<END
 g/csh -f/s//sh/g
 g/ source/s// ./g
-g/drop index /s//drop index radar./g
+g/drop index /s//drop index if exists radar./g
 g/${t}.idx/s//${t}_idx/g
 g/offset/s//cmOffset/g
 g/^go/s//\\;/g

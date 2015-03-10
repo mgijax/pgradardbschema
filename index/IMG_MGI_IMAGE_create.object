@@ -13,4 +13,6 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 
+CLUSTER radar.IMG_MGI_IMAGE USING IMG_MGI_IMAGE_pkey;
+
 EOSQL

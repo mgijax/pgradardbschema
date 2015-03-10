@@ -13,13 +13,15 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index WRK_EntrezGene_Mapping_idx_taxID on radar.WRK_EntrezGene_Mapping (taxID)
-;
+
 
 create index WRK_EntrezGene_Mapping_idx_geneID on radar.WRK_EntrezGene_Mapping (geneID)
-;
+
 
 create index WRK_EntrezGene_Mapping_idx_Marker_key on radar.WRK_EntrezGene_Mapping (_Marker_key)
-;
 
+
+
+CLUSTER radar.WRK_EntrezGene_Mapping USING WRK_EntrezGene_Mapping_pkey;
 
 EOSQL

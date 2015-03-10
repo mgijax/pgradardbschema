@@ -13,13 +13,15 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index QC_CloneLoad_SeqOnly_idx_Clone_key on radar.QC_CloneLoad_SeqOnly (_Clone_key)
-;
+
 
 create index QC_CloneLoad_SeqOnly_idx_mgiID on radar.QC_CloneLoad_SeqOnly (mgiID)
-;
+
 
 create index QC_CloneLoad_SeqOnly_idx_seqID on radar.QC_CloneLoad_SeqOnly (seqID)
-;
 
+
+
+CLUSTER radar.QC_CloneLoad_SeqOnly USING QC_CloneLoad_SeqOnly_pkey;
 
 EOSQL

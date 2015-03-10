@@ -13,11 +13,13 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index APP_JobStream_idx_jobStreamName on radar.APP_JobStream (jobStreamName)
-;
+
 
 create index APP_JobStream_idx_end_date on radar.APP_JobStream (end_date)
-;
 
 
+
+
+CLUSTER radar.APP_JobStream USING APP_JobStream_pkey;
 
 EOSQL

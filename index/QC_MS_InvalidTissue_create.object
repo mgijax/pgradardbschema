@@ -13,7 +13,9 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index QC_MS_InvalidTissue_idx_JobStream_key on radar.QC_MS_InvalidTissue (_JobStream_key)
-;
 
+
+
+CLUSTER radar.QC_MS_InvalidTissue USING QC_MS_InvalidTissue_pkey;
 
 EOSQL

@@ -15,7 +15,7 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.GB_EST_Reload_idx_primarySeqID
+drop index if exists radar.GB_EST_Reload_idx_primarySeqID
 ;
 
 EOSQL

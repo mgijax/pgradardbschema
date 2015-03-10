@@ -12,7 +12,7 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.APP_FilesMirrored_idx_fileType
+drop index if exists radar.APP_FilesMirrored_idx_fileType
 ;
 
 EOSQL

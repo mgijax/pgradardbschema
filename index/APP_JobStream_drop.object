@@ -12,10 +12,10 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.APP_JobStream_idx_jobStreamName
+drop index if exists radar.APP_JobStream_idx_jobStreamName
 ;
 
-drop index radar.APP_JobStream_idx_end_date
+drop index if exists radar.APP_JobStream_idx_end_date
 ;
 
 EOSQL

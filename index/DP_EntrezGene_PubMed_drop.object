@@ -12,13 +12,13 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-drop index radar.DP_EntrezGene_PubMed_idx_taxID
+drop index if exists radar.DP_EntrezGene_PubMed_idx_taxID
 ;
 
-drop index radar.DP_EntrezGene_PubMed_idx_geneID
+drop index if exists radar.DP_EntrezGene_PubMed_idx_geneID
 ;
 
-drop index radar.DP_EntrezGene_PubMed_idx_pubMedID
+drop index if exists radar.DP_EntrezGene_PubMed_idx_pubMedID
 ;
 
 EOSQL

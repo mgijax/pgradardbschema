@@ -13,4 +13,6 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 
+CLUSTER radar.RIKEN_FANTOM_Clones USING RIKEN_FANTOM_Clones_pkey;
+
 EOSQL
