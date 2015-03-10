@@ -9,11 +9,5 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create index index_modification_date on radar.MGI_Tables (modification_date)
-;
-
-create index index_creation_date on radar.MGI_Tables (creation_date)
-;
-
 
 EOSQL
