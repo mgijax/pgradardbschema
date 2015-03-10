@@ -13,7 +13,6 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.DP_EntrezGene_Info (
-EOSQL
 	taxID      	integer 	not null,
 	status          char(1)         not null,
 	geneID          varchar(30)     not null,
@@ -24,11 +23,4 @@ EOSQL
 	name       	text 	null,
 	geneType        text    null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL

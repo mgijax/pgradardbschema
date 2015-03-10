@@ -13,7 +13,6 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.QC_MS_ChangedLibrary (
-EOSQL
 	_QCRecord_key                  int             not null,
 	_sequence_key                  int             not null,
         oldSource_key		       int	       not null,
@@ -26,11 +25,4 @@ EOSQL
 	_JobStream_key                 int             not null,
 	creation_date                  timestamp DEFAULT now()        not null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL

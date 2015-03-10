@@ -21,18 +21,10 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.TXT_Searches (
-EOSQL
 	_Search_key                    int             not null,
 	searchString                   text    not null,
 	dataset                        varchar(25)     not null,
 	mgiDatabase                    varchar(20)     not null,
 	searchTime                     timestamp DEFAULT now()        not null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL

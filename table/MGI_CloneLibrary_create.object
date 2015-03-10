@@ -16,17 +16,9 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.MGI_CloneLibrary (
-EOSQL
 	libraryNum                     int             not null,
 	cloneSet                       varchar(80)     not null,
 	goodName                       text    not null,
 	badName                        text    not null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL

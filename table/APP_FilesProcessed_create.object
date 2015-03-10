@@ -1,9 +1,8 @@
 #!/bin/sh
 
 #
+# Application - Processed Files
 #
-cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
-
 # A record in this table represents the logging of
 # of a file that has been processed by a Job Stream.
 #
@@ -23,20 +22,13 @@ cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 cd `dirname $0` && . ./Configuration
 
-cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.APP_FilesProcessed (
-EOSQL
 	_File_key                      int             not null,
 	_JobStream_key                 int             not null,
 	createdBy                      varchar(30)     not null,
 	creation_date                  timestamp DEFAULT now()        not null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL

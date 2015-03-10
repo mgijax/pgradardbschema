@@ -18,22 +18,21 @@ fi
 #
 
 #
-# copy mgddbschema/table/*_create.object to postgres directory
+# copy radardbschema/table/*_create.object to postgres directory
 #
-cd ${PG_RADAR_DBSCHEMADIR}/table
+cd ../table
 cp ../../radardbschema/table/${findObject} .
 
 #
-# convert each mgd-format table script to a postgres script
+# convert each radar-format table script to a postgres script
 #
-#g/bit/s//boolean/g
 
 for i in ${findObject}
 do
 
 ed $i <<END
 g/csh -f/s//sh/g
-g/ source/s// ./g
+g/\&\& source/s//\&\& ./g
 g/create table /s//create table radar./g
 g/tinyint/s//smallint/g
 g/datetime/s//timestamp DEFAULT now()/g
@@ -44,8 +43,9 @@ g/float/s//numeric/g
 g/numericValue/s//floatValue/g
 g/offset/s//cmOffset/g
 g/varchar(255)/s//text/g
+g/numeric(8,0)    identity/s//serial/g
 g/^)/s//);/
-/cat
+/^cat
 d
 a
 cat - <<EOSQL | \${PG_DBUTILS}/bin/doisql.csh \$0
@@ -56,6 +56,8 @@ d
 d
 d
 .
+/^go
+;d
 a
 EOSQL
 .

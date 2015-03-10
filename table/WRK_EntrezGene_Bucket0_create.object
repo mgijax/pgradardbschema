@@ -13,7 +13,6 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.WRK_EntrezGene_Bucket0 (
-EOSQL
 	taxID                   int             not null,
 	_Object_key		int             not null,
 	_LogicalDB_key		int             not null,
@@ -23,11 +22,4 @@ EOSQL
 	private			smallint		not null,
 	refRequired             smallint             not null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL

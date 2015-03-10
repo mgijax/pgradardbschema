@@ -13,7 +13,6 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.DP_EntrezGene_RefSeq (
-EOSQL
 	taxID      	integer 	not null,
 	geneID          varchar(30)     not null,
 	status          varchar(15)     null,
@@ -27,11 +26,4 @@ EOSQL
 	endPos          integer         not null,
 	orientation     char(1)         not null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL

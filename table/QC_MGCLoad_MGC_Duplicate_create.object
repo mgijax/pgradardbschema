@@ -13,17 +13,9 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.QC_MGCLoad_MGC_Duplicate (
-EOSQL
 	_QCRecord_key                  int             not null,
 	_MGCClone_key                  int             not null,
 	_JobStream_key                 int             not null,
 	creation_date                  timestamp DEFAULT now()        not null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL

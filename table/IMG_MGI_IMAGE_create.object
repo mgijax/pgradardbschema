@@ -19,15 +19,7 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.IMG_MGI_IMAGE (
-EOSQL
 	mgiID                          varchar(30)     not null,
 	imageID                        varchar(30)     not null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL

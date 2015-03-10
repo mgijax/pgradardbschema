@@ -19,17 +19,9 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.NIA_Parent_Daughter_Clones (
-EOSQL
 	parentCloneID                  varchar(30)     not null,
 	daughterCloneID                varchar(30)     not null,
 	origin                         varchar(5)      not null,
 	cloneLibrary                   text    not null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL

@@ -13,7 +13,6 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.QC_cDNALoad_Library_No_Parent (
-EOSQL
 	_QCRecord_key                  int             not null,
 	seqIDList                      text    not null,
 	rawLibrary                     text    not null,
@@ -21,11 +20,4 @@ EOSQL
 	_JobStream_key                 int             not null,
 	creation_date                  timestamp DEFAULT now()        not null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL

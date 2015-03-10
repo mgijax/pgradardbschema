@@ -21,15 +21,7 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.TXT_Matches (
-EOSQL
 	_Search_key                    int             not null,
 	_Object_key                    int             not null
 );
-go
-
-checkpoint
-go
-
-quit
-
 EOSQL
