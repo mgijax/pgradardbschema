@@ -12,9 +12,9 @@
 cd `dirname $0` && . ./Configuration
 
 
-cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+${PG_RADAR_DBSCHEMADIR}/procedure/APP_createJobStream_drop.object
 
-DROP FUNCTION APP_createJobStream(varchar,varchar);
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 CREATE OR REPLACE FUNCTION APP_createJobStream (
 v_jobStreamName varchar(30),

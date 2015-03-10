@@ -11,10 +11,9 @@
 #
 cd `dirname $0` && . ./Configuration
 
+${PG_RADAR_DBSCHEMADIR}/procedure/APP_endJobStream_drop.object
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
-
-DROP FUNCTION APP_endJobStream(int,int);
 
 CREATE OR REPLACE FUNCTION APP_endJobStream (
 jobStreamKey int,
