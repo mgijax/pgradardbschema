@@ -13,10 +13,10 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index DP_HomoloGene_idx_groupID on radar.DP_HomoloGene (groupID)
-
+;
 
 create index DP_HomoloGene_idx_symbol on radar.DP_HomoloGene (symbol)
-
+;
 
 
 CLUSTER radar.DP_HomoloGene USING DP_HomoloGene_pkey;

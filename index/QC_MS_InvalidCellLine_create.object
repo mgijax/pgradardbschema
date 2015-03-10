@@ -13,7 +13,7 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index QC_MS_InvalidCellLine_idx_JobStream_key on radar.QC_MS_InvalidCellLine (_JobStream_key)
-
+;
 
 
 CLUSTER radar.QC_MS_InvalidCellLine USING QC_MS_InvalidCellLine_pkey;

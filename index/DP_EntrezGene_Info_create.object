@@ -13,19 +13,19 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index DP_EntrezGene_Info_idx_taxID on radar.DP_EntrezGene_Info (taxID)
-
+;
 
 create index DP_EntrezGene_Info_idx_geneID on radar.DP_EntrezGene_Info (geneID)
-
+;
 
 create index DP_EntrezGene_Info_idx_symbol on radar.DP_EntrezGene_Info (symbol)
-
+;
 
 create index DP_EntrezGene_Info_idx_locusTag on radar.DP_EntrezGene_Info (locusTag)
-
+;
 
 create index DP_EntrezGene_Info_idx_status on radar.DP_EntrezGene_Info (status)
-
+;
 
 
 CLUSTER radar.DP_EntrezGene_Info USING DP_EntrezGene_Info_pkey;

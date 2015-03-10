@@ -13,10 +13,10 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index QC_AssocLoad_Target_Discrep_idx_MGIType_key on radar.QC_AssocLoad_Target_Discrep (_MGIType_key)
-
+;
 
 create index QC_AssocLoad_Target_Discrep_idx_Object_key on radar.QC_AssocLoad_Target_Discrep (_Object_key)
-
+;
 
 
 CLUSTER radar.QC_AssocLoad_Target_Discrep USING QC_AssocLoad_Target_Discrep_pkey;

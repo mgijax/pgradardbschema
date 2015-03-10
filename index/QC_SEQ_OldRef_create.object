@@ -13,7 +13,7 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index QC_SEQ_OldRef_idx_JobStream_key on radar.QC_SEQ_OldRef (_JobStream_key)
-
+;
 
 
 CLUSTER radar.QC_SEQ_OldRef USING QC_SEQ_OldRef_pkey;

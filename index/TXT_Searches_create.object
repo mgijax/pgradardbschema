@@ -13,10 +13,10 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create unique index TXT_Searches_idx_searchString on radar.TXT_Searches (searchString, dataset, mgiDatabase)
-
+;
 
 create index TXT_Searches_idx_searchTime on radar.TXT_Searches (searchTime)
-
+;
 
 
 CLUSTER radar.TXT_Searches USING TXT_Searches_pkey;

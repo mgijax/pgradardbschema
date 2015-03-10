@@ -13,13 +13,13 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index WRK_EntrezGene_Synonym_idx_taxID on radar.WRK_EntrezGene_Synonym (taxID)
-
+;
 
 create index WRK_EntrezGene_Synonym_idx_geneID on radar.WRK_EntrezGene_Synonym (geneID)
-
+;
 
 create index WRK_EntrezGene_Synonym_idx_Marker_key on radar.WRK_EntrezGene_Synonym (_Marker_key)
-
+;
 
 
 CLUSTER radar.WRK_EntrezGene_Synonym USING WRK_EntrezGene_Synonym_pkey;

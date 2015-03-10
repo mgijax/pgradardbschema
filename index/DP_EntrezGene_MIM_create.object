@@ -13,16 +13,16 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create index DP_EntrezGene_MIM_idx_mimID on radar.DP_EntrezGene_MIM (mimID)
-
+;
 
 create index DP_EntrezGene_MIM_idx_geneID on radar.DP_EntrezGene_MIM (geneID)
-
+;
 
 create index DP_EntrezGene_MIM_idx_annotationType on radar.DP_EntrezGene_MIM (annotationType)
-
+;
 
 create index DP_EntrezGene_MIM_idx_source on radar.DP_EntrezGene_MIM (source)
-
+;
 
 
 CLUSTER radar.DP_EntrezGene_MIM USING DP_EntrezGene_MIM_pkey;
