@@ -15,7 +15,7 @@ ${PG_RADAR_DBSCHEMADIR}/procedure/APP_endJobStream_drop.object
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-CREATE OR REPLACE FUNCTION APP_endJobStream (
+CREATE OR REPLACE FUNCTION radar.APP_endJobStream (
 jobStreamKey int,
 jobStreamReturnCode int
 )
@@ -41,9 +41,9 @@ END;
 \$\$
 LANGUAGE plpgsql;
 
-GRANT EXECUTE ON FUNCTION APP_endJobStream(int,int) TO public;
+GRANT EXECUTE ON FUNCTION radar.APP_endJobStream(int,int) TO public;
 
 
-COMMENT ON FUNCTION APP_endJobStream(int,int) IS '';
+COMMENT ON FUNCTION radar.APP_endJobStream(int,int) IS '';
 
 EOSQL

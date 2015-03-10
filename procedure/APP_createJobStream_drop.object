@@ -4,6 +4,6 @@ cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-DROP FUNCTION IF EXISTS APP_createJobStream(varchar,varchar);
+DROP FUNCTION IF EXISTS radar.APP_createJobStream(varchar,varchar);
 
 EOSQL

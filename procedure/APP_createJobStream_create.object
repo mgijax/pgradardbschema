@@ -16,7 +16,7 @@ ${PG_RADAR_DBSCHEMADIR}/procedure/APP_createJobStream_drop.object
 
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-CREATE OR REPLACE FUNCTION APP_createJobStream (
+CREATE OR REPLACE FUNCTION radar.APP_createJobStream (
 v_jobStreamName varchar(30),
 createdBy varchar(30)
 )
@@ -55,9 +55,9 @@ END;
 \$\$
 LANGUAGE plpgsql;
 
-GRANT EXECUTE ON FUNCTION APP_createJobStream(varchar,varchar) TO public;
+GRANT EXECUTE ON FUNCTION radar.APP_createJobStream(varchar,varchar) TO public;
 
 
-COMMENT ON FUNCTION APP_createJobStream(varchar,varchar) IS '';
+COMMENT ON FUNCTION radar.APP_createJobStream(varchar,varchar) IS '';
 
 EOSQL
