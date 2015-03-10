@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/csh -f
 
 #
 # This table is the MGI Format for the Clone Load Product (cloneload).
@@ -23,18 +23,27 @@
 #	- Added _CloneAccession_key
 #
 
-cd `dirname $0` && . ./Configuration
+cd `dirname $0` && source ./Configuration
 
+cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+use ${DBNAME}
+go
 
-create table radar.MGI_CloneLoad_Accession (
+create table MGI_CloneLoad_Accession (
 	_CloneAccession_key            int             not null,
 	_Clone_key                     int             not null,
 	accID                          varchar(30)     not null,
 	logicalDB                      varchar(80)     not null,
-	private                        boolean             not null,
+	private                        bit             not null,
 	_JobStream_key                 int             not null,
-	creation_date                  timestamp without time zone        not null
-);
+	creation_date                  datetime        not null
+)
+go
+
+checkpoint
+go
+
+quit
+
 EOSQL

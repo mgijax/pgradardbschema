@@ -16,7 +16,7 @@ fi
 #
 # copy radardbschema/table/*_drop.object to postgres directory
 #
-cd ../table
+cd ${PG_RADAR_DBSCHEMADIR}/table
 cp ../../radardbschema/table/${findObject} .
 
 #
@@ -28,7 +28,7 @@ do
 
 ed $i <<END
 g/csh -f/s//sh/g
-g/source/s//./g
+g/ source/s// ./g
 g/drop table /s//drop table radar./g
 /cat
 d

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/csh -f
 
 #
 # History
@@ -7,12 +7,14 @@
 #	- new
 #
 
-cd `dirname $0` && . ./Configuration
+cd `dirname $0` && source ./Configuration
 
+cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+use ${DBNAME}
+go
 
-create table radar.DP_EntrezGene_RefSeq (
+create table DP_EntrezGene_RefSeq (
 	taxID      	integer 	not null,
 	geneID          varchar(30)     not null,
 	status          varchar(15)     null,
@@ -25,5 +27,12 @@ create table radar.DP_EntrezGene_RefSeq (
 	startPos        integer         not null,
 	endPos          integer         not null,
 	orientation     char(1)         not null
-);
+)
+go
+
+checkpoint
+go
+
+quit
+
 EOSQL

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/csh -f
 
 #
 # History
@@ -7,19 +7,28 @@
 #	- new
 #
 
-cd `dirname $0` && . ./Configuration
+cd `dirname $0` && source ./Configuration
 
+cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+use ${DBNAME}
+go
 
-create table radar.WRK_EntrezGene_Bucket0 (
+create table WRK_EntrezGene_Bucket0 (
 	taxID                   int             not null,
 	_Object_key		int             not null,
 	_LogicalDB_key		int             not null,
 	geneID                  varchar(30)     not null,
 	mgiID    		varchar(30) 	not null,
 	accID    		varchar(30) 	not null,
-	private			boolean		not null,
-	refRequired             boolean             not null
-);
+	private			bit		not null,
+	refRequired             bit             not null
+)
+go
+
+checkpoint
+go
+
+quit
+
 EOSQL
