@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # History
@@ -7,17 +7,16 @@
 #	- was originally a "tempdb..symatches"; createing a "real" table
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
-cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create table WRK_EntrezGene_SyMatches (
+create table radar.WRK_EntrezGene_SyMatches (
+EOSQL
 	geneID                  varchar(30)     not null,
 	mgiID    		varchar(30) 	not null
-)
+);
 go
 
 checkpoint

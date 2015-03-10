@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # This table is a representation of:
@@ -15,26 +15,25 @@
 #
 # 08/07/2003    dbm
 #       - Added _JobStream_key
-#       - Removed createdBy, modifiedBy and modification_date
 #
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
 # 10/15/2003    dbm
 #       - Added _RPCIClone_key as the primary key
 #
 # 10/17/2003    dbm
-#       - Changed clone_date (datetime) to cloneDate (varchar)
+#       - Changed clone_date (timestamp DEFAULT now()) to cloneDate (varchar)
 #
 # 12/29/2004    dbm
 #       - Removed fpBin
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
-
-create table DP_RPCI_Clones (
+create table radar.DP_RPCI_Clones (
+EOSQL
 	_RPCIClone_key                 int             not null,
 	cloneID                        varchar(40)     not null,
 	ends                           char(3)         null,
@@ -45,8 +44,8 @@ create table DP_RPCI_Clones (
 	cloneDate                      varchar(10)     not null,
 	seqID                          varchar(30)     null,
 	_JobStream_key                 int             not null,
-	creation_date                  datetime        not null
-)
+	creation_date                  timestamp DEFAULT now()        not null
+);
 go
 
 checkpoint

@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # This table is the MGI ID to IMAGE ID mapping.
@@ -13,17 +13,16 @@
 #	- TR 3404 (JSAM)
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
-cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create table IMG_MGI_IMAGE (
+create table radar.IMG_MGI_IMAGE (
+EOSQL
 	mgiID                          varchar(30)     not null,
 	imageID                        varchar(30)     not null
-)
+);
 go
 
 checkpoint

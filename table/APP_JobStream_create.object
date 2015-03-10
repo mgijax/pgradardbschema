@@ -1,8 +1,9 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
-# This table is the Application Job Stream.
 #
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
 # A record in this table represents the logging of the execution
 #
 # History
@@ -12,21 +13,19 @@
 #
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
-
-create table APP_JobStream (
+create table radar.APP_JobStream (
+EOSQL
 	_JobStream_key                 int             not null,
 	jobStreamName                  varchar(30)     not null,
 	createdBy                      varchar(30)     not null,
 	returnCode                     int null,
-	start_date                     datetime        not null,
-	end_date                       datetime null
-)
+	start_date                     timestamp DEFAULT now()        not null,
+	end_date                       timestamp DEFAULT now() null
+);
 go
 
 checkpoint

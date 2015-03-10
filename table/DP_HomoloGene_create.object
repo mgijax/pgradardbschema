@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # History
@@ -7,21 +7,20 @@
 #	- new
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
-cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create table DP_HomoloGene (
+create table radar.DP_HomoloGene (
+EOSQL
 	groupID         integer         not null,
 	taxID           integer         not null,
 	geneID          varchar(10)     not null,
 	symbol          varchar(50)     not null,
 	proteinGI       varchar(30)     not null,
 	proteinID       varchar(30)     not null
-)
+);
 go
 
 checkpoint

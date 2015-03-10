@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # History
@@ -7,26 +7,25 @@
 #	- new
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
-cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create table QC_MS_ChangedLibrary (
+create table radar.QC_MS_ChangedLibrary (
+EOSQL
 	_QCRecord_key                  int             not null,
 	_sequence_key                  int             not null,
         oldSource_key		       int	       not null,
-	oldRawName                     varchar(255)    null,
-	oldResolvedName                varchar(255)    not null,
+	oldRawName                     text    null,
+	oldResolvedName                text    not null,
         newSource_key		       int	       null,
-	newRawName                     varchar(255)    null,
-	newResolvedName                varchar(255)    null,
+	newRawName                     text    null,
+	newResolvedName                text    null,
 	foundMethod	               varchar(30)     null,
 	_JobStream_key                 int             not null,
-	creation_date                  datetime        not null
-)
+	creation_date                  timestamp DEFAULT now()        not null
+);
 go
 
 checkpoint

@@ -1,24 +1,23 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # This file was generated automatically by dbschemaScripts.py -- edit with care.
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
-cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create table MGI_dbinfo (
+create table radar.MGI_dbinfo (
+EOSQL
  	public_version                 varchar(30)     not null,
 	product_name                   varchar(30)     not null,
 	schema_version                 varchar(30)     not null,
-	lastdump_date                  datetime        not null,
-	creation_date                  datetime        not null,
-	modification_date              datetime        not null 
-)
+	lastdump_date                  timestamp DEFAULT now()        not null,
+	creation_date                  timestamp DEFAULT now()        not null,
+	modification_date              timestamp DEFAULT now()        not null 
+);
 go
 
 checkpoint

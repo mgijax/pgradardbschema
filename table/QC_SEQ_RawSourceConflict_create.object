@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # History
@@ -7,21 +7,20 @@
 #	- created
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
-cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create table QC_SEQ_RawSourceConflict (
+create table radar.QC_SEQ_RawSourceConflict (
+EOSQL
 	_QCRecord_key		int             	not null,
 	_Sequence_key           int		     	not null,
-	attrName		varchar(255)		null,
-	incomingValue		varchar(255)		null,
+	attrName		text		null,
+	incomingValue		text		null,
 	_JobStream_key		int             	not null,
-	creation_date		datetime        	not null
-)
+	creation_date		timestamp DEFAULT now()        	not null
+);
 go
 
 checkpoint

@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # This table is the clone mapping for the Clone Load Product (cloneload).
@@ -19,24 +19,23 @@
 #	- Renamed from WRK_CloneMapping to WRK_CloneAssociation
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
-cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create table WRK_CloneAssociation (
+create table radar.WRK_CloneAssociation (
+EOSQL
 	_Clone_key                     int             not null,
 	accID                          varchar(30)     not null,
 	logicalDB                      varchar(80)     not null,
-	private                        bit             not null,
+	private                        smallint             not null,
 	_Object_key                    int             null,
 	_MGIType_key                   int             null,
 	mgiID                          varchar(30)     null,
 	_Source_key                    int             null,
 	_Refs_key                      int             null
-)
+);
 go
 
 checkpoint

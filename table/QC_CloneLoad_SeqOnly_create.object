@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # This table is used to create the Seq-Only QC report for the
@@ -14,20 +14,19 @@
 #	- TR 3404 (JSAM)
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
-cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create table QC_CloneLoad_SeqOnly (
+create table radar.QC_CloneLoad_SeqOnly (
+EOSQL
 	_Clone_key                     int             not null,
 	mgiID                          varchar(30)     not null,
 	seqID                          varchar(30)     not null,
 	_JobStream_key                 int             not null,
-	creation_date                  datetime        not null
-)
+	creation_date                  timestamp DEFAULT now()        not null
+);
 go
 
 checkpoint

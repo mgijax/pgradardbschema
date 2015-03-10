@@ -1,8 +1,9 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
-# This table is used to create the Duplicate Seq ID QC report for the
 # Clone Load Product (cloneload).
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
 #
 # It contains data produced by the last run of the clone loader.
 #
@@ -14,21 +15,19 @@
 #	- TR 3404 (JSAM)
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
-
-create table QC_CloneLoad_DupSeq (
+create table radar.QC_CloneLoad_DupSeq (
+EOSQL
 	_Clone_key                     int             not null,
 	seqID                          varchar(30)     not null,
 	cloneName                      varchar(40)     not null,
 	accID                          varchar(30)     not null,
 	_JobStream_key                 int             not null,
-	creation_date                  datetime        not null
-)
+	creation_date                  timestamp DEFAULT now()        not null
+);
 go
 
 checkpoint

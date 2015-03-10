@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # This table is the MGI Format for the Clone Load Product (cloneload).
@@ -20,24 +20,23 @@
 #
 # 08/07/2003    dbm
 #       - Added _JobStream_key
-#       - Removed createdBy, modifiedBy and modification_date
 #
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-cd `dirname $0` && source ./Configuration
+
+cd `dirname $0` && . ./Configuration
 
 cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
-
-create table MGI_CloneLoad_Clone (
+create table radar.MGI_CloneLoad_Clone (
+EOSQL
 	_Clone_key                     int             not null,
 	cloneName                      varchar(40)     not null,
-	cloneLibrary                   varchar(255)    null,
+	cloneLibrary                   text    null,
 	jnumID                         varchar(30)     not null,
 	_JobStream_key                 int             not null,
-	creation_date                  datetime        not null
-)
+	creation_date                  timestamp DEFAULT now()        not null
+);
 go
 
 checkpoint

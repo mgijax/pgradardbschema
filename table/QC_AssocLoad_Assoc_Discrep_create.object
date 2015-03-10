@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # History
@@ -7,14 +7,13 @@
 #	- new
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
-cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create table QC_AssocLoad_Assoc_Discrep (
+create table radar.QC_AssocLoad_Assoc_Discrep (
+EOSQL
 	_QCRecord_key                  int             not null,
 	tgtAccID                       varchar(30)     not null,
 	_TgtLogicalDB_key              int             not null,
@@ -26,8 +25,8 @@ create table QC_AssocLoad_Assoc_Discrep (
 	_Object_key                    int             not null,
 	message                        varchar(80)     not null,
 	_JobStream_key                 int             not null,
-	creation_date                  datetime        not null
-)
+	creation_date                  timestamp DEFAULT now()        not null
+);
 go
 
 checkpoint

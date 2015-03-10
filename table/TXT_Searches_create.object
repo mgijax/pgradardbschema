@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh
 
 #
 # Text Indexing - Searches
@@ -15,20 +15,19 @@
 #
 #
 
-cd `dirname $0` && source ./Configuration
+cd `dirname $0` && . ./Configuration
 
-cat - <<EOSQL | ${MGI_DBUTILS}/bin/doisql.csh ${DBSERVER} ${DBNAME} $0
 
-use ${DBNAME}
-go
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
-create table TXT_Searches (
+create table radar.TXT_Searches (
+EOSQL
 	_Search_key                    int             not null,
-	searchString                   varchar(255)    not null,
+	searchString                   text    not null,
 	dataset                        varchar(25)     not null,
 	mgiDatabase                    varchar(20)     not null,
-	searchTime                     datetime        not null
-)
+	searchTime                     timestamp DEFAULT now()        not null
+);
 go
 
 checkpoint
