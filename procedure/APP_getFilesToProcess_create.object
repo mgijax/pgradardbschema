@@ -1,0 +1,121 @@
+#!/bin/sh
+#
+# This procedure retrieves APP_FilesMirrored records
+# that are awaiting processing by a given Job Stream.
+#
+# If a maxFileSize is provided, then the SP will
+# loop thru the files until maxFileSize is met.
+#
+#
+# History
+#
+# 04/29/2004	lec
+#	- TR 3404 (JSAM)
+#
+#
+cd `dirname $0` && . ./Configuration
+
+${PG_RADAR_DBSCHEMADIR}/procedure/APP_getFilesToProcess_drop.object
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+CREATE OR REPLACE FUNCTION radar.APP_getFilesToProcess (
+v_jobStreamName varchar(30),
+v_fileType varchar(30),
+maxFileSize int = 0
+)
+RETURNS TABLE(fileName varchar(255), fileSize int) AS
+\$\$
+
+DECLARE
+v_fileName varchar(255);
+v_fileSize int;
+sumFileSize int;
+file_cursor refcursor;
+
+
+BEGIN
+
+/* if no max size given, return all files */
+if maxFileSize = 0
+then
+	return query
+	select m.fileName, m.fileSize
+	from APP_FilesMirrored m
+	where m.fileType = v_fileType
+	and not exists (select 1
+	from APP_JobStream j, APP_FilesProcessed p
+	where j.jobStreamName= v_jobStreamName
+	and j._JobStream_key = p._JobStream_key
+	and p._File_key = m._File_key)
+	order by m.file_date
+	;
+end if;
+
+/* if maxFileSize given, then return files until maxFileSize is reached */
+select into sumFileSize 0
+;
+
+drop table if exists filesToProcess;
+
+create temp table filesToProcess as
+select m.fileName, m.fileSize
+from APP_FilesMirrored m
+where 1 = 0
+;
+
+OPEN file_cursor FOR
+select m.fileName, m.fileSize
+from APP_FilesMirrored m
+where m.fileType = v_fileType
+and not exists (select 1
+from APP_JobStream j, APP_FilesProcessed p
+where j.jobStreamName= v_jobStreamName
+and j._JobStream_key = p._JobStream_key
+and p._File_key = m._File_key)
+order by m.file_date ;
+LOOP
+    FETCH file_cursor INTO v_fileName, v_fileSize;
+
+    if NOT FOUND 
+    then
+        exit ;
+    end if;
+
+    /* if this fileSize exceeds the maximum..we're done */
+    if fileSize + sumFileSize > maxFileSize
+    then
+	    /* always return at least one file, even if it exceeds max file size */
+	    if (select count(*) from filesToProcess) = 0
+	    then
+		    insert into filesToProcess values (v_fileName, v_fileSize)
+		    ;
+
+		    exit;
+	    end if;
+
+    else
+	    /* else, this file can be processsed */
+	    insert into filesToProcess values (v_fileName, v_fileSize) ;
+
+	    /* increment the total file size */
+	    select into sumFileSize sumFileSize + fileSize ;
+    end if;
+END LOOP;
+CLOSE file_cursor;
+
+/* return the files to process */
+return query
+select * from filesToProcess;
+
+
+END;
+\$\$
+LANGUAGE plpgsql;
+
+GRANT EXECUTE ON FUNCTION APP_getFilesToProcess(varchar,varchar,int) TO public;
+
+
+COMMENT ON FUNCTION APP_getFilesToProcess(varchar,varchar,int) IS '';
+
+EOSQL
