@@ -1,0 +1,68 @@
+#!/bin/sh
+#
+# This procedure creates a new APP_FilesProcessed record.
+#
+#
+# History
+#
+# 04/28/2004	lec
+#	- TR 3404 (JSAM)
+#
+# 12/06/2004	lec
+#	- Added fileType
+#
+cd `dirname $0` && . ./Configuration
+
+${PG_RADAR_DBSCHEMADIR}/procedure/APP_logProcessedFile_drop.object
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+CREATE OR REPLACE FUNCTION radar.APP_logProcessedFile (
+v_jobStreamKey int,
+v_fileName varchar(255),
+v_fileType varchar(30)
+)
+RETURNS VOID AS
+\$\$
+
+DECLARE
+v_createdBy varchar(30);
+v_fileKey int;
+
+
+BEGIN
+
+/* find the unlogged APP_FilesMirrored._File_key for the given fileName, fileType, jobStreamName combination */
+select into v_createdBy v_jobStreamName from APP_JobStream where _JobStream_key  = v_jobStreamKey
+;
+
+select into v_fileKey m._File_key from APP_FilesMirrored m
+where m.fileName = v_fileName
+and m.fileType = v_fileType
+and not exists (select 1 from APP_FilesProcessed p
+where m._File_key = p._File_key
+and p.createdBy = v_createdBy)
+;
+
+if v_fileKey is null
+then
+    RAISE EXCEPTION 'Error:  could not determine _File_key for data file: %, %, %', v_fileName, v_fileType, v_createdBy
+    return;
+end if;
+
+/* create the record */
+
+insert into APP_FilesProcessed
+values (v_fileKey, v_jobStreamKey, v_createdBy, current_date)
+;
+
+END;
+\$\$
+LANGUAGE plpgsql;
+
+GRANT EXECUTE ON FUNCTION APP_logProcessedFile(int,varchar,varchar) TO public;
+
+
+COMMENT ON FUNCTION APP_logProcessedFile(int,varchar,varchar) IS '';
+
+EOSQL
