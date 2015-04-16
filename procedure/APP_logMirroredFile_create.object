@@ -1,0 +1,91 @@
+#!/bin/sh
+#
+# This procedure creates a new APP_FilesMirrored record.
+#
+#
+# History
+#
+# 04/28/2004	lec
+#	- TR 3404 (JSAM)
+#
+#
+cd `dirname $0` && . ./Configuration
+
+${PG_RADAR_DBSCHEMADIR}/procedure/APP_logMirroredFile_drop.object
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+CREATE OR REPLACE FUNCTION radar.APP_logMirroredFile (
+v_fileType varchar(30),
+v_fileName varchar(255),
+v_fileSize int,
+v_fileDate varchar(30), /* includes date and time MM/DD/YYYY HH:MM */
+v_createdBy varchar(30)
+)
+RETURNS VOID AS
+\$\$
+
+DECLARE
+v_fileKey int;
+
+
+BEGIN
+
+/* if a log record with fileType 'SWISS-PROT' or 'TrEMBL' has not been */
+/* processed, do not create a new log entry OR */
+/* if a log record of the same fileType, fileName and fileDate exists, */
+/* then do not create a new log entry. */
+if v_fileType = 'SWISS-PROT' or v_fileType = 'TrEMBL'
+then
+	if ( select count(_File_key)
+	from APP_FilesMirrored
+	where fileType = v_fileType and
+	fileName = v_fileName)
+	!=
+	(select count(m._File_key)
+	from APP_FilesMirrored m, APP_FilesProcessed p
+	where m.fileType = v_fileType and
+	m.fileName = v_fileName and
+	p.createdBy in ('trembl_seqload', 'swissprot_seqload') and
+	m._File_key = p._File_key)
+	then
+		return;
+	end if;
+
+end if;
+
+if exists (select 1 from APP_FilesMirrored
+where fileType = v_fileType and
+fileName = v_fileName and
+file_date = v_fileDate)
+then
+	return;
+end if;
+
+/* get next file key */
+select into v_fileKey max(_File_key) + 1 from APP_FilesMirrored
+;
+
+if v_fileKey is null
+then
+    select into v_fileKey 1
+    ;
+end if;
+
+
+/* create a record */
+insert into APP_FilesMirrored
+values (v_fileKey, v_fileType, v_fileName, v_fileSize, v_createdBy, v_fileDate, current_date)
+;
+
+
+END;
+\$\$
+LANGUAGE plpgsql;
+
+GRANT EXECUTE ON FUNCTION APP_logMirroredFile(varchar,varchar,int,varchar,varchar) TO public;
+
+
+COMMENT ON FUNCTION APP_logMirroredFile(varchar,varchar,int,varchar,varchar) IS '';
+
+EOSQL

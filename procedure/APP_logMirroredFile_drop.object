@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd `dirname $0` && . ./Configuration
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+DROP FUNCTION IF EXISTS radar.APP_logMirroredFile(varchar,varchar,int,varchar,varchar);
+
+EOSQL
