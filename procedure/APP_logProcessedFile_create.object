@@ -33,7 +33,7 @@ v_fileKey int;
 BEGIN
 
 /* find the unlogged APP_FilesMirrored._File_key for the given fileName, fileType, jobStreamName combination */
-select into v_createdBy v_jobStreamName from APP_JobStream where _JobStream_key  = v_jobStreamKey
+select into v_createdBy jobStreamName from APP_JobStream where _JobStream_key  = v_jobStreamKey
 ;
 
 select into v_fileKey m._File_key from APP_FilesMirrored m
@@ -46,7 +46,7 @@ and p.createdBy = v_createdBy)
 
 if v_fileKey is null
 then
-    RAISE EXCEPTION 'Error:  could not determine _File_key for data file: %, %, %', v_fileName, v_fileType, v_createdBy
+    RAISE EXCEPTION 'Error:  could not determine _File_key for data file: %, %, %', v_fileName, v_fileType, v_createdBy;
     return;
 end if;
 

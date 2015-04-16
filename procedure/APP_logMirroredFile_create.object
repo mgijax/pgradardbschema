@@ -57,7 +57,7 @@ end if;
 if exists (select 1 from APP_FilesMirrored
 where fileType = v_fileType and
 fileName = v_fileName and
-file_date = v_fileDate)
+file_date = v_fileDate::timestamp)
 then
 	return;
 end if;
@@ -75,7 +75,7 @@ end if;
 
 /* create a record */
 insert into APP_FilesMirrored
-values (v_fileKey, v_fileType, v_fileName, v_fileSize, v_createdBy, v_fileDate, current_date)
+values (v_fileKey, v_fileType, v_fileName, v_fileSize, v_createdBy, v_fileDate::timestamp, current_date)
 ;
 
 
