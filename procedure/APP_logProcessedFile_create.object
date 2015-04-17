@@ -42,6 +42,7 @@ and m.fileType = v_fileType
 and not exists (select 1 from APP_FilesProcessed p
 where m._File_key = p._File_key
 and p.createdBy = v_createdBy)
+limit 1
 ;
 
 if v_fileKey is null
