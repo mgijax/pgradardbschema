@@ -105,8 +105,12 @@ END LOOP;
 CLOSE file_cursor;
 
 /* return the files to process */
+/*
+ // Somehow this already gets returned, so the following line actually duplicates
+ // the result. I don't understand this at all.
 return query
 select * from filesToProcess;
+*/
 
 
 END;
