@@ -47,14 +47,14 @@ limit 1
 
 if v_fileKey is null
 then
-    RAISE EXCEPTION 'Error:  could not determine _File_key for data file: %, %, %', v_fileName, v_fileType, v_createdBy;
+    RAISE EXCEPTION 'Error:  could not determine _File_key for data file: %, %, %, %', v_fileName, v_fileType, v_createdBy, v_fileKey;
     return;
 end if;
 
 /* create the record */
 
 insert into APP_FilesProcessed
-values (v_fileKey, v_jobStreamKey, v_createdBy, current_date)
+values (v_fileKey, v_jobStreamKey, v_createdBy, now())
 ;
 
 END;

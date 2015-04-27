@@ -75,7 +75,7 @@ end if;
 
 /* create a record */
 insert into APP_FilesMirrored
-values (v_fileKey, v_fileType, v_fileName, v_fileSize, v_createdBy, v_fileDate::timestamp, current_date)
+values (v_fileKey, v_fileType, v_fileName, v_fileSize, v_createdBy, v_fileDate::timestamp, now())
 ;
 
 
