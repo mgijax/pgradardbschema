@@ -33,7 +33,7 @@ export EXPORTDATA EXPORTLOGS LOGDIR
 # 1 : run sybase/bcpout.csh
 # data files are saved in EXPORTDATA
 # 
-runBCP=0
+runBCP=1
 export runBCP
 
 #
