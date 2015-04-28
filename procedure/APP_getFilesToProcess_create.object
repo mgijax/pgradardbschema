@@ -24,7 +24,7 @@ v_jobStreamName varchar(30),
 v_fileType varchar(30),
 maxFileSize int = 0
 )
-RETURNS TABLE(fileName varchar(255), fileSize int) AS
+RETURNS TABLE(fileName text, fileSize int) AS
 \$\$
 
 DECLARE
@@ -50,13 +50,12 @@ then
 	and p._File_key = m._File_key)
 	order by m.file_date
 	;
+	return;
 end if;
 
 /* if maxFileSize given, then return files until maxFileSize is reached */
 select into sumFileSize 0
 ;
-
-drop table if exists filesToProcess;
 
 create temp table filesToProcess as
 select m.fileName, m.fileSize
@@ -105,13 +104,12 @@ END LOOP;
 CLOSE file_cursor;
 
 /* return the files to process */
-/*
- // Somehow this already gets returned, so the following line actually duplicates
- // the result. I don't understand this at all.
 return query
 select * from filesToProcess;
-*/
 
+drop table filesToProcess;
+
+return;
 
 END;
 \$\$
