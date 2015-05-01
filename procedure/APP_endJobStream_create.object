@@ -31,7 +31,7 @@ then
 end if;
 
 update APP_JobStream
-set end_date = current_date,
+set end_date = now(),
     returnCode = @jobStreamReturnCode
 where _JobStream_key = @jobStreamKey;
 

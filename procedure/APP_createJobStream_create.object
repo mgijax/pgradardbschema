@@ -46,7 +46,7 @@ then
 end if;
 
 /* create a job stream record */
-insert into APP_JobStream values (jobStreamKey, v_jobStreamName, createdBy, NULL, current_date, NULL)
+insert into APP_JobStream values (jobStreamKey, v_jobStreamName, createdBy, NULL, now(), NULL)
 ;
 
 return jobStreamKey;
