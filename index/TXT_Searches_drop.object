@@ -1,0 +1,21 @@
+#!/bin/sh
+
+#
+# History
+#
+# 03/08/2005	lec
+#	- TR 5915, MPR
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+drop index if exists radar.TXT_Searches_idx_searchString
+;
+
+drop index if exists radar.TXT_Searches_idx_searchTime
+;
+
+EOSQL

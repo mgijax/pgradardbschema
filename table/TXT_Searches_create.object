@@ -1,0 +1,30 @@
+#!/bin/sh
+
+#
+# Text Indexing - Searches
+#
+# A record in this table represents 
+# a unique search for a given database and dataset.
+#
+#
+#
+# History
+#
+# 03/08/2005	lec
+#	- TR 5915, MPR
+#
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+create table radar.TXT_Searches (
+	_Search_key                    int             not null,
+	searchString                   text    not null,
+	dataset                        varchar(25)     not null,
+	mgiDatabase                    varchar(20)     not null,
+	searchTime                     timestamp DEFAULT now()        not null
+);
+EOSQL

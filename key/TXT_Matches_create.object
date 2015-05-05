@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#
+# History
+#
+# 03/08/2005	lec
+#	- TR 5915, MPR
+#
+
+cd `dirname $0` && . ./Configuration
+
+
+cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
+
+ALTER TABLE radar.TXT_Matches ADD PRIMARY KEY (_Search_key, _Object_key);
+
+
+EOSQL
