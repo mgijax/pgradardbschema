@@ -19,6 +19,4 @@ create index DP_EntrezGene_Synonym_idx_geneID on radar.DP_EntrezGene_Synonym(gen
 ;
 
 
-CLUSTER radar.DP_EntrezGene_Synonym USING DP_EntrezGene_Synonym_pkey;
-
 EOSQL

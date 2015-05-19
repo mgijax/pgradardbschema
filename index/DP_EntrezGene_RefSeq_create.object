@@ -25,6 +25,4 @@ create index DP_EntrezGene_RefSeq_idx_genomic on radar.DP_EntrezGene_RefSeq (gen
 ;
 
 
-CLUSTER radar.DP_EntrezGene_RefSeq USING DP_EntrezGene_RefSeq_pkey;
-
 EOSQL

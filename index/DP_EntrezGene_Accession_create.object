@@ -25,6 +25,4 @@ create index DP_EntrezGene_Accession_idx_genomic on radar.DP_EntrezGene_Accessio
 ;
 
 
-CLUSTER radar.DP_EntrezGene_Accession USING DP_EntrezGene_Accession_pkey;
-
 EOSQL

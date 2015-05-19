@@ -25,6 +25,4 @@ create index WRK_EntrezGene_Bucket0_idx_accID on radar.WRK_EntrezGene_Bucket0 (a
 ;
 
 
-CLUSTER radar.WRK_EntrezGene_Bucket0 USING WRK_EntrezGene_Bucket0_pkey;
-
 EOSQL

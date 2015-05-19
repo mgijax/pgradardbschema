@@ -22,6 +22,4 @@ create index DP_EntrezGene_DBXRef_idx_dbXrefID on radar.DP_EntrezGene_DBXRef (db
 ;
 
 
-CLUSTER radar.DP_EntrezGene_DBXRef USING DP_EntrezGene_DBXRef_pkey;
-
 EOSQL

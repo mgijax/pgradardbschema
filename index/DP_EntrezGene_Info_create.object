@@ -28,6 +28,4 @@ create index DP_EntrezGene_Info_idx_status on radar.DP_EntrezGene_Info (status)
 ;
 
 
-CLUSTER radar.DP_EntrezGene_Info USING DP_EntrezGene_Info_pkey;
-
 EOSQL

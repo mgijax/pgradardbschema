@@ -22,6 +22,4 @@ create index WRK_EntrezGene_Bucket0Tmp_idx_idType on radar.WRK_EntrezGene_Bucket
 ;
 
 
-CLUSTER radar.WRK_EntrezGene_Bucket0Tmp USING WRK_EntrezGene_Bucket0Tmp_pkey;
-
 EOSQL

@@ -22,6 +22,4 @@ create index WRK_EntrezGene_Nomen_idx_Marker_key on radar.WRK_EntrezGene_Nomen (
 ;
 
 
-CLUSTER radar.WRK_EntrezGene_Nomen USING WRK_EntrezGene_Nomen_pkey;
-
 EOSQL

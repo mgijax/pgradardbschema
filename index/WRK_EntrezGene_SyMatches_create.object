@@ -19,6 +19,4 @@ create index WRK_EntrezGene_SyMatches_idx_mgiID on radar.WRK_EntrezGene_SyMatche
 ;
 
 
-CLUSTER radar.WRK_EntrezGene_SyMatches USING WRK_EntrezGene_SyMatches_pkey;
-
 EOSQL

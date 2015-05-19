@@ -19,6 +19,4 @@ create index DP_HomoloGene_idx_symbol on radar.DP_HomoloGene (symbol)
 ;
 
 
-CLUSTER radar.DP_HomoloGene USING DP_HomoloGene_pkey;
-
 EOSQL

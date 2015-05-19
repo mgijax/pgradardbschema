@@ -22,6 +22,4 @@ create index WRK_EntrezGene_Mapping_idx_Marker_key on radar.WRK_EntrezGene_Mappi
 ;
 
 
-CLUSTER radar.WRK_EntrezGene_Mapping USING WRK_EntrezGene_Mapping_pkey;
-
 EOSQL

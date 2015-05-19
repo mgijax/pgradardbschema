@@ -25,6 +25,4 @@ create index DP_EntrezGene_MIM_idx_source on radar.DP_EntrezGene_MIM (source)
 ;
 
 
-CLUSTER radar.DP_EntrezGene_MIM USING DP_EntrezGene_MIM_pkey;
-
 EOSQL

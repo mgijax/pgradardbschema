@@ -22,6 +22,4 @@ create index DP_EntrezGene_PubMed_idx_pubMedID on radar.DP_EntrezGene_PubMed (pu
 ;
 
 
-CLUSTER radar.DP_EntrezGene_PubMed USING DP_EntrezGene_PubMed_pkey;
-
 EOSQL

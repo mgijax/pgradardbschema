@@ -25,6 +25,4 @@ create index WRK_EntrezGene_EGSet_idx_idType on radar.WRK_EntrezGene_EGSet (idTy
 ;
 
 
-CLUSTER radar.WRK_EntrezGene_EGSet USING WRK_EntrezGene_EGSet_pkey;
-
 EOSQL
