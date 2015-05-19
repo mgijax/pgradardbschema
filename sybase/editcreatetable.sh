@@ -43,6 +43,11 @@ g/float/s//numeric/g
 g/numericValue/s//floatValue/g
 g/offset/s//cmOffset/g
 g/varchar(255)/s//text/g
+g/varchar(30)/s//text/g
+g/varchar(50)/s//text/g
+g/varchar(10)/s//text/g
+g/varchar(15)/s//text/g
+g/varchar(100)/s//text/g
 g/numeric(8,0)    identity/s//serial/g
 g/^)/s//);/
 /^cat

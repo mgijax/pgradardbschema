@@ -1,3 +1,12 @@
+TAG: pgradardbschema-5-2-2-?
+DATE: 
+STAFF: lec
+CHANGES:
+1) TR11750
+a) change DP_xxx varchar() to text
+b) change DP_EntrezGene_Accession.startPos/endPos from integer to text
+c) change DP_EntrezGene_RefSeq.startPos/endPos from integer to text
+
 TAG: pgradardbschema-5-2-1-9
 TAG: pgradardbschema-5-2-1-8
 TAG: pgradardbschema-5-2-1-7

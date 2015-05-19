@@ -22,7 +22,7 @@ do
 ed $i <<END
 g/csh -f/s//sh/g
 g/source/s//./g
-g/truncate table /s//truncate table radar./g
+g/truncate cascade table /s//truncate table radar./g
 /cat
 d
 a

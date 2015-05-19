@@ -14,7 +14,7 @@ cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.DP_EntrezGene_Synonym (
 	taxID           integer         not null,
-	geneID          varchar(30)     not null,
+	geneID          text     not null,
 	synonym         text    not null
 );
 EOSQL

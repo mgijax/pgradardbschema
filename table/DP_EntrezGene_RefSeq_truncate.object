@@ -13,7 +13,7 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 
-truncate table radar.DP_EntrezGene_RefSeq
+truncate table radar.DP_EntrezGene_RefSeq cascade
 
 ;
 EOSQL
