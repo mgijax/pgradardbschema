@@ -21,11 +21,11 @@ ALTER TABLE radar.DP_EntrezGene_Accession ADD FOREIGN KEY (geneID) REFERENCES ra
 ALTER TABLE radar.DP_EntrezGene_DBXRef ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
 
 
-ALTER TABLE radar.DP_EntrezGene_History ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
-
-
 --not all 'geneID' columns exist in DB_EntrezGene_info...not sure why
---ALTER TABLE radar.DP_EntrezGene_MIM ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
+--ALTER TABLE radar.DP_EntrezGene_History ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
+
+
+ALTER TABLE radar.DP_EntrezGene_MIM ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
 
 
 ALTER TABLE radar.DP_EntrezGene_PubMed ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
