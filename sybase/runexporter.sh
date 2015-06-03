@@ -171,7 +171,7 @@ ${PG_RADAR_DBSCHEMADIR}/key/key_create.sh
 echo 'run create index for all tables...' | tee -a ${LOG}
 ${PG_RADAR_DBSCHEMADIR}/index/index_create.sh
 echo 'run create procedure for all tables...' | tee -a ${LOG}
-${PG_MGD_DBSCHEMADIR}/procedure/procedure_create.sh | tee -a ${LOG}
+${PG_RADAR_DBSCHEMADIR}/procedure/procedure_create.sh | tee -a ${LOG}
 
 else
 #
