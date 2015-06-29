@@ -16,7 +16,7 @@ ALTER TABLE radar.DP_EntrezGene_RefSeq DROP CONSTRAINT DP_EntrezGene_RefSeq_gene
 
 ALTER TABLE radar.DP_EntrezGene_PubMed DROP CONSTRAINT DP_EntrezGene_PubMed_geneID_fkey CASCADE;
 
-ALTER TABLE radar.DP_EntrezGene_MIM DROP CONSTRAINT DP_EntrezGene_MIM_geneID_fkey CASCADE;
+--ALTER TABLE radar.DP_EntrezGene_MIM DROP CONSTRAINT DP_EntrezGene_MIM_geneID_fkey CASCADE;
 
 --ALTER TABLE radar.DP_EntrezGene_History DROP CONSTRAINT DP_EntrezGene_History_geneID_fkey CASCADE;
 
