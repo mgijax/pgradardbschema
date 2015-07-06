@@ -3,6 +3,13 @@
 #
 # exporter that uses the schema product
 #
+# NOTE:  table/DP_EntrezGene_History_create.object
+# has an extra field (creation_date) because the input file now contains one.
+# Sybase accepts a load of the input file and simply ignores the last field.
+# Postgres does not.
+# So, after the export, this table will be empty in Postgres.  This is OK as it
+# will be loaded as part of the entrezgeneload/loadFiles.csh script.
+#
 
 cd `dirname $0` && . ../Configuration
 
