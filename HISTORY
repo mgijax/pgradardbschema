@@ -1,8 +1,10 @@
+TAG: pgradardbschema-6-0-3-2
 TAG: pgradardbschema-6-0-3-1
 DATE: 04/07/2016
 STAFF: lec 
 CHANGES:
 1) TR12069/obsolete TXT tables
+1) TR12069/obsolete MGI_Tables, MGI_Columns
 
 TAG: pgradardbschema-6-0-0-3
 DATE: 08/20/2015
