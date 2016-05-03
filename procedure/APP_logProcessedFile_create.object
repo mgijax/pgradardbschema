@@ -19,14 +19,14 @@ cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 CREATE OR REPLACE FUNCTION radar.APP_logProcessedFile (
 v_jobStreamKey int,
-v_fileName varchar(255),
-v_fileType varchar(30)
+v_fileName app_filesmirrored.fileName%TYPE,
+v_fileType app_filesmirrored.fileType%TYPE
 )
 RETURNS VOID AS
 \$\$
 
 DECLARE
-v_createdBy varchar(30);
+v_createdBy mgi_user.login%TYPE;
 v_fileKey int;
 
 
@@ -61,9 +61,9 @@ END;
 \$\$
 LANGUAGE plpgsql;
 
-GRANT EXECUTE ON FUNCTION APP_logProcessedFile(int,varchar,varchar) TO public;
+GRANT EXECUTE ON FUNCTION APP_logProcessedFile(int,text,varchar) TO public;
 
 
-COMMENT ON FUNCTION APP_logProcessedFile(int,varchar,varchar) IS '';
+COMMENT ON FUNCTION APP_logProcessedFile(int,text,varchar) IS '';
 
 EOSQL

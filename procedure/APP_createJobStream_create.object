@@ -17,8 +17,8 @@ ${PG_RADAR_DBSCHEMADIR}/procedure/APP_createJobStream_drop.object
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 CREATE OR REPLACE FUNCTION radar.APP_createJobStream (
-v_jobStreamName varchar(30),
-createdBy varchar(30)
+v_jobStreamName app_jobstream.jobstreamName%TYPE,
+createdBy mgi_user.login%TYPE
 )
 RETURNS INT AS
 \$\$

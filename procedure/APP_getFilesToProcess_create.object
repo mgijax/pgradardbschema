@@ -20,15 +20,15 @@ ${PG_RADAR_DBSCHEMADIR}/procedure/APP_getFilesToProcess_drop.object
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 CREATE OR REPLACE FUNCTION radar.APP_getFilesToProcess (
-v_jobStreamName varchar(30),
-v_fileType varchar(30),
+v_jobStreamName app_jobstream.jobstreamName%TYPE,
+v_fileType app_filesmirrored.fileType%TYPE,
 maxFileSize int = 0
 )
 RETURNS TABLE(fileName text, fileSize int) AS
 \$\$
 
 DECLARE
-v_fileName varchar(255);
+v_fileName app_filesmirrored.fileName%TYPE;
 v_fileSize int;
 sumFileSize int;
 file_cursor refcursor;
