@@ -29,8 +29,8 @@ LOGDIR=${EXPORTLOGS}
 export EXPORTDATA EXPORTLOGS LOGDIR
 
 #
-# 0 : do not run sybase/bcpout.csh
-# 1 : run sybase/bcpout.csh
+# 0 : do not run bcpout.csh
+# 1 : run bcpout.csh
 # data files are saved in EXPORTDATA
 # 
 runBCP=1
