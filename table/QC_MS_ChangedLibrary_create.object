@@ -16,12 +16,12 @@ create table radar.QC_MS_ChangedLibrary (
 	_QCRecord_key                  int             not null,
 	_sequence_key                  int             not null,
         oldSource_key		       int	       not null,
-	oldRawName                     text    null,
-	oldResolvedName                text    not null,
+	oldRawName                     text            null,
+	oldResolvedName                text            not null,
         newSource_key		       int	       null,
-	newRawName                     text    null,
-	newResolvedName                text    null,
-	foundMethod	               varchar(30)     null,
+	newRawName                     text            null,
+	newResolvedName                text            null,
+	foundMethod	               text            null,
 	_JobStream_key                 int             not null,
 	creation_date                  timestamp DEFAULT now()        not null
 );

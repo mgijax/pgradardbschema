@@ -10,9 +10,9 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.MGI_dbinfo (
- 	public_version                 varchar(30)     not null,
-	product_name                   varchar(30)     not null,
-	schema_version                 varchar(30)     not null,
+ 	public_version                 text            not null,
+	product_name                   text            not null,
+	schema_version                 text            not null,
 	lastdump_date                  timestamp DEFAULT now()        not null,
 	creation_date                  timestamp DEFAULT now()        not null,
 	modification_date              timestamp DEFAULT now()        not null 

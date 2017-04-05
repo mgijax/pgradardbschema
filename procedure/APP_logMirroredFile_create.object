@@ -61,9 +61,9 @@ END;
 \$\$
 LANGUAGE plpgsql;
 
-GRANT EXECUTE ON FUNCTION APP_logMirroredFile(varchar,text,int,varchar,varchar) TO public;
+GRANT EXECUTE ON FUNCTION APP_logMirroredFile(text,text,int,varchar,text) TO public;
 
 
-COMMENT ON FUNCTION APP_logMirroredFile(varchar,text,int,varchar,varchar) IS '';
+COMMENT ON FUNCTION APP_logMirroredFile(text,text,int,varchar,text) IS '';
 
 EOSQL

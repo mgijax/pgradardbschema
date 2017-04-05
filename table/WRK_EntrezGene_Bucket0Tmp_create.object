@@ -13,8 +13,8 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.WRK_EntrezGene_Bucket0Tmp (
-	geneID                  varchar(30)     not null,
-	mgiID    		varchar(30) 	not null,
-	idType			varchar(10)	not null
+	geneID                  text            not null,
+	mgiID    		text        	not null,
+	idType			text       	not null
 );
 EOSQL

@@ -61,9 +61,9 @@ END;
 \$\$
 LANGUAGE plpgsql;
 
-GRANT EXECUTE ON FUNCTION APP_logProcessedFile(int,text,varchar) TO public;
+GRANT EXECUTE ON FUNCTION APP_logProcessedFile(int,text,text) TO public;
 
 
-COMMENT ON FUNCTION APP_logProcessedFile(int,text,varchar) IS '';
+COMMENT ON FUNCTION APP_logProcessedFile(int,text,text) IS '';
 
 EOSQL

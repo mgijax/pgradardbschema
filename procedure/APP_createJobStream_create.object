@@ -55,9 +55,9 @@ END;
 \$\$
 LANGUAGE plpgsql;
 
-GRANT EXECUTE ON FUNCTION radar.APP_createJobStream(varchar,varchar) TO public;
+GRANT EXECUTE ON FUNCTION radar.APP_createJobStream(text,text) TO public;
 
 
-COMMENT ON FUNCTION radar.APP_createJobStream(varchar,varchar) IS '';
+COMMENT ON FUNCTION radar.APP_createJobStream(text,text) IS '';
 
 EOSQL

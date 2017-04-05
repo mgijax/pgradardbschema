@@ -13,7 +13,7 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.DP_EntrezGene_RefSeq (
-	taxID      	integer 	not null,
+	taxID      	integer  not null,
 	geneID          text     not null,
 	status          text     null,
 	rna             text     null,
@@ -24,6 +24,6 @@ create table radar.DP_EntrezGene_RefSeq (
 	genomicgi       text     not null,
 	startPos        text	 not null,
 	endPos          text	 not null,
-	orientation     char(1)         not null
+	orientation     char(1)  not null
 );
 EOSQL

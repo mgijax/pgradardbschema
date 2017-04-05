@@ -15,7 +15,7 @@ cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 create table radar.QC_MS_InvalidLibrary (
 	_QCRecord_key                  int             not null,
 	_JobStream_key                 int             not null,
-	library                        text    not null,
+	library                        text            not null,
 	numberOfOccurrences            int             not null,
 	creation_date                  timestamp DEFAULT now()        not null
 );

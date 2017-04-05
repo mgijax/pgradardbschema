@@ -13,10 +13,10 @@ cd `dirname $0` && . ./Configuration
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 create table radar.DP_EntrezGene_History (
-	taxID      	integer 	not null,
+	taxID      	integer  not null,
 	geneID          text     not null,
 	oldgeneID       text     not null,
-	oldsymbol    	text 	not null,
+	oldsymbol    	text 	 not null,
 	creation_date   timestamp DEFAULT now()        not null
 );
 EOSQL

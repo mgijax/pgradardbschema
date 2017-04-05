@@ -15,9 +15,9 @@ cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 create table radar.MGI_Association (
 	_Assoc_key                     int             not null,
 	_Record_key                    int             not null,
-	accID                          varchar(30)     not null,
-	logicalDB                      varchar(80)     not null,
-	target                         smallint             not null,
+	accID                          text            not null,
+	logicalDB                      text            not null,
+	target                         smallint        not null,
 	_JobStream_key                 int             not null,
 	creation_date                  timestamp DEFAULT now()        not null
 );

@@ -16,10 +16,10 @@ create table radar.WRK_EntrezGene_Bucket0 (
 	taxID                   int             not null,
 	_Object_key		int             not null,
 	_LogicalDB_key		int             not null,
-	geneID                  varchar(30)     not null,
-	mgiID    		varchar(30) 	not null,
-	accID    		varchar(30) 	not null,
-	private			smallint		not null,
-	refRequired             smallint             not null
+	geneID                  text            not null,
+	mgiID    		text        	not null,
+	accID    		text        	not null,
+	private			smallint	not null,
+	refRequired             smallint        not null
 );
 EOSQL
