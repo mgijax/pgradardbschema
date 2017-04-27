@@ -1,5 +1,5 @@
-TAG: pgradardbschema-6-0-10-?
-DATE: 04/05/2017
+TAG: pgradardbschema-6-0-10-1
+DATE: 04/27/2017
 STAFF: lec 
 CHANGES:
 TR12083/varchar -> text
