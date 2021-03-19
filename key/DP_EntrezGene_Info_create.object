@@ -3,6 +3,9 @@
 #
 # History
 #
+# 03/19/2021    sc
+#       -TR13349 remove Homologene
+#
 # 01/14/2005
 #	- TR 5939/EntrezGene
 #
@@ -35,10 +38,6 @@ ALTER TABLE radar.DP_EntrezGene_RefSeq ADD FOREIGN KEY (geneID) REFERENCES radar
 
 
 ALTER TABLE radar.DP_EntrezGene_Synonym ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
-
-
---not all 'geneID' columns exist in DB_EntrezGene_info...not sure why
---ALTER TABLE radar.DP_HomoloGene ADD FOREIGN KEY (geneID) REFERENCES radar.DP_EntrezGene_Info ON DELETE CASCADE;
 
 
 EOSQL
