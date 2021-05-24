@@ -5,7 +5,8 @@
 # 01/14/2005	lec
 #	- TR 5939/EntrezGene
 #
-cd `dirname $0` &. ./Configuration
+cd `dirname $0` && . ./Configuration
+
 cat - <<EOSQL | ${PG_DBUTILS}/bin/doisql.csh $0
 
 ALTER TABLE radar.DP_HomoloGene DROP CONSTRAINT DP_HomoloGene_geneID_fkey CASCADE;
