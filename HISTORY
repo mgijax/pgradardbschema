@@ -1,5 +1,6 @@
+TAG: pgradardbschema-6-0-22-1
 TAG: pgradardbschema-6-0-21-1
-DATE: 
+DATE: 07/25/2022
 STAFF: lec
 CHANGES: 
 wts2-646/Switch load of Human gene to disease associations to use the Alliance file.
