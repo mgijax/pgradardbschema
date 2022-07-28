@@ -39,21 +39,6 @@ ALTER TABLE radar.QC_MS_AttrEdit ADD FOREIGN KEY (_JobStream_key) REFERENCES rad
 ALTER TABLE radar.QC_MS_ChangedLibrary ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
 
 
-ALTER TABLE radar.QC_MS_InvalidLibrary ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
-
-
-ALTER TABLE radar.QC_MS_InvalidStrain ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
-
-
-ALTER TABLE radar.QC_MS_InvalidTissue ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
-
-
-ALTER TABLE radar.QC_MS_InvalidCellLine ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
-
-
-ALTER TABLE radar.QC_MS_InvalidGender ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
-
-
 ALTER TABLE radar.QC_MS_NameConflict ADD FOREIGN KEY (_JobStream_key) REFERENCES radar.APP_JobStream ON DELETE CASCADE;
 
 

@@ -1,3 +1,14 @@
+TAG: pgradardbschema-6-0-22-?
+DATE: 07/28/2022
+STAFF: lec
+CHANGES: 
+wts2-761/crm-344/MGD db cleanup/obsolete radar tables
+QC_MS_InvalidCellLine
+QC_MS_InvalidGender
+QC_MS_InvalidLibrary
+QC_MS_InvalidStrain
+QC_MS_InvalidTissue
+
 TAG: pgradardbschema-6-0-22-1
 TAG: pgradardbschema-6-0-21-1
 DATE: 07/25/2022
