@@ -1,3 +1,11 @@
+TAG: pgradardbschema-6-0-22-3
+DATE: 08/01/2022
+STAFF: lec
+CHANGES: 
+wts2-646/Switch load of Human gene to disease associations to use the Alliance file.
+restore DP_EntrezGene_MIM; needed for Human/OMIM info
+
+DP_EntrezGene_MIM
 TAG: pgradardbschema-6-0-22-2
 DATE: 07/28/2022
 STAFF: lec
